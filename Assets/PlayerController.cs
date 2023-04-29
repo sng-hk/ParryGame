@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public Vector3 position2;
+    public Vector3 transform;
 
     // Start is called before the first frame update
     void Start()
