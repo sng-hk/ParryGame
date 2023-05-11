@@ -7,17 +7,18 @@ public class PlayerController : MonoBehaviour
 {
     public static PlayerController instance { get; set; }
 
+    [Header("Run")]
     public float maxSpeed = 15.0f;
     public float lerpAmount = 0.5f;
-    float runAccelAmount = 9.5f;
+    float runAccelAmount = 19f;
+    float runDeccelAmount = 19f;
 
     [Header("Vertical Movement")]    
     public float jumpDelay = 0.25f;
     public float jumpForce = 5f;
+    public float fallMultiplier = 4f;
     private float jumpTimer;
-    float fallMultiplier = 6f;
 
-    float runDeccelAmount = 9.5f;
     bool isFacingRight = true;
 
     [Header("Physics")]
@@ -34,14 +35,18 @@ public class PlayerController : MonoBehaviour
     //Size of groundCheck depends on the size of your character generally you want them slightly small than width (for ground) and height (for the wall check)
     [SerializeField] private Vector2 _groundCheckSize = new Vector2(0.17f, 0.02f);
     public bool onGround = false;
-
     
     [Header("Animator")]
     [SerializeField] private Animator animator;
 
     [Header("Player Input")]
     Vector2 _moveInput;
-        
+
+    [Header("Events")]
+    [Space]
+
+    public UnityEngine.Events.UnityEvent OnLandEvent;
+
 
     private void Awake()
     {
@@ -70,6 +75,13 @@ public class PlayerController : MonoBehaviour
         {
             jumpTimer = Time.time + jumpDelay;
         }
+        #endregion
+
+        #region Animator
+        animator.SetFloat("HorizontalInput", Mathf.Abs(_moveInput.x));
+
+        animator.SetFloat("VerticalVel", RB.velocity.y);
+        animator.SetBool("OnGround", onGround);
         #endregion
     }
 
@@ -121,12 +133,7 @@ public class PlayerController : MonoBehaviour
         modifyPhysics();
         #endregion
 
-        #region Animator
-        animator.SetFloat("HorizontalInput", Mathf.Abs(_moveInput.x));
-
-        animator.SetFloat("VerticalVel", RB.velocity.y);
-        animator.SetBool("OnGround", onGround);
-        #endregion
+        
     }
 
     void Jump()
