@@ -324,7 +324,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 615278709}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.271, y: -3.092, z: 21.64308}
+  m_LocalPosition: {x: -1.271, y: 8.02, z: 21.64308}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -349,6 +349,7 @@ MonoBehaviour:
   lerpAmount: 0.5
   jumpDelay: 0.25
   jumpForce: 10
+  fallMultiplier: 2.5
   linearDrag: 10
   gravity: 1
   Velocity: 0
@@ -362,6 +363,9 @@ MonoBehaviour:
   _groundCheckSize: {x: 0.17, y: 0.02}
   onGround: 0
   animator: {fileID: 615278715}
+  OnLandEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &615278713
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -13,11 +13,14 @@ public class PlayerController : MonoBehaviour
     float runAccelAmount = 19f;
     float runDeccelAmount = 19f;
 
-    [Header("Vertical Movement")]    
+    [Header("Vertical Movement")]
     public float jumpDelay = 0.25f;
     public float jumpForce = 5f;
     public float fallMultiplier = 4f;
     private float jumpTimer;
+    private float coyoteTime = 0.3f;
+    private float coyoteTimeCounter;
+    [SerializeField] private bool doubleJump;
 
     bool isFacingRight = true;
 
@@ -35,7 +38,7 @@ public class PlayerController : MonoBehaviour
     //Size of groundCheck depends on the size of your character generally you want them slightly small than width (for ground) and height (for the wall check)
     [SerializeField] private Vector2 _groundCheckSize = new Vector2(0.17f, 0.02f);
     public bool onGround = false;
-    
+
     [Header("Animator")]
     [SerializeField] private Animator animator;
 
@@ -44,7 +47,6 @@ public class PlayerController : MonoBehaviour
 
     [Header("Events")]
     [Space]
-
     public UnityEngine.Events.UnityEvent OnLandEvent;
 
 
@@ -66,14 +68,30 @@ public class PlayerController : MonoBehaviour
         Velocity = RB.velocity.x;
 
         if (_moveInput.x != 0)
+        {
             CheckDirectionToFace(_moveInput.x > 0);
+        }
 
         #region Jump
-        /*onGround = Physics2D.Raycast(transform.position, Vector2.down, groundLength, groundLayer);*/
         onGround = Physics2D.OverlapBox(_groundCheckPoint.position, _groundCheckSize, 0, groundLayer);
+
+        if (onGround && !Input.GetKey(KeyCode.X))
+        {
+            doubleJump = false;
+        }
+
+        if (onGround)
+        {
+            coyoteTimeCounter = coyoteTime;
+        }
+        else
+        {
+            coyoteTimeCounter -= Time.deltaTime;
+        }
+
         if (Input.GetKeyDown(KeyCode.X))
         {
-            jumpTimer = Time.time + jumpDelay;
+            jumpTimer = Time.time + jumpDelay;            
         }
         #endregion
 
@@ -116,7 +134,7 @@ public class PlayerController : MonoBehaviour
         #endregion
 
         #region Friction
-        if(Mathf.Abs(_moveInput.x) < 0.01f)
+        if (Mathf.Abs(_moveInput.x) < 0.01f)
         {
             float amount = Mathf.Min(Mathf.Abs(RB.velocity.x), Mathf.Abs(frictionAmount));
 
@@ -126,39 +144,37 @@ public class PlayerController : MonoBehaviour
         #endregion
 
         #region Jump
-        if (jumpTimer > Time.time && onGround)
+        if (jumpTimer > Time.time && coyoteTimeCounter > 0f)
         {
-            Jump();
+            Jump();            
         }
         modifyPhysics();
         #endregion
-
-        
     }
 
     void Jump()
     {
-        RB.velocity = new Vector2(RB.velocity.x, 0);
+        RB.velocity = new Vector2(RB.velocity.x, 0f);
         RB.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-        jumpTimer = 0;
-        /*StartCoroutine(JumpSqueeze(0.5f, 1.2f, 0.1f));*/
+        jumpTimer = 0f;
+        coyoteTimeCounter = 0f;
     }
 
     void modifyPhysics()
-    {   
+    {
         if (onGround)
-        {           
-            RB.gravityScale = 0;
+        {
+            RB.gravityScale = 0f;
         }
         else
         {
             RB.gravityScale = gravity;
             RB.drag = linearDrag * 0.15f;
-            if (RB.velocity.y < 0)
+            if (RB.velocity.y < 0f)
             {
                 RB.gravityScale = gravity * fallMultiplier;
             }
-            else if (RB.velocity.y > 0 && !Input.GetKey(KeyCode.X))
+            else if (RB.velocity.y > 0f && !Input.GetKey(KeyCode.X))
             {
                 RB.gravityScale = gravity * (fallMultiplier / 2);
             }
@@ -182,11 +198,9 @@ public class PlayerController : MonoBehaviour
         isFacingRight = !isFacingRight;
     }
 
-
-
-    private void OnDrawGizmos()
+    /*private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawLine(transform.position, transform.position + Vector3.down * groundLength);
-    }
+    }*/
 }
