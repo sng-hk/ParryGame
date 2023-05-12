@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
     private float jumpTimer;
     private float coyoteTime = 0.3f;
     private float coyoteTimeCounter;
-    [SerializeField] private bool doubleJump;
+    [SerializeField] private int jumpCounter;
 
     bool isFacingRight = true;
 
@@ -72,17 +72,13 @@ public class PlayerController : MonoBehaviour
             CheckDirectionToFace(_moveInput.x > 0);
         }
 
-        #region Jump
+        #region Jump Check
         onGround = Physics2D.OverlapBox(_groundCheckPoint.position, _groundCheckSize, 0, groundLayer);
 
-        if (onGround && !Input.GetKey(KeyCode.X))
-        {
-            doubleJump = false;
-        }
-
+        // CoyoteTime
         if (onGround)
         {
-            coyoteTimeCounter = coyoteTime;
+            coyoteTimeCounter = coyoteTime;            
         }
         else
         {
@@ -91,7 +87,8 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.X))
         {
-            jumpTimer = Time.time + jumpDelay;            
+            //JumpBuffer
+            jumpTimer = Time.time + jumpDelay;
         }
         #endregion
 
@@ -146,8 +143,9 @@ public class PlayerController : MonoBehaviour
         #region Jump
         if (jumpTimer > Time.time && coyoteTimeCounter > 0f)
         {
-            Jump();            
-        }
+            Jump();
+        }        
+
         modifyPhysics();
         #endregion
     }

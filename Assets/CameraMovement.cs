@@ -4,27 +4,27 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
-    Vector3 playerPosition;
+    private Vector3 playerPosition;
+    [SerializeField] [Range(0f, 1f)] private float smoothTime = 0.25f;
+    private Vector3 velocity = Vector3.zero;
+    [SerializeField] Vector3 offset = new Vector3(0f, 5f, -10f);
 
-    [Header("Camera Move")]
-    public float extraMoveX;
-    public float extraMoveY;
+    [SerializeField] private Transform target;
 
     // Start is called before the first frame update
     void Start()
     {
-        playerPosition = PlayerController.instance.transform.position;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        Vector3 targetPosition = target.position + offset;
+        transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
     }
 
     private void FixedUpdate()
     {
-        playerPosition = PlayerController.instance.transform.position;
-        transform.position = new Vector3(playerPosition.x + extraMoveX, playerPosition.y + extraMoveY, transform.position.z);
     }
 }
