@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Bullet : MonoBehaviour
 {
     [Header("Speed")]
@@ -20,6 +21,8 @@ public class Bullet : MonoBehaviour
     public int direction;
     public bool isReflect;
 
+    
+
     private void Awake()
     {
         StartCoroutine(DestroyAfterSeconds());
@@ -31,6 +34,8 @@ public class Bullet : MonoBehaviour
         bulletSr.color = defaultColor;
         direction = 1;
         isReflect = false;
+
+        
     }
 
     void Update()
@@ -38,7 +43,7 @@ public class Bullet : MonoBehaviour
         transform.Translate(Vector2.up * speed * Time.deltaTime * direction);
     }
 
-
+    
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
