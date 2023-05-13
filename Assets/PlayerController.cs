@@ -49,6 +49,12 @@ public class PlayerController : MonoBehaviour
     [Space]
     public UnityEngine.Events.UnityEvent OnLandEvent;
 
+    //+
+    public float dashSpeed = 1f; // 대쉬 속도
+    public float dashDuration = 0.5f; // 대쉬 지속 시간
+    private bool isDashing = false; // 대쉬 중인지 여부를 나타내는 변수
+    private float dashTimer = 0f; // 대쉬 타이머
+    //++
 
     private void Awake()
     {
@@ -71,6 +77,35 @@ public class PlayerController : MonoBehaviour
         {
             CheckDirectionToFace(_moveInput.x > 0);
         }
+
+        //+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (!isDashing)
+            {
+                isDashing = true;
+                dashTimer = 0f;
+            }
+            else
+            {
+                isDashing = false;
+            }
+        }
+
+        // 대쉬 중인 경우에는 일정 시간동안 일정한 속도로 이동합니다.
+        if (isDashing)
+        {
+            dashTimer += Time.deltaTime;
+            if (dashTimer < dashDuration)
+            {
+                transform.Translate(Vector3.right * dashSpeed * Time.deltaTime);
+            }
+            else
+            {
+                isDashing = false;
+            }
+        }
+        //++
 
         #region Jump Check
         onGround = Physics2D.OverlapBox(_groundCheckPoint.position, _groundCheckSize, 0, groundLayer);
