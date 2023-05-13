@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - OneWayPlatform
+  - Enemy
+  - Bullet
+  - Shield
   layers:
   - Default
   - TransparentFX

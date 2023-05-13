@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 2326567145606549913}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 8.8, y: -2.69, z: 0}
-  m_LocalScale: {x: 1.715, y: 1.913625, z: 1}
+  m_LocalScale: {x: 1.715, y: 1.913625, z: -1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1060894903
-  m_SortingLayer: 3
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.7735849, g: 0.36091274, b: 0.31016377, a: 1}
@@ -143,8 +143,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2326567145606549913}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be73a41f77269ef40bbd0fd74b5c5910, type: 3}
+  m_Script: {fileID: 11500000, guid: 6b665f911946514409a3ee4758153805, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyHp: 0
-  bullet: {fileID: 3343141980394933602, guid: 31372845d8f4e0749996218540b90380, type: 3}
+  enemyHp: 100
+  bullet: {fileID: 3343141980394933602, guid: d2792ebfdf63f9e4191f424c06abb8f7, type: 3}
+  spawnBulletOffset: {x: -2, y: 0, z: 0}

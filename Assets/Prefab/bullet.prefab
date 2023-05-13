@@ -73,7 +73,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -775148841
-  m_SortingLayer: 4
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -95,10 +95,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3343141980394933602}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad7fa818aaa5eef47b123efb0fff2947, type: 3}
+  m_Script: {fileID: 11500000, guid: 3ff4f0da56d09234fa1080fc2db8767c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  defaultColor: {r: 1, g: 0, b: 0, a: 1}
   afterReflectColor: {r: 0, g: 1, b: 0, a: 1}
   bulletSr: {fileID: 0}
   direction: 0
