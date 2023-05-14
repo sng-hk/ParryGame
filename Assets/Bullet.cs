@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class Bullet : MonoBehaviour
 {
     [Header("Speed")]
@@ -21,8 +20,6 @@ public class Bullet : MonoBehaviour
     public int direction;
     public bool isReflect;
 
-    
-
     private void Awake()
     {
         StartCoroutine(DestroyAfterSeconds());
@@ -34,8 +31,6 @@ public class Bullet : MonoBehaviour
         bulletSr.color = defaultColor;
         direction = 1;
         isReflect = false;
-
-        
     }
 
     void Update()
@@ -43,9 +38,7 @@ public class Bullet : MonoBehaviour
         transform.Translate(Vector2.up * speed * Time.deltaTime * direction);
     }
 
-    
-
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         // 패링 성공 시 로직
         if (collision.gameObject.CompareTag("Shield"))
@@ -59,7 +52,6 @@ public class Bullet : MonoBehaviour
         }
         else
         {
-
             if (collision.gameObject.CompareTag("Enemy"))
             {
                 Enemy enemy = collision.gameObject.GetComponent<Enemy>();
@@ -72,6 +64,7 @@ public class Bullet : MonoBehaviour
         }
 
     }
+
     IEnumerator DestroyAfterSeconds()
     {
         yield return new WaitForSeconds(4.0f);

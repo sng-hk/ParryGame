@@ -60,6 +60,7 @@ public class Enemy : MonoBehaviour
         fullalphaColor = new Color(enemySr.color.r, enemySr.color.g, enemySr.color.b, 1f);
     }
 
+
     // Update is called once per frame
     void Update()
     {
