@@ -147,5 +147,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHp: 100
-  bullet: {fileID: 3343141980394933602, guid: d2792ebfdf63f9e4191f424c06abb8f7, type: 3}
-  spawnBulletOffset: {x: -2, y: 0, z: 0}
+  bullet: {fileID: 3343141980394933602, guid: bb6a968f344b3de458ca5bae5d9de971, type: 3}
+  spawnBulletOffset: {x: -2, y: -0.5, z: 0}

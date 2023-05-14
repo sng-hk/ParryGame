@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     public float jumpDelay = 0.25f;
     public float jumpForce = 5f;
     public float fallMultiplier = 4f;
+    [SerializeField] private float maxFallSpeed;
     private float jumpTimer;
     private float coyoteTime = 0.3f;
     private float coyoteTimeCounter;
@@ -205,11 +206,13 @@ public class PlayerController : MonoBehaviour
             RB.drag = linearDrag * 0.15f;
             if (RB.velocity.y < 0f)
             {
-                RB.gravityScale = gravity * fallMultiplier;
+                /*RB.gravityScale = gravity * fallMultiplier;*/
+                RB.gravityScale = 0;                
+                RB.velocity = new Vector2(RB.velocity.x, maxFallSpeed);               
             }
             else if (RB.velocity.y > 0f && !Input.GetKey(KeyCode.X))
             {
-                RB.gravityScale = gravity * (fallMultiplier / 2);
+                RB.gravityScale = gravity * (fallMultiplier / 2);                
             }
         }
     }
