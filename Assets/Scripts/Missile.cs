@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Missile : Bullet
 {
-    private Transform target;
+    public Transform target;
     private Rigidbody2D rb;
     
     public float rotateSpeed = 200f;
@@ -45,7 +45,8 @@ public class Missile : Bullet
             Debug.Log("sheild parry");
             target = GameObject.FindGameObjectWithTag("Enemy").transform;
             bulletSr.color = afterReflectColor;
-            isReflect = true;
+            isReflect = true;            
+            StartCoroutine(nameof(TimeFreeze), 0.5f);
         }
         else
         {

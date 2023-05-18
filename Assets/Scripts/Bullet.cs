@@ -49,6 +49,7 @@ public class Bullet : MonoBehaviour
             speed *= 2;
             bulletSr.color = afterReflectColor;
             isReflect = true;
+            
         }
         else
         {
@@ -63,6 +64,13 @@ public class Bullet : MonoBehaviour
             Destroy(gameObject);
         }
 
+    }
+
+    protected IEnumerator TimeFreeze(float freezingTime)
+    {
+        Time.timeScale = 0.6f;
+        yield return new WaitForSecondsRealtime(freezingTime);
+        Time.timeScale = 1f;
     }
 
     IEnumerator DestroyAfterSeconds()

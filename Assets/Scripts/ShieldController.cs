@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Shield : MonoBehaviour
+public class ShieldController : MonoBehaviour
 {
     private bool isActiveShield = false;
     private bool canActiveShield = true;
     private float ShieldActiveTimer = 1f;
-    private float ShieldCoolDown = 0.4f;
+    private float ShieldCoolDown = 0.4f;    
 
     // Start is called before the first frame update
     void Start()
@@ -18,8 +18,8 @@ public class Shield : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(KeyCode.C) && canActiveShield)        
-            StartCoroutine(nameof(ActivateShield));              
+        if (Input.GetKey(KeyCode.C) && canActiveShield)
+            StartCoroutine(nameof(ActivateShield));
     }
 
     IEnumerator ActivateShield()
@@ -32,5 +32,5 @@ public class Shield : MonoBehaviour
         isActiveShield = false;
         yield return new WaitForSeconds(ShieldCoolDown);
         canActiveShield = true;
-    }
+    }    
 }

@@ -42,6 +42,12 @@ public class PlayerController : MonoBehaviour
 
     [Header("Animator")]
     [SerializeField] private Animator animator;
+    [SerializeField] private GameObject jumpParticle;
+    [SerializeField] private GameObject runParticle;
+    [SerializeField] private Vector3 dashAnimationOffset = new Vector3(-0.68f, 0f, 0f);
+
+    [Header("Sprite Renderer")]
+    SpriteRenderer sr;
 
     [Header("Player Input")]
     Vector2 moveInput;
@@ -64,6 +70,7 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         RB = GetComponent<Rigidbody2D>();
+        sr = GetComponent<SpriteRenderer>();
         instance = this;
     }
 
@@ -90,7 +97,7 @@ public class PlayerController : MonoBehaviour
         #region Dash
         if (Input.GetKeyDown(KeyCode.Space) && canDash)
         {
-            if(moveInput != Vector2.zero)
+            if (moveInput != Vector2.zero)
             {
                 dashDir = moveInput;
             }
@@ -124,7 +131,6 @@ public class PlayerController : MonoBehaviour
 
         #region Animator
         animator.SetFloat("HorizontalInput", Mathf.Abs(moveInput.x));
-
         animator.SetFloat("VerticalVel", RB.velocity.y);
         animator.SetBool("OnGround", onGround);
         #endregion
@@ -180,6 +186,7 @@ public class PlayerController : MonoBehaviour
         if (jumpTimer > Time.time && coyoteTimeCounter > 0f)
         {
             Jump();
+            Instantiate(jumpParticle, transform.position, Quaternion.identity);
         }
 
         modifyPhysics();
@@ -207,12 +214,12 @@ public class PlayerController : MonoBehaviour
             if (RB.velocity.y < 0f)
             {
                 /*RB.gravityScale = gravity * fallMultiplier;*/
-                RB.gravityScale = 0;                
-                RB.velocity = new Vector2(RB.velocity.x, maxFallSpeed);               
+                RB.gravityScale = 0;
+                RB.velocity = new Vector2(RB.velocity.x, maxFallSpeed);
             }
             else if (RB.velocity.y > 0f && !Input.GetKey(KeyCode.X))
             {
-                RB.gravityScale = gravity * (fallMultiplier / 2);                
+                RB.gravityScale = gravity * (fallMultiplier / 2);
             }
         }
     }
@@ -245,12 +252,25 @@ public class PlayerController : MonoBehaviour
         isDashing = true;
         float originalGravity = RB.gravityScale;
         SetGravityScale(0);
+
+        GameObject go = Instantiate(runParticle, transform.position, Quaternion.identity);
+        Vector2 scale = go.transform.localScale;
+        scale.x *= (isFacingRight ? 1 : -1); // 방향에 따라 파티클의 x 스케일을 결정. 
+        go.transform.localScale = scale;
+        go.transform.position += dashAnimationOffset * (isFacingRight ? 1 : -1);
+
         RB.velocity = dir * dashingPower;
-        tr.emitting = true;
+
+        animator.SetBool("IsDash", true);
+        sr.flipX = true;
+
         yield return new WaitForSeconds(dashingTime);
-        tr.emitting = false;
         SetGravityScale(originalGravity);
         isDashing = false;
+
+        animator.SetBool("IsDash", false);
+        sr.flipX = false;
+
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;
     }
