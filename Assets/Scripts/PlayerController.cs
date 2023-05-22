@@ -22,6 +22,8 @@ public class PlayerController : MonoBehaviour
     private float coyoteTime = 0.3f;
     private float coyoteTimeCounter;
     [SerializeField] private int jumpCounter;
+    [SerializeField] private bool doubleJump;
+    [SerializeField] private bool canDoubleJump;
 
     bool isFacingRight = true;
 
@@ -116,6 +118,7 @@ public class PlayerController : MonoBehaviour
         if (onGround)
         {
             coyoteTimeCounter = coyoteTime;
+            canDoubleJump = false;
         }
         else
         {
@@ -126,6 +129,10 @@ public class PlayerController : MonoBehaviour
         {
             //JumpBuffer
             jumpTimer = Time.time + jumpDelay;
+            if(canDoubleJump)
+            {
+                doubleJump = true;
+            }
         }
         #endregion
 
@@ -183,10 +190,13 @@ public class PlayerController : MonoBehaviour
         #endregion
 
         #region Jump
-        if (jumpTimer > Time.time && coyoteTimeCounter > 0f)
+        if (jumpTimer > Time.time && coyoteTimeCounter > 0f || doubleJump)
         {
             Jump();
-            Instantiate(jumpParticle, transform.position, Quaternion.identity);
+            if(doubleJump)
+            {
+                doubleJump = false;
+            }
         }
 
         modifyPhysics();
@@ -199,6 +209,8 @@ public class PlayerController : MonoBehaviour
         RB.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         jumpTimer = 0f;
         coyoteTimeCounter = 0f;
+        Instantiate(jumpParticle, transform.position, Quaternion.identity);
+        canDoubleJump = !canDoubleJump;        
     }
 
     void modifyPhysics()
@@ -214,8 +226,11 @@ public class PlayerController : MonoBehaviour
             if (RB.velocity.y < 0f)
             {
                 /*RB.gravityScale = gravity * fallMultiplier;*/
-                RB.gravityScale = 0;
-                RB.velocity = new Vector2(RB.velocity.x, maxFallSpeed);
+                RB.gravityScale = gravity * fallMultiplier;
+                if (RB.velocity.y < maxFallSpeed)
+                {
+                    RB.velocity = new Vector2(RB.velocity.x, maxFallSpeed);
+                }
             }
             else if (RB.velocity.y > 0f && !Input.GetKey(KeyCode.X))
             {

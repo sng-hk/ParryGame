@@ -17,8 +17,9 @@ public class OneWayPlatformCheck : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        if (Input.GetKeyDown(KeyCode.I))
         {
+            Debug.Log(currentOneWayPlatform);
             if (currentOneWayPlatform != null)
             {
                 StartCoroutine(DisableCollision());
@@ -30,7 +31,7 @@ public class OneWayPlatformCheck : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("OneWayPlatform"))
         {
-            currentOneWayPlatform = collision.gameObject;            
+            currentOneWayPlatform = collision.gameObject;
         }
     }
 
@@ -38,16 +39,18 @@ public class OneWayPlatformCheck : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("OneWayPlatform"))
         {
-            currentOneWayPlatform = collision.gameObject;            
+            currentOneWayPlatform = null;
         }
     }
 
     private IEnumerator DisableCollision()
     {
         BoxCollider2D platformCollider = currentOneWayPlatform.GetComponent<BoxCollider2D>();
-        
+
         Physics2D.IgnoreCollision(playerCollider, platformCollider);
-        yield return new WaitForSeconds(0.25f);
-        Physics2D.IgnoreCollision(playerCollider, platformCollider, false);        
+        Debug.Log("Disable");
+        yield return new WaitForSeconds(1f);
+        Physics2D.IgnoreCollision(playerCollider, platformCollider, false);
+        Debug.Log("Able");
     }
 }
