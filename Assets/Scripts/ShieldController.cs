@@ -6,8 +6,10 @@ public class ShieldController : MonoBehaviour
 {
     private bool isActiveShield = false;
     private bool canActiveShield = true;
-    private float ShieldActiveTimer = 1f;
-    private float ShieldCoolDown = 0.4f;    
+    private float ShieldActiveTimer = 0.2f;
+    private float ShieldCoolDown = 0.1f;
+
+    [SerializeField] private Animator animator;
 
     // Start is called before the first frame update
     void Start()
@@ -18,8 +20,10 @@ public class ShieldController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.C) && canActiveShield)
-            StartCoroutine(nameof(ActivateShield));
+        if (Input.GetKeyDown(KeyCode.C) && canActiveShield)
+        {
+            StartCoroutine(nameof(ActivateShield));            
+        }
     }
 
     IEnumerator ActivateShield()
@@ -27,10 +31,12 @@ public class ShieldController : MonoBehaviour
         isActiveShield = true;
         canActiveShield = false;
         transform.GetChild(0).gameObject.SetActive(true);
+        animator.SetBool("isActive", true);
         yield return new WaitForSeconds(ShieldActiveTimer);
+        animator.SetBool("isActive", false);
         transform.GetChild(0).gameObject.SetActive(false);
         isActiveShield = false;
         yield return new WaitForSeconds(ShieldCoolDown);
         canActiveShield = true;
-    }    
+    }
 }
