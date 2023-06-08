@@ -3,27 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class OneWayPlatformCheck : MonoBehaviour
-{
-    private GameObject currentOneWayPlatform;
-
-    [SerializeField] private BoxCollider2D playerCollider;
+{    
+    private BoxCollider2D playerCollider;
+    private BoxCollider2D platformCollider;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        playerCollider = GetComponent<BoxCollider2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.DownArrow))
+        if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            Debug.Log(currentOneWayPlatform);
-            if (currentOneWayPlatform != null)
-            {                
+            if (platformCollider != null)
                 StartCoroutine(DisableCollision());
-            }
         }
     }
 
@@ -31,7 +27,8 @@ public class OneWayPlatformCheck : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("OneWayPlatform"))
         {
-            currentOneWayPlatform = collision.gameObject;
+            Debug.Log("On OneWayPlatform");
+            platformCollider = collision.gameObject.GetComponent<BoxCollider2D>();
         }
     }
 
@@ -39,18 +36,17 @@ public class OneWayPlatformCheck : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("OneWayPlatform"))
         {
-            currentOneWayPlatform = null;
+            Debug.Log("Out OneWayPlatform");
+            /*platformCollider = null;*/
         }
     }
 
     private IEnumerator DisableCollision()
     {
-        BoxCollider2D platformCollider = currentOneWayPlatform.GetComponent<BoxCollider2D>();
-
         Physics2D.IgnoreCollision(playerCollider, platformCollider);
-        Debug.Log("Disable");
-        yield return new WaitForSeconds(1f);
+        PlayerController.instance.RB.gravityScale = PlayerController.instance.gravity;        
+        PlayerController.instance.RB.velocity = new Vector2(PlayerController.instance.RB.velocity.x, PlayerController.instance.maxFallSpeed);
+        yield return new WaitForSeconds(0.05f);
         Physics2D.IgnoreCollision(playerCollider, platformCollider, false);
-        Debug.Log("Able");
     }
 }

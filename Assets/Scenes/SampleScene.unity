@@ -404,7 +404,7 @@ GameObject:
   - component: {fileID: 455265630}
   - component: {fileID: 455265629}
   - component: {fileID: 455265628}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: OneWayPlatform (3)
   m_TagString: OneWayPlatform
   m_Icon: {fileID: 0}
@@ -894,7 +894,7 @@ GameObject:
   - component: {fileID: 737696655}
   - component: {fileID: 737696654}
   - component: {fileID: 737696653}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: OneWayPlatform (2)
   m_TagString: OneWayPlatform
   m_Icon: {fileID: 0}
@@ -1878,7 +1878,7 @@ GameObject:
   - component: {fileID: 1464797183}
   - component: {fileID: 1464797182}
   - component: {fileID: 1464797181}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: OneWayPlatform (4)
   m_TagString: OneWayPlatform
   m_Icon: {fileID: 0}
@@ -2463,7 +2463,7 @@ GameObject:
   - component: {fileID: 1944597920}
   - component: {fileID: 1944597919}
   - component: {fileID: 1944597918}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: OneWayPlatform (1)
   m_TagString: OneWayPlatform
   m_Icon: {fileID: 0}

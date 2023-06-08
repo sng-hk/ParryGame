@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     public float jumpDelay = 0.25f;
     public float jumpForce = 5f;
     public float fallMultiplier = 4f;
-    [SerializeField] private float maxFallSpeed;
+    [SerializeField] public float maxFallSpeed;
     private float jumpTimer;
     private float coyoteTime = 0.3f;
     private float coyoteTimeCounter;
@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour
     public float gravity = 1f;
     public float Velocity;
     public float frictionAmount;
-    Rigidbody2D RB;
+    public Rigidbody2D RB;
 
     public LayerMask groundLayer;
     public Transform groundCheck;
