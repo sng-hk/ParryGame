@@ -44,7 +44,7 @@ public class OneWayPlatformCheck : MonoBehaviour
     private IEnumerator DisableCollision()
     {
         Physics2D.IgnoreCollision(playerCollider, platformCollider);
-        PlayerController.instance.RB.gravityScale = PlayerController.instance.gravity;        
+        PlayerController.instance.RB.gravityScale = PlayerController.instance.gravity;
         PlayerController.instance.RB.velocity = new Vector2(PlayerController.instance.RB.velocity.x, PlayerController.instance.maxFallSpeed);
         yield return new WaitForSeconds(0.05f);
         Physics2D.IgnoreCollision(playerCollider, platformCollider, false);
