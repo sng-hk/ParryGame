@@ -53,7 +53,7 @@ public class Missile : Bullet
             target = GameObject.FindGameObjectWithTag("Enemy").transform;
             bulletSr.color = afterReflectColor;
             isReflect = true;
-            StartCoroutine(nameof(TimeFreeze), 0.5f);
+            StartCoroutine(nameof(TimeFreeze), 2f);
         }
         else if (collision.gameObject.CompareTag("NonHomingZone"))
         {

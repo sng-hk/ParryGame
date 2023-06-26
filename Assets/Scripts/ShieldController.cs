@@ -22,7 +22,7 @@ public class ShieldController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.C) && canActiveShield)
         {
-            StartCoroutine(nameof(ActivateShield));            
+            StartCoroutine(nameof(ActivateShield));
         }
     }
 

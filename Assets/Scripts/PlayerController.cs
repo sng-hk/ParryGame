@@ -129,7 +129,7 @@ public class PlayerController : MonoBehaviour
         {
             //JumpBuffer
             jumpTimer = Time.time + jumpDelay;
-            if(canDoubleJump)
+            if (canDoubleJump)
             {
                 doubleJump = true;
             }
@@ -193,7 +193,7 @@ public class PlayerController : MonoBehaviour
         if (jumpTimer > Time.time && coyoteTimeCounter > 0f || doubleJump)
         {
             Jump();
-            if(doubleJump)
+            if (doubleJump)
             {
                 doubleJump = false;
             }
@@ -210,7 +210,7 @@ public class PlayerController : MonoBehaviour
         jumpTimer = 0f;
         coyoteTimeCounter = 0f;
         Instantiate(jumpParticle, transform.position, Quaternion.identity);
-        canDoubleJump = !canDoubleJump;        
+        canDoubleJump = !canDoubleJump;
     }
 
     void modifyPhysics()
@@ -270,7 +270,7 @@ public class PlayerController : MonoBehaviour
 
         GameObject go = Instantiate(runParticle, transform.position, Quaternion.identity);
         Vector2 scale = go.transform.localScale;
-        scale.x *= (isFacingRight ? 1 : -1); // 방향에 따라 파티클의 x 스케일을 결정. 
+        scale.x *= (isFacingRight ? 1 : -1); /*방향에 따라 파티클의 x 스케일을 결정. */
         go.transform.localScale = scale;
         go.transform.position += dashAnimationOffset * (isFacingRight ? 1 : -1);
 
