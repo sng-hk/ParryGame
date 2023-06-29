@@ -99,7 +99,7 @@ public class PlayerController : MonoBehaviour
 
         #region Dash
         if (Input.GetKeyDown(KeyCode.Space) && canDash)
-        {            
+        {
             StartCoroutine(nameof(Dash));
         }
         #endregion
@@ -220,14 +220,14 @@ public class PlayerController : MonoBehaviour
 
             // fall down
             if (RB.velocity.y < 0f)
-            {                
+            {
                 RB.gravityScale = gravity * fallMultiplier;
                 if (RB.velocity.y < maxFallSpeed)
                 {
                     RB.velocity = new Vector2(RB.velocity.x, maxFallSpeed);
                 }
             }
-            else if (RB.velocity.y > 0f && !Input.GetKey(KeyCode.X)) // after u unhold jump key
+            else if (RB.velocity.y > 0f && !Input.GetKey(KeyCode.X)) // after unhold jump key
             {
                 RB.gravityScale = gravity * (fallMultiplier / 2);
             }
@@ -284,14 +284,21 @@ public class PlayerController : MonoBehaviour
 
         #region Dash Direction
         /*Vector3 endDashPoint = startDashPoint + new Vector3(6f, 0, 0) * (isFacingRight ? 1 : -1);*/
-        dashDir = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), 0);
+        if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) < 0.01f && Mathf.Abs(Input.GetAxisRaw("Vertical")) < 0.01f)
+        {
+            dashDir = Vector3.right * (isFacingRight ? 1 : -1);
+        }
+        else
+        {
+            dashDir = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), 0);
+        }
         dashDir.Normalize();
         #endregion
         Vector3 endDashPoint = startDashPoint + dashDir * dashDistance;
 
         float currentTime = 0f;
-        float dashTime = 0.4f;
-        for(; currentTime < dashTime; currentTime += Time.deltaTime)
+        float dashTime = 0.35f;
+        for (; currentTime < dashTime; currentTime += Time.deltaTime)
         {
             float t = currentTime / dashTime;
             t = Mathf.Sin(t * Mathf.PI * 0.5f); /*ease in*/
