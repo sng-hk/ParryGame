@@ -2185,6 +2185,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1877976534739777635, guid: 64c3c382225778e488846bd9bd0bf4ae, type: 3}
+      propertyPath: fallMultiplier
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1877976534739777644, guid: 64c3c382225778e488846bd9bd0bf4ae, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1

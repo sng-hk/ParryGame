@@ -66,8 +66,9 @@ public class PlayerController : MonoBehaviour
     private bool isDashing = false;
     private float dashingPower = 12f;
     private float dashingTime = 0.2f;
-    private float dashingCooldown = 0.5f;
-    private Vector2 dashDir;
+    private float dashingCooldown = 0.3f;
+    private Vector3 dashDir;
+    private float dashDistance = 6f;
 
     private void Awake()
     {
@@ -98,16 +99,8 @@ public class PlayerController : MonoBehaviour
 
         #region Dash
         if (Input.GetKeyDown(KeyCode.Space) && canDash)
-        {
-            if (moveInput != Vector2.zero)
-            {
-                dashDir = moveInput;
-            }
-            else
-            {
-                dashDir = isFacingRight ? Vector2.right : Vector2.left;
-            }
-            StartCoroutine(nameof(Dash), dashDir);
+        {            
+            StartCoroutine(nameof(Dash));
         }
         #endregion
 
@@ -221,18 +214,20 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
+            // press and hold jump key
             RB.gravityScale = gravity;
             RB.drag = linearDrag * 0.15f;
+
+            // fall down
             if (RB.velocity.y < 0f)
-            {
-                /*RB.gravityScale = gravity * fallMultiplier;*/
+            {                
                 RB.gravityScale = gravity * fallMultiplier;
                 if (RB.velocity.y < maxFallSpeed)
                 {
                     RB.velocity = new Vector2(RB.velocity.x, maxFallSpeed);
                 }
             }
-            else if (RB.velocity.y > 0f && !Input.GetKey(KeyCode.X))
+            else if (RB.velocity.y > 0f && !Input.GetKey(KeyCode.X)) // after u unhold jump key
             {
                 RB.gravityScale = gravity * (fallMultiplier / 2);
             }
@@ -261,25 +256,51 @@ public class PlayerController : MonoBehaviour
         RB.gravityScale = scale;
     }
 
-    private IEnumerator Dash(Vector2 dir)
+    private IEnumerator Dash()
     {
         canDash = false;
         isDashing = true;
         float originalGravity = RB.gravityScale;
         SetGravityScale(0);
 
+        #region Particle
         GameObject go = Instantiate(runParticle, transform.position, Quaternion.identity);
         Vector2 scale = go.transform.localScale;
         scale.x *= (isFacingRight ? 1 : -1); /*방향에 따라 파티클의 x 스케일을 결정. */
         go.transform.localScale = scale;
         go.transform.position += dashAnimationOffset * (isFacingRight ? 1 : -1);
+        #endregion
 
-        RB.velocity = dir * dashingPower;
+        /*방향키의 입력 방향에 따라 대시 방향 결정*/
+        /*대시 방식을 속도를 지정하는게 아닌 위치를 강제로 이동하는 방식으로 변경*/
+        /*RB.velocity = dir * dashingPower; 속도 지정 방식*/
 
+        #region Animator
         animator.SetBool("IsDash", true);
         sr.flipX = true;
+        #endregion
 
-        yield return new WaitForSeconds(dashingTime);
+        Vector3 startDashPoint = transform.position;
+
+        #region Dash Direction
+        /*Vector3 endDashPoint = startDashPoint + new Vector3(6f, 0, 0) * (isFacingRight ? 1 : -1);*/
+        dashDir = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), 0);
+        dashDir.Normalize();
+        #endregion
+        Vector3 endDashPoint = startDashPoint + dashDir * dashDistance;
+
+        float currentTime = 0f;
+        float dashTime = 0.4f;
+        for(; currentTime < dashTime; currentTime += Time.deltaTime)
+        {
+            float t = currentTime / dashTime;
+            t = Mathf.Sin(t * Mathf.PI * 0.5f); /*ease in*/
+            /*t = t * t * t * (t * (6f * t - 15f) + 10f);*/ /*smooth step*/
+            RB.velocity = Vector3.Lerp((endDashPoint - startDashPoint) / dashTime, Vector3.zero, t);
+            yield return null;
+        }
+
+        /*yield return new WaitForSeconds(dashingTime);*/
         SetGravityScale(originalGravity);
         isDashing = false;
 
