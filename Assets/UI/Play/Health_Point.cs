@@ -14,6 +14,15 @@ public class Health_Point : MonoBehaviour
     [SerializeField]
     private Image Heart3;
 
+    [SerializeField]
+    private Image GG_Background;
+
+    [SerializeField]
+    private Text GG_Text;
+
+    [SerializeField]
+    private Button Go_Title;
+
     public static float MaxHP = 6;
     public static float HP = 6;
     // Start is called before the first frame update
@@ -22,6 +31,10 @@ public class Health_Point : MonoBehaviour
         Heart.fillAmount = 1;
         Heart2.fillAmount = 1;
         Heart3.fillAmount = 1;
+        GG_Background.enabled = false;
+        GG_Text.enabled = false;
+        Go_Title.interactable = false;
+        Go_Title.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -47,7 +60,10 @@ public class Health_Point : MonoBehaviour
             Heart3.fillAmount = 0;
             Heart2.fillAmount = 0;
             Heart.fillAmount = 0;
+            GG_Background.enabled = true;
+            GG_Text.enabled = true;
+            Go_Title.interactable = true;
+            Go_Title.gameObject.SetActive(true);
         }
-
     }
 }
