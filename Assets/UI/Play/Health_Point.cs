@@ -23,6 +23,9 @@ public class Health_Point : MonoBehaviour
     [SerializeField]
     private Button Go_Title;
 
+    [SerializeField]
+    private Image Pause_Background;
+
     public static float MaxHP = 6;
     public static float HP = 6;
     // Start is called before the first frame update
@@ -64,6 +67,7 @@ public class Health_Point : MonoBehaviour
             GG_Text.enabled = true;
             Go_Title.interactable = true;
             Go_Title.gameObject.SetActive(true);
+            Pause.PauseGame();
         }
     }
 }

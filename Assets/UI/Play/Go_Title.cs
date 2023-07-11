@@ -22,6 +22,7 @@ public class Go_Title : MonoBehaviour
     public void GoTitle()
     {
         SceneManager.LoadScene("title");
+        Pause.ResumeGame();
         Health_Point.HP = Health_Point.MaxHP;
         Resources.UnloadUnusedAssets();
     }
