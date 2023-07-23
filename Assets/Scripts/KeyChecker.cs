@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class KeyChecker : MonoBehaviour
 {
+    BoxCollider2D coll;
     private void Start()
     {
-        LayerMask playerLayer = LayerMask.NameToLayer("Player");
-        LayerMask KeyCheckerLayer = LayerMask.NameToLayer("KeyChecker");
-        Physics2D.
-        Physics2D.IgnoreLayerCollision(playerLayer, KeyCheckerLayer, true);
+        coll = GetComponent<BoxCollider2D>();
+    }
+
+    private void Update()
+    {        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
