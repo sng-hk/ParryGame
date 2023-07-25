@@ -11,6 +11,7 @@ public class SceneLoad : MonoBehaviour
 
     private void Start()
     {
+        int sound_value_container = SoundManager.sound_value;
         Resources.UnloadUnusedAssets();
         StartCoroutine(LoadScene());
     }

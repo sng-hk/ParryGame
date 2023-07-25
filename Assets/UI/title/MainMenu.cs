@@ -6,12 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+
     [SerializeField]
     private GameObject setting_object;
 
     public Text setting_sound_value_text;
-
-    int sound_value;
 
     public void SettingEnable()
     {
@@ -39,13 +38,6 @@ public class MainMenu : MonoBehaviour
             //esc누르면 세팅창 닫히도록.
             SettingDisable();
         }
-    }
-
-    public void TextChanger(float value)
-    {
-        //사운드 크기에 맞춰 변하는 텍스트.
-        sound_value = (int)(value*100);
-        setting_sound_value_text.text = sound_value.ToString();
     }
 
     public void ClickNewGameButton()

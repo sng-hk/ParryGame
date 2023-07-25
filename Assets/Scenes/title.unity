@@ -1630,8 +1630,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1002578580}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+      - m_Target: {fileID: 1476747121}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
         m_MethodName: TextChanger
         m_Mode: 0
         m_Arguments:
@@ -2416,6 +2416,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4694af17c7a5030428446326f9fe0097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound_value_text: {fileID: 478856379}
+  sound_bar: {fileID: 1018653100}
   bgm: {fileID: 1369709940}
 --- !u!4 &1476747122
 Transform:
