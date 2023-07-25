@@ -13,7 +13,7 @@ public class Pause : MonoBehaviour
 
     public Text pause_sound_value_text;
 
-    int sound_salue;
+    int sound_value;
 
 
     public void PauseEnable()
