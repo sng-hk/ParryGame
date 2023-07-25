@@ -7,90 +7,78 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     [SerializeField]
-    private Image Setting_Image;
+    private GameObject setting_object;
 
-    [SerializeField]
-    private Button Setting_Close;
+    public Text setting_sound_value_text;
 
-    [SerializeField]
-    private Text Setting_Text;
+    int sound_value;
 
-    [SerializeField]
-    private Text Setting_Sound_Text;
-
-    [SerializeField]
-    private Text Setting_Sound_Value;
-
-    [SerializeField]
-    private Slider Sound_Bar;
-
-    int Sound_Value;
-
-    // Start is called before the first frame update
-    void Start()
+    public void SettingEnable()
     {
-        Setting_Image.enabled = false;
-        Setting_Close.interactable = false;
-        Setting_Close.gameObject.SetActive(false);
-        Setting_Text.enabled = false;
-        Setting_Sound_Text.enabled = false;
-        Setting_Sound_Value.enabled = false;
-        Sound_Bar.interactable = false;
-        Sound_Bar.gameObject.SetActive(false);
+        //세팅창 켜기.
+        setting_object.SetActive(true);
     }
 
-    // Update is called once per frame
+    public void SettingDisable()
+    {
+        //세팅창 끄기.
+        setting_object.SetActive(false);
+    }
+
+
+    void Start()
+    {
+        SettingDisable();
+    }
+
+    
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            //esc누르면 세팅창 닫히도록.
+            SettingDisable();
+        }
     }
 
     public void TextChanger(float value)
     {
-        Sound_Value = (int)(value*100);
-        Setting_Sound_Value.text = Sound_Value.ToString();
+        //사운드 크기에 맞춰 변하는 텍스트.
+        sound_value = (int)(value*100);
+        setting_sound_value_text.text = sound_value.ToString();
     }
 
-    public void OnClickNewGame()
+    public void ClickNewGameButton()
     {
+        //New Game 버튼 클릭 시.
         SceneManager.LoadScene("loading");
     }
 
-    public void OnClickLoad()
+    public void ClickContinueButton()
     {
-
+        //continue 버튼 클릭 시.
+        //불러오기 기능
     }
 
-    public void OnClickOption()
+    public void ClickSettingButton()
     {
-        Setting_Image.enabled = true;
-        Setting_Close.interactable = true;
-        Setting_Close.gameObject.SetActive(true);
-        Setting_Text.enabled = true;
-        Setting_Sound_Text.enabled = true;
-        Setting_Sound_Value.enabled = true;
-        Sound_Bar.interactable = true;
-        Sound_Bar.gameObject.SetActive(true);
+        //setting 버튼 클릭 시.
+        SettingEnable();
     }
 
-    public void Setting_Close_Button()
+    public void ClickExitButton()
     {
-        Setting_Image.enabled = false;
-        Setting_Close.interactable = false;
-        Setting_Close.gameObject.SetActive(false);
-        Setting_Text.enabled = false;
-        Setting_Sound_Text.enabled = false;
-        Setting_Sound_Value.enabled = false;
-        Sound_Bar.interactable = false;
-        Sound_Bar.gameObject.SetActive(false);
-    }
-
-    public void OnClickQuit()
-    {
+        //Exit 버튼 클릭 시.
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #else
         Application.Quit();
 #endif
+    }
+
+    public void SettingCloseButton()
+    {
+        //setting의 x버튼 클릭 시.
+        SettingDisable();
     }
 }

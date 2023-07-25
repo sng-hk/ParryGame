@@ -8,7 +8,7 @@ public class Drop : MonoBehaviour
     {
         if(collision.GetComponent<PlayerController>() != null)
         {
-        Health_Point.HP -= Health_Point.MaxHP;
+            PlayerController.instance.player_helth_point -= PlayerController.instance.player_max_helth_point;
         }
     }
 }

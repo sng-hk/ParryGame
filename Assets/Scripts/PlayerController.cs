@@ -7,6 +7,10 @@ public class PlayerController : MonoBehaviour
 {
     public static PlayerController instance { get; set; }
 
+    [Header("HP")]
+    public float player_max_helth_point = 6;
+    public float player_helth_point = 6;
+
     [Header("Run")]
     public float maxSpeed = 15.0f;
     public float lerpAmount = 0.5f;

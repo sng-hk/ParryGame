@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class Go_Title : MonoBehaviour
+public class GoTitle : MonoBehaviour
 {
 
     // Start is called before the first frame update
@@ -19,11 +19,11 @@ public class Go_Title : MonoBehaviour
 
     }
 
-    public void GoTitle()
+    public void ClickGoTitle()
     {
         SceneManager.LoadScene("title");
         Pause.ResumeGame();
-        Health_Point.HP = Health_Point.MaxHP;
+        PlayerController.instance.player_helth_point = PlayerController.instance.player_max_helth_point;
         Resources.UnloadUnusedAssets();
     }
 }

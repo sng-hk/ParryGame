@@ -7,13 +7,14 @@ using UnityEngine.SceneManagement;
 public class SceneLoad : MonoBehaviour
 {
     public Slider progressbar;
-    public Text loadtext;
+    public Text loading_text;
 
     private void Start()
     {
         Resources.UnloadUnusedAssets();
         StartCoroutine(LoadScene());
     }
+
     IEnumerator LoadScene()
     {
         yield return null;
@@ -33,7 +34,7 @@ public class SceneLoad : MonoBehaviour
 
             if (progressbar.value >= 1f)
             {
-                loadtext.text = "Press Spacebar";
+                loading_text.text = "Press Spacebar";
             }
 
 

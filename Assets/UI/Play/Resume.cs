@@ -6,19 +6,7 @@ using UnityEngine.UI;
 public class Resume : MonoBehaviour
 {
     [SerializeField]
-    private Image Pause_Background;
-
-    [SerializeField]
-    private Image Pause_BackImage;
-
-    [SerializeField]
-    private Text Pause_Text;
-
-    [SerializeField]
-    private Button Pause_BackToGame_Button;
-
-    [SerializeField]
-    private Button Pause_Title_Button;
+    private GameObject pause_object;
 
     // Start is called before the first frame update
     void Start()
@@ -32,15 +20,9 @@ public class Resume : MonoBehaviour
         
     }
 
-    public void OnclickResumeButton()
+    public void ClickResumeButton()
     {
         Pause.ResumeGame();
-        Pause_Background.enabled = false;
-        Pause_BackImage.enabled = false;
-        Pause_Text.enabled = false;
-        Pause_BackToGame_Button.interactable = false;
-        Pause_BackToGame_Button.gameObject.SetActive(false);
-        Pause_Title_Button.interactable = false;
-        Pause_Title_Button.gameObject.SetActive(false);
+        pause_object.SetActive(false);
     }
 }
