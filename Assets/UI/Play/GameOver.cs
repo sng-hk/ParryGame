@@ -5,63 +5,73 @@ using UnityEngine.UI;
 
 public class GameOver : MonoBehaviour
 {
-    [SerializeField]
-    private Image Heart;
+    public Image[] hearts;
+    public Image[] black_hearts;
 
     [SerializeField]
-    private Image Heart2;
+    private GameObject _gameover_object;
 
-    [SerializeField]
-    private Image Heart3;
-
-    [SerializeField]
-    private GameObject gameover_object;
+    public float player_heart_counter;
 
     public void GameoverEnable()
     {
         //게임오버 화면 켜기.
-        gameover_object.SetActive(true);
+        _gameover_object.SetActive(true);
     }
 
     public void GameoverDisable()
     {
         //게임오버 화면 끄기.
-        gameover_object.SetActive(false);
+        _gameover_object.SetActive(false);
     }
 
     void Start()
     {
-        Heart.fillAmount = 1;
-        Heart2.fillAmount = 1;
-        Heart3.fillAmount = 1;
         GameoverDisable();
+
+        player_heart_counter = PlayerController.instance.player_max_helth_point / 2;
+        for (int i = 0; i < hearts.Length; i++)
+        {
+            hearts[i].fillAmount = 1;
+            if (i + 1 > player_heart_counter)
+            {
+                hearts[i].enabled = false;
+                black_hearts[i].enabled = false;
+            }
+        }
     }
 
-    // Update is called once per frame
+
     void Update()
     {
-        if (PlayerController.instance.player_helth_point <= 6 && PlayerController.instance.player_helth_point >= 5)
+        player_heart_counter = PlayerController.instance.player_max_helth_point / 2;
+
+        if (PlayerController.instance.player_helth_point == 0)
         {
-            Heart3.fillAmount = (PlayerController.instance.player_helth_point - 4) / 2;
-        }
-        else if (PlayerController.instance.player_helth_point <= 4 && PlayerController.instance.player_helth_point >= 3)
-        {
-            Heart3.fillAmount = 0;
-            Heart2.fillAmount = (PlayerController.instance.player_helth_point - 2) / 2;
-        }
-        else if (PlayerController.instance.player_helth_point <= 2 && PlayerController.instance.player_helth_point >= 1)
-        {
-            Heart3.fillAmount = 0;
-            Heart2.fillAmount = 0;
-            Heart.fillAmount = PlayerController.instance.player_helth_point / 2;
-        }
-        else
-        {
-            Heart3.fillAmount = 0;
-            Heart2.fillAmount = 0;
-            Heart.fillAmount = 0;
-            gameover_object.SetActive(true);
             Pause.PauseGame();
+            GameoverEnable();
+        }
+
+        for (int i = 0; i < player_heart_counter; i++)
+        {
+            if (i > player_heart_counter)
+            {
+                hearts[i].enabled = false;
+                black_hearts[i].enabled = false;
+            }
+
+            if (i + 1 <= PlayerController.instance.player_helth_point / 2)
+            {
+                continue;
+            }
+            else if(i < PlayerController.instance.player_helth_point / 2 && i + 1 > PlayerController.instance.player_helth_point / 2)
+            {
+                hearts[i].fillAmount = 0.5f;
+            }
+            else
+            {
+                hearts[i].fillAmount = 0;
+            }
         }
     }
 }
