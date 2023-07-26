@@ -916,6 +916,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34585fe85d146f140904ea1bdacac744, type: 3}
+--- !u!4 &899415474 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8653264907793579981, guid: 2d8a37c1a3b801f47b76ff99f30ca89f, type: 3}
+  m_PrefabInstance: {fileID: 1217526730}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1032585495
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1244,30 +1249,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5213403755653741298, guid: 2d8a37c1a3b801f47b76ff99f30ca89f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.8
+    - target: {fileID: 5213403756167673143, guid: 2d8a37c1a3b801f47b76ff99f30ca89f, type: 3}
+      propertyPath: points.Array.size
+      value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 5213403756167673147, guid: 2d8a37c1a3b801f47b76ff99f30ca89f, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2.891137
-      objectReference: {fileID: 0}
-    - target: {fileID: 5213403756167673147, guid: 2d8a37c1a3b801f47b76ff99f30ca89f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.1473
-      objectReference: {fileID: 0}
-    - target: {fileID: 5213403756167673147, guid: 2d8a37c1a3b801f47b76ff99f30ca89f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5213403756696115498, guid: 2d8a37c1a3b801f47b76ff99f30ca89f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.67
-      objectReference: {fileID: 0}
-    - target: {fileID: 5213403756696115498, guid: 2d8a37c1a3b801f47b76ff99f30ca89f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.8
-      objectReference: {fileID: 0}
+    - target: {fileID: 5213403756167673143, guid: 2d8a37c1a3b801f47b76ff99f30ca89f, type: 3}
+      propertyPath: points.Array.data[2]
+      value: 
+      objectReference: {fileID: 899415474}
+    - target: {fileID: 5213403756167673143, guid: 2d8a37c1a3b801f47b76ff99f30ca89f, type: 3}
+      propertyPath: points.Array.data[3]
+      value: 
+      objectReference: {fileID: 2058743903}
     - target: {fileID: 5213403756860866641, guid: 2d8a37c1a3b801f47b76ff99f30ca89f, type: 3}
       propertyPath: m_Name
       value: MovingPlatformSystem
@@ -1379,6 +1372,11 @@ PrefabInstance:
       objectReference: {fileID: 2077339511}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46c810f11f6d4244ab4a7e8d477c1868, type: 3}
+--- !u!4 &1369189295 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5213403756860866642, guid: 2d8a37c1a3b801f47b76ff99f30ca89f, type: 3}
+  m_PrefabInstance: {fileID: 1217526730}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1592990548
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2188,6 +2186,37 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34585fe85d146f140904ea1bdacac744, type: 3}
+--- !u!1 &2058743902
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2058743903}
+  m_Layer: 0
+  m_Name: Point4
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2058743903
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2058743902}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.41, y: 5.58, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1369189295}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2077339511 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1877976534739777644, guid: 64c3c382225778e488846bd9bd0bf4ae, type: 3}
