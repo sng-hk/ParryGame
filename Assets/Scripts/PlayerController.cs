@@ -212,7 +212,7 @@ public class PlayerController : MonoBehaviour
         canDoubleJump = !canDoubleJump;
     }
 
-    void modifyPhysics()
+    public void modifyPhysics()
     {
         if (onGround)
         {
