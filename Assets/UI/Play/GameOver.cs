@@ -46,23 +46,28 @@ public class GameOver : MonoBehaviour
     {
         player_heart_counter = PlayerController.instance.player_max_helth_point / 2;
 
-        if (PlayerController.instance.player_helth_point == 0)
+        if (PlayerController.instance.player_helth_point <= 0)
         {
             Pause.PauseGame();
             GameoverEnable();
         }
 
+        for (int i = 3; i < hearts.Length; i++)
+        {
+            if (i + 1 <= player_heart_counter)
+            {
+                hearts[i].enabled = true;
+                black_hearts[i].enabled = true;
+            }
+        }
+
         for (int i = 0; i < player_heart_counter; i++)
         {
-            if (i > player_heart_counter)
-            {
-                hearts[i].enabled = false;
-                black_hearts[i].enabled = false;
-            }
+          
 
             if (i + 1 <= PlayerController.instance.player_helth_point / 2)
             {
-                continue;
+                hearts[i].fillAmount = 1;
             }
             else if(i < PlayerController.instance.player_helth_point / 2 && i + 1 > PlayerController.instance.player_helth_point / 2)
             {

@@ -88,29 +88,32 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (Pause.GameStop == 1)
+        if (Pause.GameStop == 0)
         {
-            if (isDashing)
-            {
-                return;
-            }
+            return;
+        }
 
-            moveInput.x = Input.GetAxisRaw("Horizontal");
-            Velocity = RB.velocity.x;
+        if (isDashing)
+        {
+            return;
+        }
 
-            if (moveInput.x != 0)
-            {
-                CheckDirectionToFace(moveInput.x > 0);
-            }
+        moveInput.x = Input.GetAxisRaw("Horizontal");
+        Velocity = RB.velocity.x;
 
-            #region Dash
+        if (moveInput.x != 0)
+        {
+            CheckDirectionToFace(moveInput.x > 0);
+        }
+
+        #region Dash
             if (Input.GetKeyDown(KeyCode.Space) && canDash)
             {
                 StartCoroutine(nameof(Dash));
             }
             #endregion
 
-            #region Jump Check
+        #region Jump Check
             onGround = Physics2D.OverlapBox(_groundCheckPoint.position, _groundCheckSize, 0, groundLayer);
 
             // CoyoteTime
@@ -135,12 +138,12 @@ public class PlayerController : MonoBehaviour
             }
             #endregion
 
-            #region Animator
+        #region Animator
             animator.SetFloat("HorizontalInput", Mathf.Abs(moveInput.x));
             animator.SetFloat("VerticalVel", RB.velocity.y);
             animator.SetBool("OnGround", onGround);
             #endregion
-        }
+
     }
 
     private void FixedUpdate()
