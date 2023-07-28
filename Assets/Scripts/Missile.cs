@@ -61,14 +61,22 @@ public class Missile : Bullet
         }
         else if (collision.gameObject.CompareTag("Enemy"))
         {
-            Enemy enemy = collision.gameObject.GetComponent<Enemy>();
-            Destroy(gameObject);
             // 적 피격시 로직
+            if (isReflect)
+            {
+                Enemy enemy_take_damage = collision.gameObject.GetComponent<Enemy>();
+                enemy_take_damage.TakeDamage(10);
+                Destroy(gameObject);
+            }
         }
         else if (collision.gameObject.CompareTag("Player"))
         {
-            PlayerController player = collision.gameObject.GetComponent<PlayerController>();
             // 플레이어 피격시 로직
+            if (!isReflect)
+            {
+                PlayerController.instance.player_helth_point -= 1;
+                Destroy(gameObject);
+            }
         }
     }
 }

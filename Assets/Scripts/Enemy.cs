@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject _enemy_object;
+
     [Header("EnemyUI")]
-    public int enemyHp;
+    public int enemy_hp;
 
     [Header("Sprite Renderer")]
     private SpriteRenderer enemySr;
@@ -53,7 +56,7 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        enemyHp = 100;
+        enemy_hp = 10;
         enemySr = GetComponent<SpriteRenderer>();
 
         halfalphaColor = new Color(enemySr.color.r, enemySr.color.g, enemySr.color.b, 0.6f);
@@ -64,7 +67,10 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if(enemy_hp <= 0)
+        {
+            _enemy_object.SetActive(false);
+        }
     }
 
     IEnumerator SpawnBullet()
@@ -72,7 +78,16 @@ public class Enemy : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(2.0f);
-            Instantiate(bullet, transform.position + spawnBulletOffset, bullet.transform.rotation);
+
+            if (EnemySight.recognize == true)
+            {
+                Instantiate(bullet, transform.position + spawnBulletOffset, bullet.transform.rotation);
+            }
         }
+    }
+
+    public void TakeDamage(int damage)
+    {
+        enemy_hp -= damage;
     }
 }

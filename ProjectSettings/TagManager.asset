@@ -19,8 +19,8 @@ TagManager:
   - OneWayPlatform
   - KeyChecker
   - Player
-  - 
-  - 
+  - Monster
+  - Bullet
   - 
   - 
   - 

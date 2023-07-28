@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1898257631720733463}
   - component: {fileID: 4465056960784823183}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: front
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5233667783224210925}
   - component: {fileID: 7664492440395519569}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: front (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -181,7 +181,7 @@ GameObject:
   - component: {fileID: 3343141980394933606}
   - component: {fileID: 6919516532906285097}
   - component: {fileID: -6776706007881469389}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Missile
   m_TagString: Bullet
   m_Icon: {fileID: 0}

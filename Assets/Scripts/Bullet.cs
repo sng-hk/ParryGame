@@ -49,21 +49,20 @@ public class Bullet : MonoBehaviour
             speed *= 2;
             bulletSr.color = afterReflectColor;
             isReflect = true;
-            
+
         }
-        else
+        else if (collision.gameObject.CompareTag("Enemy"))
         {
-            if (collision.gameObject.CompareTag("Enemy"))
+            if (isReflect == true)
             {
-                Enemy enemy = collision.gameObject.GetComponent<Enemy>();
+                Destroy(gameObject);
             }
-            else if (collision.gameObject.CompareTag("Player"))
-            {
-                PlayerController player = collision.gameObject.GetComponent<PlayerController>();
-            }
+        }
+        else if (collision.gameObject.CompareTag("Player"))
+        {
+            PlayerController.instance.player_helth_point -= 1;
             Destroy(gameObject);
         }
-
     }
 
     protected IEnumerator TimeFreeze(float freezingTime)

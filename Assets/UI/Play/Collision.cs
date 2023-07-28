@@ -6,6 +6,9 @@ public class Collision : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        PlayerController.instance.player_helth_point -= 1;
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            PlayerController.instance.player_helth_point -= 1;
+        }
     }
 }
