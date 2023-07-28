@@ -14,4 +14,9 @@ public class PlayerInventory : MonoBehaviour
         NumberOfKeyItems++;
         OnKeyItemCollected.Invoke(this);
     }
+
+    public void KeyItemUsed()
+    {
+        NumberOfKeyItems--;
+    }
 }

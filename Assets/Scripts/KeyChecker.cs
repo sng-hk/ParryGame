@@ -5,27 +5,47 @@ using UnityEngine;
 public class KeyChecker : MonoBehaviour
 {
     BoxCollider2D coll;
+    PlayerController _player;
+    PlayerInventory _player_inventory;
+
     private void Start()
     {
         coll = GetComponent<BoxCollider2D>();
     }
 
     private void Update()
-    {        
+    {
+
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        Debug.Log(collision);
-        PlayerController player = collision.gameObject.GetComponent<PlayerController>();
-        PlayerInventory playerInventory = collision.gameObject.GetComponent<PlayerInventory>();
-        if (player != null && playerInventory != null)
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            _player = null;
+            _player_inventory = null;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            _player = PlayerController.instance;
+            _player_inventory = collision.GetComponent<PlayerInventory>();
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player") && _player != null && _player_inventory != null)
         {
             if (Input.GetKeyDown(KeyCode.F))
             {
-                if (playerInventory.NumberOfKeyItems >= 1)
+                if (_player_inventory.NumberOfKeyItems >= 1)
                 {
                     Debug.Log("Door Open");
+                    _player_inventory.KeyItemUsed();
                     transform.parent.gameObject.SetActive(false);
                 }
                 else
@@ -36,34 +56,8 @@ public class KeyChecker : MonoBehaviour
         }
         else
         {
-            Debug.Log("null exception");
+            Debug.Log("null exception or collision is not player");
         }
     }
-
-    /*private void OnTriggerEnter2D(Collider2D collision)
-    {
-        PlayerController player = collision.GetComponent<PlayerController>();
-        PlayerInventory playerInventory = collision.GetComponent<PlayerInventory>();
-        if (player != null && playerInventory != null)
-        {
-            if (Input.GetKeyDown(KeyCode.F))
-            {
-                if (playerInventory.NumberOfKeyItems >= 1)
-                {
-                    Debug.Log("Door Open");
-                    transform.parent.gameObject.SetActive(false);
-                }
-                else
-                {
-                    Debug.Log("Key is required");
-                }
-            }
-        }
-        else
-        {
-            Debug.Log("null exception");
-        }
-
-    }*/
 
 }

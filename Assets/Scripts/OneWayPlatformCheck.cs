@@ -6,6 +6,7 @@ public class OneWayPlatformCheck : MonoBehaviour
 {    
     private BoxCollider2D playerCollider;
     private BoxCollider2D platformCollider;
+    private bool _is_disable_collision = false;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +21,20 @@ public class OneWayPlatformCheck : MonoBehaviour
         {
             if (platformCollider != null)
                 StartCoroutine(DisableCollision());
+        }
+
+        if(!_is_disable_collision)
+        {
+            if (PlayerController.instance.transform.position.y <= gameObject.transform.position.y)
+            {
+                Debug.Log(PlayerController.instance.transform.position.y + " :: " + gameObject.transform.position.y);
+                gameObject.layer = LayerMask.NameToLayer("Default");
+            }
+            else
+            {
+                Debug.Log("higher than player");
+                gameObject.layer = LayerMask.NameToLayer("Ground");
+            }
         }
     }
 
@@ -44,10 +59,10 @@ public class OneWayPlatformCheck : MonoBehaviour
     private IEnumerator DisableCollision()
     {
         Physics2D.IgnoreCollision(playerCollider, platformCollider);
-        PlayerController.instance.RB.gravityScale = PlayerController.instance.gravity;
-        /*PlayerController.instance.RB.velocity = new Vector2(PlayerController.instance.RB.velocity.x, PlayerController.instance.maxFallSpeed);*/
-        PlayerController.instance.modifyPhysics();
-        yield return new WaitForSeconds(0.05f);
+        gameObject.layer = LayerMask.NameToLayer("Default");
+        _is_disable_collision = true;
+        yield return new WaitForSeconds(0.3f);
         Physics2D.IgnoreCollision(playerCollider, platformCollider, false);
+        _is_disable_collision = false;
     }
 }

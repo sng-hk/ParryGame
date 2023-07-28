@@ -35,12 +35,15 @@ public class DisappearingPlatform : MonoBehaviour
     {        
         yield return new WaitForSeconds(1f);
         _Sr.color = new Color(_Sr.color.r, _Sr.color.g, _Sr.color.b, 0.3f);
-        _is_disappear = true;
+        _is_disappear = true;        
         Physics2D.IgnoreCollision(_platform_collider, _player_collider, true);
+        gameObject.layer = LayerMask.NameToLayer("Default");
+        
         yield return new WaitForSeconds(2.5f);
         _Sr.color = new Color(_Sr.color.r, _Sr.color.g, _Sr.color.b, 1f);
-        Physics2D.IgnoreCollision(_platform_collider, _player_collider, false);
         _is_disappear = false;
+        Physics2D.IgnoreCollision(_platform_collider, _player_collider, false);
+        gameObject.layer = LayerMask.NameToLayer("Ground");
 
     }
 }

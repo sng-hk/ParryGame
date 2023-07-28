@@ -7,6 +7,7 @@ public class Missile : Bullet
 {
     [SerializeField] private GameObject parrySucceed;
     public Transform target;
+    [SerializeField] private Vector2 _target_offset;
     private Rigidbody2D rb;
 
     public float rotateSpeed = 200f;
@@ -32,7 +33,7 @@ public class Missile : Bullet
         Vector2 direction;
         if (!inHomingZone || this.target.tag == "Enemy")
         {
-            direction = (Vector2)target.position - rb.position;
+            direction = (Vector2)target.position + _target_offset - rb.position;
             direction.Normalize();
             float rotateAmount = Vector3.Cross(direction, transform.up).z;
             rb.angularVelocity = (-1) * rotateAmount * rotateSpeed;
@@ -53,7 +54,7 @@ public class Missile : Bullet
             target = GameObject.FindGameObjectWithTag("Enemy").transform;
             bulletSr.color = afterReflectColor;
             isReflect = true;
-            StartCoroutine(nameof(TimeFreeze), 2f);
+            StartCoroutine(nameof(TimeFreeze), 0.7f);
         }
         else if (collision.gameObject.CompareTag("NonHomingZone"))
         {

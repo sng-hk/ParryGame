@@ -67,7 +67,7 @@ public class Bullet : MonoBehaviour
 
     protected IEnumerator TimeFreeze(float freezingTime)
     {
-        Time.timeScale = 0.05f;
+        Time.timeScale = 0.3f;
         yield return new WaitForSecondsRealtime(freezingTime);
         Time.timeScale = 1f;
     }

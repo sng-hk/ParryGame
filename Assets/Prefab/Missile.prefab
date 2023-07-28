@@ -314,4 +314,5 @@ MonoBehaviour:
   isReflect: 0
   parrySucceed: {fileID: 5625895889940678975, guid: b24ac2f502d6e7549b054e2f195869af, type: 3}
   target: {fileID: 0}
+  _target_offset: {x: 0, y: 0.33}
   rotateSpeed: 800

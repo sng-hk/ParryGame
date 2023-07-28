@@ -152,7 +152,7 @@ public class PlayerController : MonoBehaviour
         {
             return;
         }
-
+        
         #region Run
         //Calculate the direction we want to move in and our desired velocity
         float targetSpeed = moveInput.x * maxSpeed;
