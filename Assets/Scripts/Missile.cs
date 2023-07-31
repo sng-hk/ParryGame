@@ -12,7 +12,15 @@ public class Missile : Bullet
 
     public float rotateSpeed = 200f;
     private bool inHomingZone = false;
-    // Start is called before the first frame update
+
+    private Enemy shooter;
+    Vector3 shooter_position;
+
+    public void MemoryShooter(Enemy enemy)
+    {
+        shooter = enemy;
+    }
+
     void Start()
     {
         target = PlayerController.instance.transform;
@@ -20,10 +28,13 @@ public class Missile : Bullet
         Debug.Log("target =" + this.target.name + ", targetTag = " + this.target.tag);
     }
 
-    // Update is called once per frame
     void Update()
     {
-
+        if (shooter != null)
+        {
+            // 적 위치 계속 가져오기
+            shooter_position = shooter.transform.position;
+        }
     }
 
 
@@ -31,9 +42,16 @@ public class Missile : Bullet
     {
         // '미사일'에서부터 '타겟'까지의 방향벡터
         Vector2 direction;
-        if (!inHomingZone || this.target.tag == "Enemy")
+        if (!inHomingZone)
         {
-            direction = (Vector2)target.position + _target_offset - rb.position;
+            if(isReflect == true)
+            {
+                direction = (Vector2)shooter_position + _target_offset - rb.position;
+            }
+            else
+            {
+                direction = (Vector2)target.position + _target_offset - rb.position;
+            }
             direction.Normalize();
             float rotateAmount = Vector3.Cross(direction, transform.up).z;
             rb.angularVelocity = (-1) * rotateAmount * rotateSpeed;
@@ -65,6 +83,7 @@ public class Missile : Bullet
             // 적 피격시 로직
             if (isReflect)
             {
+                //Enemy에서 함수 가져와서 적용시키기
                 Enemy enemy_take_damage = collision.gameObject.GetComponent<Enemy>();
                 enemy_take_damage.TakeDamage(10);
                 Destroy(gameObject);

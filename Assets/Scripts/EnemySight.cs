@@ -5,11 +5,12 @@ using UnityEngine;
 public class EnemySight : MonoBehaviour
 {
     public static bool recognize = false;
+    Enemy parent_script;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        parent_script = GetComponentInParent<Enemy>();
     }
 
     // Update is called once per frame
@@ -22,6 +23,7 @@ public class EnemySight : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            parent_script.Recognize();
             recognize = true;
         }
     }
@@ -30,6 +32,7 @@ public class EnemySight : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            parent_script.UnRecognize();
             recognize = false;
         }
     }

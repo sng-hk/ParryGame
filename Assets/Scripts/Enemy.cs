@@ -17,6 +17,7 @@ public class Enemy : MonoBehaviour
     private Color halfalphaColor;
     private Color fullalphaColor;
 
+    private List<GameObject> missile_list = new List<GameObject>();
 
     private bool isHurt = false;
 
@@ -50,7 +51,15 @@ public class Enemy : MonoBehaviour
 
     private void Awake()
     {
+    }
+
+    public void Recognize()
+    {
         StartCoroutine(SpawnBullet());
+    }
+    public void UnRecognize()
+    {
+        StopCoroutine(SpawnBullet());
     }
 
     // Start is called before the first frame update
@@ -63,26 +72,57 @@ public class Enemy : MonoBehaviour
         fullalphaColor = new Color(enemySr.color.r, enemySr.color.g, enemySr.color.b, 1f);
     }
 
+    IEnumerator SpawnBullet()
+    {
+        yield return new WaitForSeconds(1.0f);
+        while (true)
+        {
+            if (EnemySight.recognize == true)
+            {
+                GameObject missile_object = Instantiate(bullet, transform.position + spawnBulletOffset, bullet.transform.rotation);
+                Missile missile_script = missile_object.GetComponent<Missile>();
+                missile_script.MemoryShooter(this);
+                missile_list.Add(missile_object);
+                yield return new WaitForSeconds(2.0f);
+            }
+            else if(EnemySight.recognize == false)
+            {
+                yield break;
+            }
+
+        }
+    }
+
+    private void RemoveAll()
+    {
+        // 적이 비활성화될 때 자신이 쏜 모든 총알을 삭제
+        foreach (GameObject missile_object in missile_list)
+        {
+            if (missile_object != null)
+            {
+                Destroy(missile_object);
+            }
+        }
+        missile_list.Clear();
+    }
 
     // Update is called once per frame
     void Update()
     {
-        if(enemy_hp <= 0)
+        for (int i = missile_list.Count - 1; i >= 0; i--)
+        {
+            GameObject missile_object = missile_list[i];
+            if (missile_object == null)
+            {
+                // 투사체가 삭제되었을 경우 리스트에서 제거
+                missile_list.RemoveAt(i);
+            }
+        }
+
+        if (enemy_hp <= 0)
         {
             _enemy_object.SetActive(false);
-        }
-    }
-
-    IEnumerator SpawnBullet()
-    {
-        while (true)
-        {
-            yield return new WaitForSeconds(2.0f);
-
-            if (EnemySight.recognize == true)
-            {
-                Instantiate(bullet, transform.position + spawnBulletOffset, bullet.transform.rotation);
-            }
+            RemoveAll();
         }
     }
 
@@ -90,4 +130,6 @@ public class Enemy : MonoBehaviour
     {
         enemy_hp -= damage;
     }
+
+
 }
