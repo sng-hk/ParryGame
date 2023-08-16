@@ -12,6 +12,11 @@ public class SoundManager : MonoBehaviour
     public static int sound_value = 20;
 
     public AudioSource bgm;
+    public AudioSource[] sfx_player;
+    public AudioClip[] sfx_clip;
+    public enum sfx {dash, game_over};
+    int sfx_cousor = 0;
+    
 
     public void TextChanger(float value)
     {
@@ -39,5 +44,19 @@ public class SoundManager : MonoBehaviour
         
     }
 
+    public void SfxPlayer(sfx type)
+    {
+        switch (type)
+        {
+            case sfx.dash:
+                sfx_player[sfx_cousor].clip = sfx_clip[0];
+                break;
+            case sfx.game_over:
+                sfx_player[sfx_cousor].clip = sfx_clip[1];
+                break;
+        }
 
+        sfx_player[sfx_cousor].Play();
+        sfx_cousor = (sfx_cousor + 1) % sfx_player.Length;
+    }
 }

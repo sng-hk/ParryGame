@@ -74,6 +74,8 @@ public class PlayerController : MonoBehaviour
     private Vector3 dashDir;
     private float dashDistance = 6f;
 
+    public SoundManager sound_manager;
+
     private void Awake()
     {
         RB = GetComponent<Rigidbody2D>();
@@ -109,7 +111,8 @@ public class PlayerController : MonoBehaviour
         #region Dash
             if (Input.GetKeyDown(KeyCode.Space) && canDash)
             {
-                StartCoroutine(nameof(Dash));
+            sound_manager.SfxPlayer(SoundManager.sfx.dash);
+            StartCoroutine(nameof(Dash));
             }
             #endregion
 

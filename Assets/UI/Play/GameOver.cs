@@ -13,6 +13,7 @@ public class GameOver : MonoBehaviour
 
     public float player_heart_counter;
 
+    public SoundManager sound_manager;
     public void GameoverEnable()
     {
         //게임오버 화면 켜기.
@@ -41,7 +42,6 @@ public class GameOver : MonoBehaviour
         }
     }
 
-
     void Update()
     {
         player_heart_counter = PlayerController.instance.player_max_helth_point / 2;
@@ -50,6 +50,7 @@ public class GameOver : MonoBehaviour
         {
             Pause.PauseGame();
             GameoverEnable();
+
         }
 
         for (int i = 3; i < hearts.Length; i++)
@@ -63,8 +64,6 @@ public class GameOver : MonoBehaviour
 
         for (int i = 0; i < player_heart_counter; i++)
         {
-          
-
             if (i + 1 <= PlayerController.instance.player_helth_point / 2)
             {
                 hearts[i].fillAmount = 1;
