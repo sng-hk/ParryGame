@@ -67,6 +67,7 @@ public class Missile : Bullet
     {
         if (collision.gameObject.CompareTag("Shield") && this.target.name == "Body")
         {
+            sound_manager.SfxPlayer(SoundManager.sfx.parrying);
             Instantiate(parrySucceed, transform.position, Quaternion.identity);
             // target 만 Enemy 로 변경
             target = GameObject.FindGameObjectWithTag("Enemy").transform;
@@ -83,6 +84,8 @@ public class Missile : Bullet
             // 적 피격시 로직
             if (isReflect)
             {
+
+                sound_manager.SfxPlayer(SoundManager.sfx.attacked);
                 //Enemy에서 함수 가져와서 적용시키기
                 Enemy enemy_take_damage = collision.gameObject.GetComponent<Enemy>();
                 enemy_take_damage.TakeDamage(10);
@@ -94,6 +97,7 @@ public class Missile : Bullet
             // 플레이어 피격시 로직
             if (!isReflect)
             {
+                sound_manager.SfxPlayer(SoundManager.sfx.attacked);
                 PlayerController.instance.player_helth_point -= 1;
                 Destroy(gameObject);
             }

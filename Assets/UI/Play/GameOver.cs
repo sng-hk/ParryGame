@@ -16,6 +16,7 @@ public class GameOver : MonoBehaviour
     public SoundManager sound_manager;
     public void GameoverEnable()
     {
+        sound_manager.SfxPlayer(SoundManager.sfx.game_over);
         //게임오버 화면 켜기.
         _gameover_object.SetActive(true);
     }

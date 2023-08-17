@@ -8,6 +8,8 @@ public class KeyChecker : MonoBehaviour
     PlayerController _player;
     PlayerInventory _player_inventory;
 
+    public SoundManager sound_manager;
+
     private void Start()
     {
         coll = GetComponent<BoxCollider2D>();
@@ -44,6 +46,7 @@ public class KeyChecker : MonoBehaviour
             {
                 if (_player_inventory.NumberOfKeyItems >= 1)
                 {
+                    sound_manager.SfxPlayer(SoundManager.sfx.door_open);
                     Debug.Log("Door Open");
                     _player_inventory.KeyItemUsed();
                     transform.parent.gameObject.SetActive(false);

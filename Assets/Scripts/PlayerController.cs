@@ -210,6 +210,7 @@ public class PlayerController : MonoBehaviour
 
     void Jump()
     {
+        sound_manager.SfxPlayer(SoundManager.sfx.jump);
         RB.velocity = new Vector2(RB.velocity.x, 0f);
         RB.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         jumpTimer = 0f;

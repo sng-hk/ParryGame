@@ -14,7 +14,7 @@ public class SoundManager : MonoBehaviour
     public AudioSource bgm;
     public AudioSource[] sfx_player;
     public AudioClip[] sfx_clip;
-    public enum sfx {dash, game_over};
+    public enum sfx {dash, game_over, attacked, parrying, shot, get, jump, door_open, time_stop, page_up, shild_on};
     int sfx_cousor = 0;
     
 
@@ -53,6 +53,33 @@ public class SoundManager : MonoBehaviour
                 break;
             case sfx.game_over:
                 sfx_player[sfx_cousor].clip = sfx_clip[1];
+                break;
+            case sfx.shot:
+                sfx_player[sfx_cousor].clip = sfx_clip[2];
+                break;
+            case sfx.time_stop:
+                sfx_player[sfx_cousor].clip = sfx_clip[3];
+                break;
+            case sfx.shild_on:
+                sfx_player[sfx_cousor].clip = sfx_clip[4];
+                break;
+            case sfx.page_up:
+                sfx_player[sfx_cousor].clip = sfx_clip[5];
+                break;
+            case sfx.parrying:
+                sfx_player[sfx_cousor].clip = sfx_clip[6];
+                break;
+            case sfx.door_open:
+                sfx_player[sfx_cousor].clip = sfx_clip[7];
+                break;
+            case sfx.jump:
+                sfx_player[sfx_cousor].clip = sfx_clip[8];
+                break;
+            case sfx.get:
+                sfx_player[sfx_cousor].clip = sfx_clip[9];
+                break;
+            case sfx.attacked:
+                sfx_player[sfx_cousor].clip = sfx_clip[10];
                 break;
         }
 

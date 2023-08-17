@@ -20,8 +20,11 @@ public class Bullet : MonoBehaviour
     public int direction;
     public bool isReflect;
 
+    public SoundManager sound_manager;
+
     private void Awake()
     {
+        sound_manager = FindObjectOfType<SoundManager>();
         StartCoroutine(DestroyAfterSeconds());
     }
 

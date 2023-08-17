@@ -104,6 +104,7 @@ MonoBehaviour:
   bulletSr: {fileID: 0}
   direction: 0
   isReflect: 0
+  sound_manager: {fileID: 2470379303268738533, guid: ea1f77a1abc2190489c04243429266c5, type: 3}
 --- !u!70 &3343141980394933606
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

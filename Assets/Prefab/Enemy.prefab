@@ -292,7 +292,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b665f911946514409a3ee4758153805, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyHp: 100
+  _enemy_object: {fileID: 0}
+  enemy_hp: 0
+  sound_manager: {fileID: 2470379303268738533, guid: ea1f77a1abc2190489c04243429266c5, type: 3}
   bullet: {fileID: 3343141980394933602, guid: bb6a968f344b3de458ca5bae5d9de971, type: 3}
   spawnBulletOffset: {x: -2, y: -0.5, z: 0}
 --- !u!1 &2974909094457871701

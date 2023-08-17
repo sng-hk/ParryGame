@@ -21,6 +21,7 @@ public class Enemy : MonoBehaviour
 
     private bool isHurt = false;
 
+    public SoundManager sound_manager;
 
     public GameObject bullet;
     [SerializeField] Vector3 spawnBulletOffset;
@@ -51,6 +52,7 @@ public class Enemy : MonoBehaviour
 
     private void Awake()
     {
+        sound_manager = FindObjectOfType<SoundManager>();
     }
 
     public void Recognize()
@@ -79,6 +81,7 @@ public class Enemy : MonoBehaviour
         {
             if (EnemySight.recognize == true)
             {
+                sound_manager.SfxPlayer(SoundManager.sfx.shot);
                 GameObject missile_object = Instantiate(bullet, transform.position + spawnBulletOffset, bullet.transform.rotation);
                 Missile missile_script = missile_object.GetComponent<Missile>();
                 missile_script.MemoryShooter(this);

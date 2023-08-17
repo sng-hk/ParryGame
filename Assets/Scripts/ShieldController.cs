@@ -11,6 +11,8 @@ public class ShieldController : MonoBehaviour
 
     [SerializeField] private Animator animator;
 
+    public SoundManager sound_manager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +30,7 @@ public class ShieldController : MonoBehaviour
 
     IEnumerator ActivateShield()
     {
+        sound_manager.SfxPlayer(SoundManager.sfx.shild_on);
         isActiveShield = true;
         canActiveShield = false;
         transform.GetChild(0).gameObject.SetActive(true);

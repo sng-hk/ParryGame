@@ -312,6 +312,7 @@ MonoBehaviour:
   bulletSr: {fileID: 3343141980394933601}
   direction: 0
   isReflect: 0
+  sound_manager: {fileID: 2470379303268738533, guid: ea1f77a1abc2190489c04243429266c5, type: 3}
   parrySucceed: {fileID: 5625895889940678975, guid: b24ac2f502d6e7549b054e2f195869af, type: 3}
   target: {fileID: 0}
   _target_offset: {x: 0, y: 0.33}

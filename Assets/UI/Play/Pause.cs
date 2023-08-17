@@ -15,22 +15,26 @@ public class Pause : MonoBehaviour
 
     int sound_value;
 
+    public SoundManager sound_manager;
+
 
     public void PauseEnable()
     {
+        sound_manager.SfxPlayer(SoundManager.sfx.page_up);
         //일시정지 창 켜기.
         pause_object.SetActive(true);
     }
 
     public void PauseDisable()
     {
+        sound_manager.SfxPlayer(SoundManager.sfx.page_up);
         //일시정지 창 끄기.
         pause_object.SetActive(false);
     }
 
     void Start()
     {
-        PauseDisable();
+        //PauseDisable();
     }
 
     public static void PauseGame()
