@@ -7355,6 +7355,10 @@ PrefabInstance:
       propertyPath: sfx_clip.Array.data[10]
       value: 
       objectReference: {fileID: 8300000, guid: c54f2bb0abe54014684df4c68920a488, type: 3}
+    - target: {fileID: 2470379303556086595, guid: ea1f77a1abc2190489c04243429266c5, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: b3acf6381813795479fed60f3edab283, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea1f77a1abc2190489c04243429266c5, type: 3}
 --- !u!1001 &2981644487283402159

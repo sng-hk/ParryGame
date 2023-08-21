@@ -11,7 +11,6 @@ public class SceneLoad : MonoBehaviour
 
     private void Start()
     {
-        int sound_value_container = SoundManager.sound_value;
         Resources.UnloadUnusedAssets();
         StartCoroutine(LoadScene());
     }
@@ -19,7 +18,7 @@ public class SceneLoad : MonoBehaviour
     IEnumerator LoadScene()
     {
         yield return null;
-        AsyncOperation operation = SceneManager.LoadSceneAsync("SampleScene");
+        AsyncOperation operation = SceneManager.LoadSceneAsync(GoStage.loding_scene);
         operation.allowSceneActivation = false;
 
         while (!operation.isDone)

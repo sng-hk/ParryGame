@@ -43,13 +43,7 @@ public class MainMenu : MonoBehaviour
     public void ClickNewGameButton()
     {
         //New Game 버튼 클릭 시.
-        SceneManager.LoadScene("loading");
-    }
-
-    public void ClickContinueButton()
-    {
-        //continue 버튼 클릭 시.
-        //불러오기 기능
+        SceneManager.LoadScene("StageSelect");
     }
 
     public void ClickSettingButton()
