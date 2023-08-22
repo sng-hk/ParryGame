@@ -16,7 +16,7 @@ public class OneWayPlatformCheck : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {        
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             if (platformCollider != null)
@@ -27,12 +27,10 @@ public class OneWayPlatformCheck : MonoBehaviour
         {
             if (PlayerController.instance.transform.position.y <= gameObject.transform.position.y)
             {
-                Debug.Log(PlayerController.instance.transform.position.y + " :: " + gameObject.transform.position.y);
                 gameObject.layer = LayerMask.NameToLayer("Default");
             }
             else
-            {
-                Debug.Log("higher than player");
+            {                
                 gameObject.layer = LayerMask.NameToLayer("Ground");
             }
         }

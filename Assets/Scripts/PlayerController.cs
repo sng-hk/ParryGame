@@ -207,7 +207,7 @@ public class PlayerController : MonoBehaviour
         modifyPhysics();
         #endregion
     }
-
+    
     void Jump()
     {
         sound_manager.SfxPlayer(SoundManager.sfx.jump);
