@@ -12,11 +12,9 @@ public class FlyingEmeny : MonoBehaviour
 
     private List<GameObject> missile_list = new List<GameObject>();
 
-    private bool isHurt = false;
+    public SoundManager sound_manager;
 
-    //public SoundManager sound_manager;
-
-    public GameObject bullet;
+    public GameObject drops;
     [SerializeField] Vector3 spawnBulletOffset;
 
     public float speed; // speed of the platform
@@ -29,7 +27,7 @@ public class FlyingEmeny : MonoBehaviour
 
     private void Awake()
     {
-        //sound_manager = FindObjectOfType<SoundManager>();
+        sound_manager = FindObjectOfType<SoundManager>();
     }
     public void Recognize()
     {
@@ -52,16 +50,16 @@ public class FlyingEmeny : MonoBehaviour
         yield return new WaitForSeconds(1.0f);
         while (true)
         {
-            if (EnemySight.recognize == true)
+            if (FlyingEnemySight.recognize == true)
             {
-                //sound_manager.SfxPlayer(SoundManager.sfx.shot);
-                GameObject missile_object = Instantiate(bullet, transform.position + spawnBulletOffset, bullet.transform.rotation);
-                Missile missile_script = missile_object.GetComponent<Missile>();
-                //missile_script.MemoryShooter(this);
+                sound_manager.SfxPlayer(SoundManager.sfx.shot);
+                GameObject missile_object = Instantiate(drops, transform.position + spawnBulletOffset, drops.transform.rotation);
+                Drops missile_script = missile_object.GetComponent<Drops>();
+                missile_script.MemoryShooter(this);
                 missile_list.Add(missile_object);
                 yield return new WaitForSeconds(2.0f);
             }
-            else if (EnemySight.recognize == false)
+            else if (FlyingEnemySight.recognize == false)
             {
                 yield break;
             }
