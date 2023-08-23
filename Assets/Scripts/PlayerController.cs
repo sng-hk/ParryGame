@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private bool canDoubleJump;
 
     bool isFacingRight = true;
+    Vector2 start_pos;
 
     [Header("Physics")]
     public float linearDrag = 5f;
@@ -75,6 +76,7 @@ public class PlayerController : MonoBehaviour
     private float dashDistance = 6f;
 
     public SoundManager sound_manager;
+    private float respawn_delay;
 
     private void Awake()
     {
@@ -86,6 +88,8 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         tr.emitting = false;
+        start_pos = transform.position;
+        respawn_delay = 0.7f;
     }
 
     void Update()
@@ -196,7 +200,7 @@ public class PlayerController : MonoBehaviour
 
         #region Jump
         if (jumpTimer > Time.time && coyoteTimeCounter > 0f || doubleJump)
-        {
+        {            
             Jump();
             if (doubleJump)
             {
@@ -217,7 +221,7 @@ public class PlayerController : MonoBehaviour
         coyoteTimeCounter = 0f;
         Instantiate(jumpParticle, transform.position, Quaternion.identity);
         canDoubleJump = !canDoubleJump;
-    }
+    }   
 
     public void modifyPhysics()
     {
@@ -330,6 +334,16 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;
     }
+
+    public IEnumerator Respawn()
+    {
+        sr.enabled = false;
+        yield return new WaitForSeconds(respawn_delay);
+        player_helth_point = 6;
+        transform.position = start_pos;
+        sr.enabled = true;
+    }
+
 
     /*private void OnDrawGizmos()
     {

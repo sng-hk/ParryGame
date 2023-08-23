@@ -49,9 +49,9 @@ public class GameOver : MonoBehaviour
 
         if (PlayerController.instance.player_helth_point <= 0)
         {
-            Pause.PauseGame();
-            GameoverEnable();
-
+            /*Pause.PauseGame();
+            GameoverEnable();*/
+            PlayerController.instance.StartCoroutine("Respawn");
         }
 
         for (int i = 3; i < hearts.Length; i++)
