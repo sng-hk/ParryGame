@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
     public float fallMultiplier = 4f;
     [SerializeField] public float maxFallSpeed;
     private float jumpTimer;
-    private float coyoteTime = 0.3f;
+    private float coyoteTime = 5f;
     private float coyoteTimeCounter;
     [SerializeField] private int jumpCounter;
     [SerializeField] private bool doubleJump;

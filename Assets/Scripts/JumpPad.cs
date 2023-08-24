@@ -10,7 +10,16 @@ public class JumpPad : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * bounce, ForceMode2D.Impulse);               
+            Rigidbody2D player_rb = collision.gameObject.GetComponent<Rigidbody2D>();
+            if (Input.GetKey(KeyCode.X))
+            {
+                player_rb.AddForce(Vector2.up * (bounce - PlayerController.instance.jumpForce), ForceMode2D.Impulse);
+            }
+            else
+            {
+            player_rb.AddForce(Vector2.up * bounce, ForceMode2D.Impulse);
+            }
+                
         }
     }
 }
