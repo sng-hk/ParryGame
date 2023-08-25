@@ -6,6 +6,8 @@ using UnityEngine.Events;
 public class PlayerInventory : MonoBehaviour
 {
     public int NumberOfKeyItems { get; private set; }
+    public bool[] sequence_of_coin = { false, false, false };
+    public int number_of_coin = 0;
 
     public UnityEvent<PlayerInventory> OnKeyItemCollected;
 
@@ -18,5 +20,16 @@ public class PlayerInventory : MonoBehaviour
     public void KeyItemUsed()
     {
         NumberOfKeyItems--;
+    }
+
+    public void AddCoin(int x)
+    {
+        sequence_of_coin[x] = true;
+        number_of_coin++;
+    }
+
+    public bool[] ReturnCoin()
+    {
+        return sequence_of_coin;
     }
 }

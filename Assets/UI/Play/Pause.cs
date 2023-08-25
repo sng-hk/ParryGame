@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class Pause : MonoBehaviour
 {
+    public Image[] coins;
     public static float GameStop = 1;
 
     [SerializeField]
@@ -14,9 +15,12 @@ public class Pause : MonoBehaviour
     public Text pause_sound_value_text;
 
     int sound_value;
+    public bool[] coin = { false, false, false };
 
     public SoundManager sound_manager;
 
+
+    public PlayerInventory player_inventory;
 
     public void PauseEnable()
     {
@@ -67,6 +71,19 @@ public class Pause : MonoBehaviour
             {
                 PauseGame();
                 PauseEnable();
+            }
+        }
+
+        coin = player_inventory.ReturnCoin();
+        for (int i = 0; i<3; i++)
+        {
+            if (coin[i] == true)
+            {
+                coins[i].enabled = true;
+            }
+            else
+            {
+                coins[i].enabled = false;
             }
         }
     }
