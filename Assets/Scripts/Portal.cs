@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Portal : MonoBehaviour
 {
-    public static PlayerController instance { get; set; }
-
     public bool player_in;
     public GameObject exit_portal;
 
