@@ -57,10 +57,10 @@ public class KeyChecker : MonoBehaviour
                 }
             }
         }
-        else
+        /*else
         {
             Debug.Log("null exception or collision is not player");
-        }
+        }*/
     }
 
 }
