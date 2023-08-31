@@ -29,10 +29,12 @@ public class FlyingEmeny : MonoBehaviour
     {
         sound_manager = FindObjectOfType<SoundManager>();
     }
+
     public void Recognize()
     {
         StartCoroutine(SpawnBullet());
     }
+
     public void UnRecognize()
     {
         StopCoroutine(SpawnBullet());
