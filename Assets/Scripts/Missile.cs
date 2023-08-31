@@ -69,11 +69,11 @@ public class Missile : Bullet
         {
             sound_manager.SfxPlayer(SoundManager.sfx.parrying);
             Instantiate(parrySucceed, transform.position, Quaternion.identity);
-            // target 만 Enemy 로 변경
+            // target 을 Enemy 로 변경
             target = GameObject.FindGameObjectWithTag("Enemy").transform;
             bulletSr.color = afterReflectColor;
             isReflect = true;
-            StartCoroutine(nameof(TimeFreeze), 0.7f);
+            StartCoroutine(nameof(TimeFreeze), 0.3f);
         }
         else if (collision.gameObject.CompareTag("NonHomingZone"))
         {
