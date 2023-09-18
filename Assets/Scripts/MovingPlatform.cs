@@ -10,16 +10,17 @@ public class MovingPlatform : MonoBehaviour
 
     [SerializeField] private int i; // index of the array
     [SerializeField] private int id;
+    [SerializeField] private Vector3 offset;
     void Start()
     {
-        transform.position = points[startingPoint].position; // setting the position of the platform to
-        // the position of one of the points using index "startingPoint"
+        transform.position = points[startingPoint].position + offset; // setting the position of the platform to
+        // the position of one of the points using index "startingPoint"        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Vector2.Distance(transform.position, points[i].position) < 0.02f) // check if the platform was on the olast point after the increase
+        if (Vector2.Distance(transform.position, points[i].position + offset) < 0.02f) // check if the platform was on the olast point after the increase
         {
             i++;
             if (i == points.Length)
@@ -29,7 +30,7 @@ public class MovingPlatform : MonoBehaviour
         }
 
         // moving the platform to the point position with the index "i"
-        transform.position = Vector2.MoveTowards(transform.position, points[i].position, speed * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, points[i].position + offset, speed * Time.deltaTime);
         /*transform.position = Vector3.Lerp();*/
         /*t = t * t * t * (t * (6f * t - 15f) + 10f);*/
     }
