@@ -216,6 +216,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 0
+<<<<<<< Updated upstream
       m_TileSpriteIndex: 0
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
@@ -226,6 +227,8 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 0
+=======
+>>>>>>> Stashed changes
       m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
@@ -234,6 +237,7 @@ Tilemap:
       m_AllTileFlags: 1073741826
   m_AnimatedTiles: {}
   m_TileAssetArray:
+<<<<<<< Updated upstream
   - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: 51cb46d7ef805a54eb26875e1858eb3f, type: 2}
   m_TileSpriteArray:
@@ -243,6 +247,17 @@ Tilemap:
     m_Data: {fileID: 1906709563, guid: 7a1f713f3310edf43a07989e54739d86, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 2
+=======
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 51cb46d7ef805a54eb26875e1858eb3f, type: 2}
+  m_TileSpriteArray:
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -548830954, guid: 7a1f713f3310edf43a07989e54739d86, type: 3}
+  m_TileMatrixArray:
+  - m_RefCount: 1
+>>>>>>> Stashed changes
     m_Data:
       e00: 1
       e01: 0
@@ -261,13 +276,22 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
+<<<<<<< Updated upstream
   - m_RefCount: 2
+=======
+  - m_RefCount: 1
+>>>>>>> Stashed changes
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+<<<<<<< Updated upstream
   m_Origin: {x: -1, y: 0, z: 0}
   m_Size: {x: 2, y: 1, z: 1}
+=======
+  m_Origin: {x: -1, y: -1, z: 0}
+  m_Size: {x: 1, y: 2, z: 1}
+>>>>>>> Stashed changes
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -343,6 +367,7 @@ CompositeCollider2D:
   m_EdgeRadius: 0
   m_ColliderPaths:
   - m_Collider: {fileID: -201377880900312006}
+<<<<<<< Updated upstream
     m_ColliderPaths:
     - - X: 0
         Y: 1875000
@@ -356,6 +381,9 @@ CompositeCollider2D:
         Y: 1250000
       - X: -1875000
         Y: 1250000
+=======
+    m_ColliderPaths: []
+>>>>>>> Stashed changes
   m_CompositePaths:
     m_Paths:
     - - {x: -0.1875042, y: 0.125}
@@ -366,7 +394,11 @@ CompositeCollider2D:
       - {x: -0.93748343, y: 0.125}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
+<<<<<<< Updated upstream
 --- !u!114 &7120099997179379928
+=======
+--- !u!114 &2010963202680530708
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
