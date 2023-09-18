@@ -7,17 +7,51 @@ public class KeyChecker : MonoBehaviour
     BoxCollider2D coll;
     PlayerController _player;
     PlayerInventory _player_inventory;
-
+    
+    private GameObject KeyCheckerWall;
     public SoundManager sound_manager;
+
+    [SerializeField] private Transform startPosition;
+    [SerializeField] private Transform endPosition;
+
+    private bool wallUnLock = false;
+    private float currentTime = 0;
+    [SerializeField] private float lerpTime = 0.5f;
 
     private void Start()
     {
         coll = GetComponent<BoxCollider2D>();
+        KeyCheckerWall = transform.parent.gameObject;        
     }
 
     private void Update()
     {
+        if (!wallUnLock)
+            return;
+        currentTime += Time.deltaTime;
+        if(currentTime >= lerpTime)
+        {
+            currentTime = lerpTime;
+        }
 
+        float t = currentTime / lerpTime;
+
+        KeyCheckerWall.transform.position = Vector3.Lerp(startPosition.position, endPosition.position, t);
+    }
+
+    private void MoveWall()
+    {
+        StartCoroutine(MoveWallDelay());        
+    }
+
+    IEnumerator MoveWallDelay()
+    {
+        _player_inventory.KeyItemUsed();
+        yield return new WaitForSeconds(0.7f);
+        wallUnLock = true;
+        yield return new WaitForSeconds(0.7f);
+        /*transform.parent.gameObject.SetActive(false);*/
+        Destroy(transform.parent);
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -44,12 +78,11 @@ public class KeyChecker : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.F))
             {
-                if (_player_inventory.NumberOfKeyItems >= 1)
+                if (_player_inventory.NumberOfKeyItems >= 0)
                 {
-                    sound_manager.SfxPlayer(SoundManager.sfx.door_open);
+                    /*sound_manager.SfxPlayer(SoundManager.sfx.door_open);*/
                     Debug.Log("Door Open");
-                    _player_inventory.KeyItemUsed();
-                    transform.parent.gameObject.SetActive(false);
+                    MoveWall();                    
                 }
                 else
                 {
