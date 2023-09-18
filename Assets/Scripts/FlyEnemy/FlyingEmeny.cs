@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class FlyingEmeny : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject _enemy_object;
-
     [Header("EnemyUI")]
     public int enemy_hp;
 
@@ -80,6 +77,8 @@ public class FlyingEmeny : MonoBehaviour
             }
         }
         missile_list.Clear();
+
+        Destroy(gameObject);
     }
 
     void Update()
@@ -108,7 +107,6 @@ public class FlyingEmeny : MonoBehaviour
 
         if (enemy_hp <= 0)
         {
-            _enemy_object.SetActive(false);
             RemoveAll();
         }
     }

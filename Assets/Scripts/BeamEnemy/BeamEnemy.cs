@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class BeamEnemy : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject _enemy_object;
-
     [Header("EnemyUI")]
     public int enemy_hp;
 
@@ -58,6 +55,8 @@ public class BeamEnemy : MonoBehaviour
             }
         }
         missile_list.Clear();
+
+        Destroy(gameObject);
     }
 
     IEnumerator FireBeam()
@@ -113,7 +112,6 @@ public class BeamEnemy : MonoBehaviour
 
         if (enemy_hp <= 0)
         {
-            _enemy_object.SetActive(false);
             RemoveAll();
         }
     }
