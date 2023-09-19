@@ -14,7 +14,7 @@ public class MovingPlatform : MonoBehaviour
     void Start()
     {
         transform.position = points[startingPoint].position + offset; // setting the position of the platform to
-        // the position of one of the points using index "startingPoint"        
+        // the position of one of the points using index "startingPoint"        s
     }
 
     // Update is called once per frame

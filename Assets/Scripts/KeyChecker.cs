@@ -8,20 +8,21 @@ public class KeyChecker : MonoBehaviour
     PlayerController _player;
     PlayerInventory _player_inventory;
     
-    private GameObject KeyCheckerWall;
+    [SerializeField] private Transform KeyCheckerWall;
     public SoundManager sound_manager;
 
-    [SerializeField] private Transform startPosition;
-    [SerializeField] private Transform endPosition;
+    [Header("시작점 끝점 지정: 빨간점(startPoint) -> 초록점(endPoint)")]
+    [SerializeField] private Transform startPoint;
+    [SerializeField] private Transform endPoint;
 
     private bool wallUnLock = false;
     private float currentTime = 0;
-    [SerializeField] private float lerpTime = 0.5f;
+    [SerializeField] private float doorOpenDuration = 5f;
 
     private void Start()
     {
         coll = GetComponent<BoxCollider2D>();
-        KeyCheckerWall = transform.parent.gameObject;        
+        KeyCheckerWall = transform.parent.GetChild(0);
     }
 
     private void Update()
@@ -29,14 +30,16 @@ public class KeyChecker : MonoBehaviour
         if (!wallUnLock)
             return;
         currentTime += Time.deltaTime;
-        if(currentTime >= lerpTime)
+        if(currentTime >= doorOpenDuration)
         {
-            currentTime = lerpTime;
+            currentTime = doorOpenDuration;
         }
 
-        float t = currentTime / lerpTime;
+        float t = currentTime / doorOpenDuration;
 
-        KeyCheckerWall.transform.position = Vector3.Lerp(startPosition.position, endPosition.position, t);
+        /*KeyCheckerWall.transform.position += Vector3.right * t;*/
+
+        KeyCheckerWall.position = Vector3.Lerp(startPoint.position, endPoint.position, t);
     }
 
     private void MoveWall()
@@ -47,11 +50,11 @@ public class KeyChecker : MonoBehaviour
     IEnumerator MoveWallDelay()
     {
         _player_inventory.KeyItemUsed();
-        yield return new WaitForSeconds(0.7f);
+        yield return new WaitForSeconds(1.5f);
         wallUnLock = true;
-        yield return new WaitForSeconds(0.7f);
-        /*transform.parent.gameObject.SetActive(false);*/
-        Destroy(transform.parent);
+        yield return new WaitForSeconds(doorOpenDuration);
+        transform.parent.gameObject.SetActive(false);
+        /*Destroy(transform.parent);*/
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -78,7 +81,7 @@ public class KeyChecker : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.F))
             {
-                if (_player_inventory.NumberOfKeyItems >= 0)
+                if (_player_inventory.NumberOfKeyItems >= 1)
                 {
                     /*sound_manager.SfxPlayer(SoundManager.sfx.door_open);*/
                     Debug.Log("Door Open");
