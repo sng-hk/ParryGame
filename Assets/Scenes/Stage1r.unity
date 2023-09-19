@@ -17821,5 +17821,41 @@ PrefabInstance:
       propertyPath: sound_value_text
       value: 
       objectReference: {fileID: 346220846}
+    - target: {fileID: 2470379303268738533, guid: ea1f77a1abc2190489c04243429266c5, type: 3}
+      propertyPath: sfx_clip.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1baa41f90fd5c3d449b240995c38e625, type: 3}
+    - target: {fileID: 2470379303268738533, guid: ea1f77a1abc2190489c04243429266c5, type: 3}
+      propertyPath: sfx_clip.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6f5a8f36b8c7ff6428fb98df28fa48dc, type: 3}
+    - target: {fileID: 2470379303268738533, guid: ea1f77a1abc2190489c04243429266c5, type: 3}
+      propertyPath: sfx_clip.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 03be1454b4c04d84dafe4f381b20a89d, type: 3}
+    - target: {fileID: 2470379303268738533, guid: ea1f77a1abc2190489c04243429266c5, type: 3}
+      propertyPath: sfx_clip.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: 81bf21d85148bba48850b70cf6c52261, type: 3}
+    - target: {fileID: 2470379303268738533, guid: ea1f77a1abc2190489c04243429266c5, type: 3}
+      propertyPath: sfx_clip.Array.data[6]
+      value: 
+      objectReference: {fileID: 8300000, guid: c7b6c8f0b7492054dbe222cb2ccef21e, type: 3}
+    - target: {fileID: 2470379303268738533, guid: ea1f77a1abc2190489c04243429266c5, type: 3}
+      propertyPath: sfx_clip.Array.data[7]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3b892ca9009e20242baa4070ba232292, type: 3}
+    - target: {fileID: 2470379303268738533, guid: ea1f77a1abc2190489c04243429266c5, type: 3}
+      propertyPath: sfx_clip.Array.data[8]
+      value: 
+      objectReference: {fileID: 8300000, guid: 9d3171d7b3203ea46941e101926d9fb7, type: 3}
+    - target: {fileID: 2470379303268738533, guid: ea1f77a1abc2190489c04243429266c5, type: 3}
+      propertyPath: sfx_clip.Array.data[9]
+      value: 
+      objectReference: {fileID: 8300000, guid: 9c2d2046a4cf16d49b17657ea9766182, type: 3}
+    - target: {fileID: 2470379303268738533, guid: ea1f77a1abc2190489c04243429266c5, type: 3}
+      propertyPath: sfx_clip.Array.data[10]
+      value: 
+      objectReference: {fileID: 8300000, guid: e84fc9e6dc2537d47ada8790dc19fc3c, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea1f77a1abc2190489c04243429266c5, type: 3}
