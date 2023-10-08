@@ -34,11 +34,12 @@ public class GoStage : MonoBehaviour
 
     public void ClickStage1Button()
     {
-        loding_scene = "Stage1";
+        loding_scene = "Stage1r";
         SceneManager.LoadScene("loading");
     }
     public void ClickStage2Button()
     {
+        loding_scene = "Stage2r";
         SceneManager.LoadScene("loading");
     }
 }
