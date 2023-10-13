@@ -182,11 +182,11 @@ GameObject:
   - component: {fileID: 1877976534739777635}
   - component: {fileID: 1877976534739777639}
   - component: {fileID: 1877976534739777633}
-  - component: {fileID: 1877976534739777634}
   - component: {fileID: 1877976534739777632}
   - component: {fileID: 615278719}
   - component: {fileID: 3802144751257493783}
   - component: {fileID: 903489490}
+  - component: {fileID: 3510808675015432040}
   m_Layer: 8
   m_Name: Body
   m_TagString: Player
@@ -275,11 +275,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c21807b174033f4f80596026a1d714d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player_max_helth_point: 6
+  player_helth_point: 6
   maxSpeed: 6
   lerpAmount: 0.5
   jumpDelay: 0.25
   jumpForce: 12
-  fallMultiplier: 3.5
+  fallMultiplier: 2.3
   maxFallSpeed: -10
   jumpCounter: 0
   doubleJump: 0
@@ -305,6 +307,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   tr: {fileID: 615278719}
+  sound_manager: {fileID: 0}
 --- !u!114 &1877976534739777639
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -338,32 +341,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &1877976534739777634
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1877976534739777646}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.00067554414, y: 0.19990924}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0}
-    oldSize: {x: 0.2, y: 0.3875}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.21215966, y: 0.40517956}
-  m_EdgeRadius: 0
 --- !u!95 &1877976534739777632
 Animator:
   serializedVersion: 5
@@ -506,6 +483,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1680858165}
+  sound_manager: {fileID: 0}
 --- !u!114 &903489490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -518,6 +496,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21361ac2a2cdd434294c95aebbb4f013, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sequence_of_coin: 000000
+  number_of_coin: 0
   OnKeyItemCollected:
     m_PersistentCalls:
       m_Calls:
@@ -533,6 +513,22 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!70 &3510808675015432040
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1877976534739777646}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0059394836, y: 0.20601606}
+  m_Size: {x: 0.218647, y: 0.40821934}
+  m_Direction: 0
 --- !u!1 &7047448677426862812
 GameObject:
   m_ObjectHideFlags: 0

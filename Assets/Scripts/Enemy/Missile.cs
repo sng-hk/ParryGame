@@ -12,6 +12,7 @@ public class Missile : Bullet
 
     public float rotateSpeed = 200f;
     private bool inHomingZone = false;
+    public float speed_afterParry = 10.0f;
 
     private Enemy shooter;
     Vector3 shooter_position;
@@ -70,6 +71,7 @@ public class Missile : Bullet
             sound_manager.SfxPlayer(SoundManager.sfx.parrying);
             Instantiate(parrySucceed, transform.position, Quaternion.identity);
             // target 을 Enemy 로 변경
+            speed *= 2;
             target = GameObject.FindGameObjectWithTag("Enemy").transform;
             bulletSr.color = afterReflectColor;
             isReflect = true;
@@ -84,7 +86,6 @@ public class Missile : Bullet
             // 적 피격시 로직
             if (isReflect)
             {
-
                 sound_manager.SfxPlayer(SoundManager.sfx.attacked);
                 //Enemy에서 함수 가져와서 적용시키기
                 Enemy enemy_take_damage = collision.gameObject.GetComponent<Enemy>();

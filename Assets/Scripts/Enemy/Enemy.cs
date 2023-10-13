@@ -17,12 +17,12 @@ public class Enemy : MonoBehaviour
     private List<GameObject> missile_list = new List<GameObject>();
 
     private bool isHurt = false;
-    public bool isFacingRight = true;
+    public int isFacingRight = 1;
 
     public SoundManager sound_manager;
 
     public GameObject bullet;
-    [SerializeField] Vector3 spawnBulletOffset;
+    float bulletspawnDistance = 1;
 
     public void EnemyHurt()
     {
@@ -80,7 +80,10 @@ public class Enemy : MonoBehaviour
             if (EnemySight.recognize == true)
             {
                 sound_manager.SfxPlayer(SoundManager.sfx.shot);
-                GameObject missile_object = Instantiate(bullet, transform.position + spawnBulletOffset, bullet.transform.rotation);
+                // 플레이어, 적 사이를 잇는 직선상에서 적과 일정범위 떨어진 곳에 투사체 생성 bulletspawnDistance 값을 조정하여
+                // 적과 어느정도 떨어진 거리에서 투사체를 생성할 건지 결정
+                Vector3 instantiatePosition = Vector3.Normalize(PlayerController.instance.transform.position - transform.position);
+                GameObject missile_object = Instantiate(bullet, transform.position + instantiatePosition * bulletspawnDistance, Quaternion.Euler(instantiatePosition));
                 Missile missile_script = missile_object.GetComponent<Missile>();
                 missile_script.MemoryShooter(this);
                 missile_list.Add(missile_object);

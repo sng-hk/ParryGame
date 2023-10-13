@@ -5,7 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     [Header("Speed")]
-    public float speed = 5.0f;
+    public float speed = 5.0f;    
 
     [Header("Color")]
     public Color defaultColor = new Color(1.0f, 0f, 0f, 1f);
@@ -49,7 +49,7 @@ public class Bullet : MonoBehaviour
             Debug.Log("sheild parry");
             // 추가 수정사항: 적 자동 추적
             direction *= -1;
-            speed *= 2;
+            speed *= 4;
             bulletSr.color = afterReflectColor;
             isReflect = true;
 

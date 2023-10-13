@@ -10,6 +10,7 @@ public class ShieldController : MonoBehaviour
     private float ShieldCoolDown = 0.1f;
 
     [SerializeField] private Animator animator;
+    [SerializeField] private Animator playerAnimator;
 
     public SoundManager sound_manager;
 
@@ -33,10 +34,15 @@ public class ShieldController : MonoBehaviour
         sound_manager.SfxPlayer(SoundManager.sfx.shild_on);
         isActiveShield = true;
         canActiveShield = false;
+
+
+
         transform.GetChild(0).gameObject.SetActive(true);
-        animator.SetBool("isActive", true);
+        /*animator.SetBool("isActive", true);*/
+        playerAnimator.SetBool("isActiveShield",true);
         yield return new WaitForSeconds(ShieldActiveTimer);
-        animator.SetBool("isActive", false);
+        /*animator.SetBool("isActive", false);*/
+        playerAnimator.SetBool("isActiveShield",false);
         transform.GetChild(0).gameObject.SetActive(false);
         isActiveShield = false;
         yield return new WaitForSeconds(ShieldCoolDown);

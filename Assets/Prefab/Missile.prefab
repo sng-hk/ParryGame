@@ -306,7 +306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cec110eec7b7c2469135ffe5921a8e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 12
+  speed: 4
   defaultColor: {r: 0.9339623, g: 0.6740388, b: 0.8206708, a: 1}
   afterReflectColor: {r: 0, g: 1, b: 0, a: 1}
   bulletSr: {fileID: 3343141980394933601}
