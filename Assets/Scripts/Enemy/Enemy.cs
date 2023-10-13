@@ -17,6 +17,7 @@ public class Enemy : MonoBehaviour
     private List<GameObject> missile_list = new List<GameObject>();
 
     private bool isHurt = false;
+    public bool isFacingRight = true;
 
     public SoundManager sound_manager;
 
@@ -125,6 +126,8 @@ public class Enemy : MonoBehaviour
         {
             RemoveAll();
         }
+
+
     }
 
     public void TakeDamage(int damage)

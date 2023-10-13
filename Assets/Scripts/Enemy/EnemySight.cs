@@ -28,6 +28,21 @@ public class EnemySight : MonoBehaviour
         }
     }
 
+    /*private void OnTriggerStay2D(Collider2D collision)
+    {
+        if(collision.gameObject.CompareTag("Player"))
+        {
+            if(collision.transform.position.x > parent_script.transform.position.x)
+            {
+                parent_script.isFacingRight = true;
+            }
+            else
+            {
+                parent_script.isFacingRight = false;
+            }
+        }
+    }*/
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
