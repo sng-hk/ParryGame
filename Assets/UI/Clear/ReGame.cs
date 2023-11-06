@@ -4,14 +4,15 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class GoTitle : MonoBehaviour
+public class ReGame : MonoBehaviour
 {
-
-    public void ClickGoTitle()
+    public void ClickReGame()
     {
-        SceneManager.LoadScene("title");
+        GoStage.loding_scene = SceneManager.GetActiveScene().name;
+        
         Pause.ResumeGame();
         PlayerController.instance.player_helth_point = PlayerController.instance.player_max_helth_point;
         Resources.UnloadUnusedAssets();
+        SceneManager.LoadScene("loading");
     }
 }

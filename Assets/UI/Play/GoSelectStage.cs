@@ -4,12 +4,11 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class GoTitle : MonoBehaviour
+public class GoSelectStage : MonoBehaviour
 {
-
-    public void ClickGoTitle()
+    public void ClickSelectStage()
     {
-        SceneManager.LoadScene("title");
+        SceneManager.LoadScene("StageSelect");
         Pause.ResumeGame();
         PlayerController.instance.player_helth_point = PlayerController.instance.player_max_helth_point;
         Resources.UnloadUnusedAssets();
