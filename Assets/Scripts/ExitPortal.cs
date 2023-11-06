@@ -16,7 +16,8 @@ public class ExitPortal : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ClearDisable();
+        Pause.ResumeGame();
+        clear_object.SetActive(false);
     }
 
     // Update is called once per frame
@@ -27,10 +28,6 @@ public class ExitPortal : MonoBehaviour
             ClearEnable();
             clear_object.SetActive(true);
         }
-        else
-        {
-            ClearDisable();
-        }
     }
 
     public void ClearEnable()
@@ -40,13 +37,6 @@ public class ExitPortal : MonoBehaviour
         sound_manager.SfxPlayer(SoundManager.sfx.page_up);
         //클리어 창 켜기.
         clear_object.SetActive(true);
-    }
-
-    public void ClearDisable()
-    {
-        Pause.ResumeGame();
-        //클리어 창 끄기.
-        clear_object.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
