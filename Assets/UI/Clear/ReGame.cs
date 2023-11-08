@@ -8,7 +8,8 @@ public class ReGame : MonoBehaviour
 {
     public void ClickReGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        GoStage.loding_scene = SceneManager.GetActiveScene().name;
+        SceneManager.LoadScene("loading");
         Pause.ResumeGame();
         PlayerController.instance.player_helth_point = PlayerController.instance.player_max_helth_point;
         Resources.UnloadUnusedAssets();

@@ -94,7 +94,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    private void RemoveAll()
+    public void RemoveAll()
     {
         // 적이 비활성화될 때 자신이 쏜 모든 총알을 삭제
         foreach (GameObject missile_object in missile_list)
@@ -130,9 +130,14 @@ public class Enemy : MonoBehaviour
 
     }
 
-    public void TakeDamage(int damage)
+    public virtual void TakeDamage(int damage)
     {
         enemy_hp -= damage;
+        if(enemy_hp <= 0)
+        {
+            RemoveAll();
+            Destroy(gameObject);
+        }
     }
 
 
