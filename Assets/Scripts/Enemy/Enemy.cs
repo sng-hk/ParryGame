@@ -60,6 +60,8 @@ public class Enemy : MonoBehaviour
     public void UnRecognize()
     {
         StopCoroutine(SpawnBullet());
+        //이거땜에 지금 시야 나가면 다 사라짐.
+        RemoveAll();
     }
 
     // Start is called before the first frame update
@@ -105,8 +107,6 @@ public class Enemy : MonoBehaviour
             }
         }
         missile_list.Clear();
-
-        Destroy(gameObject);
     }
 
     // Update is called once per frame

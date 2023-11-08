@@ -6,9 +6,6 @@ using UnityEngine.UI;
 
 public class ReGame : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject clear_object;
-
     public void ClickReGame()
     {
         Pause.ResumeGame();

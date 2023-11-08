@@ -6,9 +6,6 @@ using UnityEngine.UI;
 
 public class GoSelectStage : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject clear_object;
-
     public void ClickSelectStage()
     {
         Pause.ResumeGame();

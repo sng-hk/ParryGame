@@ -7,10 +7,32 @@ public class Boss : Enemy
     [SerializeField]
     private GameObject exit_door;
 
+    [SerializeField]
+    private GameObject Boss_object;
+
+    public string boss_names;
+
+    private void Awake()
+    {
+        boss_names = "skelton";
+        enemy_hp = 100;
+    }
     // Start is called before the first frame update
     void Start()
     {
-        enemy_hp = 100;
+
+    }
+
+    void Update()
+    {
+        if(EnemySight.recognize == true)
+        {
+            Boss_object.SetActive(true);
+        }
+        else if(EnemySight.recognize == false || enemy_hp <= 0)
+        {
+            Boss_object.SetActive(false);
+        }
     }
 
     public override void TakeDamage(int damage)
@@ -21,7 +43,9 @@ public class Boss : Enemy
         {
             RemoveAll();
             exit_door.SetActive(true);
+            Boss_object.SetActive(false);
             Destroy(gameObject);
         }
     }
+
 }
