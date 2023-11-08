@@ -6,11 +6,13 @@ using UnityEngine.UI;
 
 public class ReGame : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject clear_object;
+
     public void ClickReGame()
     {
-        GoStage.loding_scene = SceneManager.GetActiveScene().name;
-        SceneManager.LoadScene("loading");
         Pause.ResumeGame();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         PlayerController.instance.player_helth_point = PlayerController.instance.player_max_helth_point;
         Resources.UnloadUnusedAssets();
 

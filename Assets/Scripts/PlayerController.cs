@@ -80,6 +80,7 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
+        Pause.ResumeGame();
         RB = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
         instance = this;
