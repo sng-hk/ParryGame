@@ -60,7 +60,7 @@ public class Enemy : MonoBehaviour
     public void UnRecognize()
     {
         StopCoroutine(SpawnBullet());
-        //이거땜에 지금 시야 나가면 다 사라짐.
+        //지금 이거땜에 시야 나가면 다 사라짐.
         RemoveAll();
     }
 
