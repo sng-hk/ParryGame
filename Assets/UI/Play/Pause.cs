@@ -38,6 +38,7 @@ public class Pause : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = 1;
         //PauseDisable();
     }
 
@@ -61,6 +62,7 @@ public class Pause : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(GameStop);
         if (Input.GetKeyDown(KeyCode.Escape)){
             if (GameStop == 0)
             {

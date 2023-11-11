@@ -42,11 +42,13 @@ public class BeamEnemy : MonoBehaviour
         recognize = false;
         StopCoroutine(FireBeam());
         Debug.Log("stop");
+        //지금 이거땜에 시야 나가면 다 사라짐.
+        RemoveAll();
     }
 
     private void RemoveAll()
     {
-        // 적이 비활성화될 때 자신이 쏜 모든 총알을 삭제
+        //자신이 쏜 모든 총알을 삭제
         foreach (GameObject missile_object in missile_list)
         {
             if (missile_object != null)
@@ -55,8 +57,6 @@ public class BeamEnemy : MonoBehaviour
             }
         }
         missile_list.Clear();
-
-        Destroy(gameObject);
     }
 
     IEnumerator FireBeam()

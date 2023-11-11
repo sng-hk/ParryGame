@@ -42,4 +42,9 @@ public class GoStage : MonoBehaviour
         loding_scene = "Stage2r";
         SceneManager.LoadScene("loading");
     }
+    public void ClickStage3Button()
+    {
+        loding_scene = "Stage3r";
+        SceneManager.LoadScene("loading");
+    }
 }

@@ -11,8 +11,10 @@ public class SceneLoad : MonoBehaviour
 
     private void Start()
     {
+        Pause.ResumeGame();
         Resources.UnloadUnusedAssets();
         StartCoroutine(LoadScene());
+        Debug.Log(GoStage.loding_scene);
     }
 
     IEnumerator LoadScene()
@@ -27,8 +29,11 @@ public class SceneLoad : MonoBehaviour
 
             if(progressbar.value < 0.9f)
             {
+                Debug.Log("Working2");
+                Debug.Log(Time.timeScale);
                 progressbar.value = Mathf.MoveTowards(progressbar.value, 0.9f, Time.deltaTime);
             }else if(operation.progress >= 0.9f) {
+                Debug.Log("Working3");
                 progressbar.value = Mathf.MoveTowards(progressbar.value, 1f, Time.deltaTime);
             }
 
