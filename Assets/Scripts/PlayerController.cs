@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public static PlayerController instance { get; set; }
+    /*ShieldController shield;*/
 
     [Header("HP")]
     public float player_max_helth_point = 6;
@@ -91,6 +92,7 @@ public class PlayerController : MonoBehaviour
         tr.emitting = false;
         start_pos = transform.position;
         respawn_delay = 0.7f;
+        /*shield = GetComponent<ShieldController>();*/
     }
 
     void Update()
@@ -149,7 +151,7 @@ public class PlayerController : MonoBehaviour
         #region Animator
             animator.SetFloat("HorizontalInput", Mathf.Abs(moveInput.x));
             animator.SetFloat("VerticalVel", RB.velocity.y);
-            animator.SetBool("OnGround", onGround);
+            animator.SetBool("OnGround", onGround);            
             #endregion
 
     }

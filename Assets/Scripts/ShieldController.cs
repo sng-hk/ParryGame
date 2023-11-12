@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ShieldController : MonoBehaviour
 {
-    private bool isActiveShield = false;
+    public bool isActiveShield = false;
     private bool canActiveShield = true;
     private float ShieldActiveTimer = 0.2f;
     private float ShieldCoolDown = 0.1f;
@@ -25,27 +25,29 @@ public class ShieldController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.C) && canActiveShield)
         {
-            StartCoroutine(nameof(ActivateShield));
+            /*StartCoroutine(nameof(ActivateShield));*/
+            ActivateShield();
         }
     }
 
-    IEnumerator ActivateShield()
+    void ActivateShield()
     {
         sound_manager.SfxPlayer(SoundManager.sfx.shild_on);
         isActiveShield = true;
         canActiveShield = false;
-
-
-
         transform.GetChild(0).gameObject.SetActive(true);
         /*animator.SetBool("isActive", true);*/
-        playerAnimator.SetBool("isActiveShield",true);
-        yield return new WaitForSeconds(ShieldActiveTimer);
-        /*animator.SetBool("isActive", false);*/
-        playerAnimator.SetBool("isActiveShield",false);
+        playerAnimator.Play("ParryAnim");
+    }
+
+    void EnableShield()
+    {
+        playerAnimator.SetBool("isActiveShield", false);
         transform.GetChild(0).gameObject.SetActive(false);
         isActiveShield = false;
-        yield return new WaitForSeconds(ShieldCoolDown);
         canActiveShield = true;
     }
+
+
+
 }
