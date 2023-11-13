@@ -469,7 +469,7 @@ TrailRenderer:
     generateLightingData: 0
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
-  m_Emitting: 1
+  m_Emitting: 0
 --- !u!114 &3802144751257493783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -482,7 +482,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2cc8f22e8315f646ac8b3bf2027da46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isActiveShield: 0
   animator: {fileID: 1680858165}
+  playerAnimator: {fileID: 0}
   sound_manager: {fileID: 0}
 --- !u!114 &903489490
 MonoBehaviour:
