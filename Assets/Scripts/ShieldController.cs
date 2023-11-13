@@ -42,26 +42,6 @@ public class ShieldController : MonoBehaviour
         transform.GetChild(0).gameObject.SetActive(false);
         /*yield return new WaitForSeconds(0.4f); *//*패링 쿨타임 (기호에 맞게) */
         canActiveShield = true;
-    }
-
-    private void OnDrawGizmos()
-    {
-        // Ensure that there is at least one child
-        if (transform.childCount > 0)
-        {
-            // Get the first child
-            Transform child = transform.GetChild(0);
-
-            // Get the position and scale of the child
-            Vector3 childPosition = child.position;
-            Vector3 childScale = child.localScale;
-
-            // Set the color of the wire cube
-            Gizmos.color = Color.blue;
-
-            // Draw a wire cube in the Scene view using the child's position and scale
-            Gizmos.DrawWireCube(childPosition, childScale);
-        }
-    }
+    }       
 
 }
