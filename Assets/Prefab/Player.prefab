@@ -82,7 +82,7 @@ SpriteRenderer:
   m_Size: {x: 0.6979167, y: 0.8958333}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &1680858165
@@ -482,8 +482,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2cc8f22e8315f646ac8b3bf2027da46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isActiveShield: 0
-  animator: {fileID: 1680858165}
   playerAnimator: {fileID: 0}
   sound_manager: {fileID: 0}
 --- !u!114 &903489490

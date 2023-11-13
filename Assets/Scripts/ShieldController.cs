@@ -3,14 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ShieldController : MonoBehaviour
-{
-    public bool isActiveShield = false;
+{    
     private bool canActiveShield = true;
     private float ShieldActiveTimer = 0.2f;
     private float ShieldCoolDown = 0.1f;
-
-    [SerializeField] private Animator animator;
     [SerializeField] private Animator playerAnimator;
+
+    SpriteRenderer sr;
 
     public SoundManager sound_manager;
 
@@ -18,6 +17,7 @@ public class ShieldController : MonoBehaviour
     void Start()
     {
         transform.GetChild(0).gameObject.SetActive(false);
+        sr = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -25,29 +25,43 @@ public class ShieldController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.C) && canActiveShield)
         {
-            /*StartCoroutine(nameof(ActivateShield));*/
-            ActivateShield();
+            StartCoroutine(nameof(ActivateShield));
         }
     }
 
-    void ActivateShield()
+    IEnumerator ActivateShield()
     {
-        sound_manager.SfxPlayer(SoundManager.sfx.shild_on);
-        isActiveShield = true;
+        sound_manager.SfxPlayer(SoundManager.sfx.shild_on);        
         canActiveShield = false;
         transform.GetChild(0).gameObject.SetActive(true);
         /*animator.SetBool("isActive", true);*/
-        playerAnimator.Play("ParryAnim");
-    }
-
-    void EnableShield()
-    {
-        playerAnimator.SetBool("isActiveShield", false);
+        playerAnimator.SetTrigger("ShieldTrigger");
+        sr.flipX = true;
+        yield return new WaitForSeconds(0.35f); /*패링 활성화 시간*/
+        sr.flipX = false;
         transform.GetChild(0).gameObject.SetActive(false);
-        isActiveShield = false;
+        /*yield return new WaitForSeconds(0.4f); *//*패링 쿨타임 (기호에 맞게) */
         canActiveShield = true;
     }
 
+    private void OnDrawGizmos()
+    {
+        // Ensure that there is at least one child
+        if (transform.childCount > 0)
+        {
+            // Get the first child
+            Transform child = transform.GetChild(0);
 
+            // Get the position and scale of the child
+            Vector3 childPosition = child.position;
+            Vector3 childScale = child.localScale;
+
+            // Set the color of the wire cube
+            Gizmos.color = Color.blue;
+
+            // Draw a wire cube in the Scene view using the child's position and scale
+            Gizmos.DrawWireCube(childPosition, childScale);
+        }
+    }
 
 }
