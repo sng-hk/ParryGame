@@ -10456,11 +10456,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21361ac2a2cdd434294c95aebbb4f013, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!95 &2067631207 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 1877976534739777632, guid: 64c3c382225778e488846bd9bd0bf4ae, type: 3}
-  m_PrefabInstance: {fileID: 1877976535332458523}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2078890967
 GameObject:
   m_ObjectHideFlags: 0
@@ -11024,65 +11019,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 903489490, guid: 64c3c382225778e488846bd9bd0bf4ae, type: 3}
-      propertyPath: sequence_of_coin.Array.data[0]
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 903489490, guid: 64c3c382225778e488846bd9bd0bf4ae, type: 3}
       propertyPath: OnKeyItemCollected.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 888247304}
-    - target: {fileID: 1432721694, guid: 64c3c382225778e488846bd9bd0bf4ae, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1432721694, guid: 64c3c382225778e488846bd9bd0bf4ae, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 721166704588558328, guid: 64c3c382225778e488846bd9bd0bf4ae, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.20980217
-      objectReference: {fileID: 0}
-    - target: {fileID: 721166704588558328, guid: 64c3c382225778e488846bd9bd0bf4ae, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.29371476
-      objectReference: {fileID: 0}
-    - target: {fileID: 721166704588558328, guid: 64c3c382225778e488846bd9bd0bf4ae, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.2165
-      objectReference: {fileID: 0}
-    - target: {fileID: 721166704588558328, guid: 64c3c382225778e488846bd9bd0bf4ae, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.23
-      objectReference: {fileID: 0}
-    - target: {fileID: 1125340050233359365, guid: 64c3c382225778e488846bd9bd0bf4ae, type: 3}
-      propertyPath: m_FlipX
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1125340050233359365, guid: 64c3c382225778e488846bd9bd0bf4ae, type: 3}
-      propertyPath: m_FlipY
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1125340050233359365, guid: 64c3c382225778e488846bd9bd0bf4ae, type: 3}
-      propertyPath: m_Color.a
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1125340050233359365, guid: 64c3c382225778e488846bd9bd0bf4ae, type: 3}
-      propertyPath: m_Color.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1125340050233359365, guid: 64c3c382225778e488846bd9bd0bf4ae, type: 3}
-      propertyPath: m_Color.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1125340050233359365, guid: 64c3c382225778e488846bd9bd0bf4ae, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1125340050233359365, guid: 64c3c382225778e488846bd9bd0bf4ae, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1877976534525730940, guid: 64c3c382225778e488846bd9bd0bf4ae, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -11131,56 +11070,19 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 1877976534739777634, guid: 64c3c382225778e488846bd9bd0bf4ae, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
+    - target: {fileID: 1877976534739777635, guid: 64c3c382225778e488846bd9bd0bf4ae, type: 3}
+      propertyPath: tr
+      value: 
+      objectReference: {fileID: 615278719, guid: 64c3c382225778e488846bd9bd0bf4ae, type: 3}
     - target: {fileID: 1877976534739777635, guid: 64c3c382225778e488846bd9bd0bf4ae, type: 3}
       propertyPath: sound_manager
       value: 
       objectReference: {fileID: 1631728607}
-    - target: {fileID: 1877976534739777645, guid: 64c3c382225778e488846bd9bd0bf4ae, type: 3}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1877976534739777645, guid: 64c3c382225778e488846bd9bd0bf4ae, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1877976534739777645, guid: 64c3c382225778e488846bd9bd0bf4ae, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1877976534739777645, guid: 64c3c382225778e488846bd9bd0bf4ae, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3802144751257493783, guid: 64c3c382225778e488846bd9bd0bf4ae, type: 3}
-      propertyPath: pos
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3802144751257493783, guid: 64c3c382225778e488846bd9bd0bf4ae, type: 3}
-      propertyPath: boxSize.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3802144751257493783, guid: 64c3c382225778e488846bd9bd0bf4ae, type: 3}
-      propertyPath: boxSize.y
-      value: 1.89
-      objectReference: {fileID: 0}
     - target: {fileID: 3802144751257493783, guid: 64c3c382225778e488846bd9bd0bf4ae, type: 3}
       propertyPath: sound_manager
       value: 
       objectReference: {fileID: 1631728607}
-    - target: {fileID: 3802144751257493783, guid: 64c3c382225778e488846bd9bd0bf4ae, type: 3}
-      propertyPath: playerAnimator
-      value: 
-      objectReference: {fileID: 2067631207}
-    - target: {fileID: 7047448677426862812, guid: 64c3c382225778e488846bd9bd0bf4ae, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 615278719, guid: 64c3c382225778e488846bd9bd0bf4ae, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64c3c382225778e488846bd9bd0bf4ae, type: 3}
 --- !u!1001 &2020828596305328885
 PrefabInstance:
