@@ -53,15 +53,13 @@ public class Enemy : MonoBehaviour
         sound_manager = FindObjectOfType<SoundManager>();
     }
 
-    public void Recognize()
+    public virtual void Recognize()
     {
         StartCoroutine(SpawnBullet());
     }
-    public void UnRecognize()
+    public virtual void UnRecognize()
     {
         StopCoroutine(SpawnBullet());
-        //지금 이거땜에 시야 나가면 다 사라짐.
-        RemoveAll();
     }
 
     // Start is called before the first frame update
@@ -74,7 +72,7 @@ public class Enemy : MonoBehaviour
         fullalphaColor = new Color(enemySr.color.r, enemySr.color.g, enemySr.color.b, 1f);
     }
 
-    IEnumerator SpawnBullet()
+    public IEnumerator SpawnBullet()
     {
         yield return new WaitForSeconds(1.0f);
         while (true)

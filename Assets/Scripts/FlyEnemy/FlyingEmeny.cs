@@ -35,8 +35,6 @@ public class FlyingEmeny : MonoBehaviour
     public void UnRecognize()
     {
         StopCoroutine(SpawnBullet());
-        //지금 이거땜에 시야 나가면 다 사라짐.
-        RemoveAll();
     }
 
     void Start()

@@ -28,7 +28,7 @@ public class GoStage : MonoBehaviour
     }
     public void ClickTutorialStageButton()
     {
-        loding_scene = "TutorialScene";
+        loding_scene = "TutorialR";
         SceneManager.LoadScene("loading");
     }
 

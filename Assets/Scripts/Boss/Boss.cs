@@ -25,14 +25,18 @@ public class Boss : Enemy
 
     void Update()
     {
-        if(EnemySight.recognize == true)
-        {
-            Boss_object.SetActive(true);
-        }
-        else if(EnemySight.recognize == false || enemy_hp <= 0)
-        {
-            Boss_object.SetActive(false);
-        }
+        
+    }
+
+    public override void Recognize()
+    {
+        StartCoroutine(SpawnBullet());
+        Boss_object.SetActive(true);
+    }
+    public override void UnRecognize()
+    {
+        StopCoroutine(SpawnBullet());
+        Boss_object.SetActive(false);
     }
 
     public override void TakeDamage(int damage)
