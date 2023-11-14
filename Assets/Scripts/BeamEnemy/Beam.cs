@@ -17,7 +17,7 @@ public class Beam : MonoBehaviour
 
     private void Start()
     {
-        speed = 5.0f;
+        speed = 4.0f;
         lifetime = 3.0f;
 
         is_reflect = false;

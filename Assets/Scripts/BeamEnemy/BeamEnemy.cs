@@ -118,5 +118,11 @@ public class BeamEnemy : MonoBehaviour
     public void TakeDamage(int damage)
     {
         enemy_hp -= damage;
+
+        if (enemy_hp <= 0)
+        {
+            RemoveAll();
+            Destroy(gameObject);
+        }
     }
 }

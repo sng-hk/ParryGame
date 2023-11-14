@@ -30,7 +30,7 @@ public class MovingEnemy : MonoBehaviour
             {
                 if (!is_left)
                 {
-                    transform.eulerAngles = new Vector3(0, 0, 0);
+                    transform.eulerAngles = new Vector3(0, 180, 0);
                     is_left = true;
                 }
             }
@@ -38,7 +38,7 @@ public class MovingEnemy : MonoBehaviour
             {
                 if (is_left)
                 {
-                    transform.eulerAngles = new Vector3(0, 180, 0);
+                    transform.eulerAngles = new Vector3(0, 0, 0);
                     is_left = false;
                 }
             }

@@ -25,7 +25,7 @@ public class DangerLine : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        speed = 5.0f;
+        speed = 10.0f;
         lifetime = 3.0f;
 
         lr.startColor = lineColor;

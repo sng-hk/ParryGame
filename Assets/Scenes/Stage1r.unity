@@ -27291,6 +27291,18 @@ PrefabInstance:
       propertyPath: boss_hp_bar
       value: 
       objectReference: {fileID: 2135404986}
+    - target: {fileID: 8149236915172608247, guid: 064443dcc504e9346b57d940af62f3c2, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8149236915172608247, guid: 064443dcc504e9346b57d940af62f3c2, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8149236915172608247, guid: 064443dcc504e9346b57d940af62f3c2, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 064443dcc504e9346b57d940af62f3c2, type: 3}
 --- !u!114 &2135404985 stripped
