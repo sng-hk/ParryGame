@@ -1925,6 +1925,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &982884074 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6441216128682249104, guid: 064443dcc504e9346b57d940af62f3c2, type: 3}
+  m_PrefabInstance: {fileID: 2135404984}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1043607225
 GameObject:
   m_ObjectHideFlags: 0
@@ -3312,6 +3323,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7884e44211238e498790ca94b85f12c, type: 3}
+--- !u!114 &1181573667 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 238681066368257204, guid: 064443dcc504e9346b57d940af62f3c2, type: 3}
+  m_PrefabInstance: {fileID: 2135404984}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1191287465 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5105554658353734015, guid: 13b0aa8eeea57c34ca54f0b5a6eeb034, type: 3}
@@ -18327,35 +18349,67 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5105554657049334252, guid: 13b0aa8eeea57c34ca54f0b5a6eeb034, type: 3}
       propertyPath: m_Name
-      value: beam-Boss
+      value: BeamBoss
       objectReference: {fileID: 0}
     - target: {fileID: 5105554658353734002, guid: 13b0aa8eeea57c34ca54f0b5a6eeb034, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5105554658353734003, guid: 13b0aa8eeea57c34ca54f0b5a6eeb034, type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5105554658353734003, guid: 13b0aa8eeea57c34ca54f0b5a6eeb034, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: fc88d56c52c8571448e96b8508c5de4c, type: 3}
+    - target: {fileID: 5105554658353734003, guid: 13b0aa8eeea57c34ca54f0b5a6eeb034, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5105554658353734003, guid: 13b0aa8eeea57c34ca54f0b5a6eeb034, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5105554658353734003, guid: 13b0aa8eeea57c34ca54f0b5a6eeb034, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5105554658353734014, guid: 13b0aa8eeea57c34ca54f0b5a6eeb034, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.4533281
+      value: 6.8717723
       objectReference: {fileID: 0}
     - target: {fileID: 5105554658353734014, guid: 13b0aa8eeea57c34ca54f0b5a6eeb034, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.62
+      value: 4.1280837
       objectReference: {fileID: 0}
     - target: {fileID: 5105554658353734014, guid: 13b0aa8eeea57c34ca54f0b5a6eeb034, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.6868
+      value: -6.4
       objectReference: {fileID: 0}
     - target: {fileID: 5105554658353734014, guid: 13b0aa8eeea57c34ca54f0b5a6eeb034, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.48
+      value: 0.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 5105554658353734015, guid: 13b0aa8eeea57c34ca54f0b5a6eeb034, type: 3}
+      propertyPath: m_Name
+      value: beam_boss
       objectReference: {fileID: 0}
     - target: {fileID: 5105554658639029853, guid: 13b0aa8eeea57c34ca54f0b5a6eeb034, type: 3}
       propertyPath: m_LocalScale.x
-      value: 18.43928
+      value: 6.5665355
+      objectReference: {fileID: 0}
+    - target: {fileID: 5105554658639029853, guid: 13b0aa8eeea57c34ca54f0b5a6eeb034, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.1943958
       objectReference: {fileID: 0}
     - target: {fileID: 5105554658639029853, guid: 13b0aa8eeea57c34ca54f0b5a6eeb034, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.5262
+      value: -2.67273
+      objectReference: {fileID: 0}
+    - target: {fileID: 5105554658639029853, guid: 13b0aa8eeea57c34ca54f0b5a6eeb034, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.13196
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5105554658353734002, guid: 13b0aa8eeea57c34ca54f0b5a6eeb034, type: 3}
@@ -19224,6 +19278,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2bed62a7ddeeeb94aa8ccf85412e0a29, type: 3}
+--- !u!114 &2040183914 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6797596351148056865, guid: 064443dcc504e9346b57d940af62f3c2, type: 3}
+  m_PrefabInstance: {fileID: 2135404984}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2048848972
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19372,9 +19437,25 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8960585983615711109, guid: 064443dcc504e9346b57d940af62f3c2, type: 3}
+      propertyPath: coins.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8960585983615711109, guid: 064443dcc504e9346b57d940af62f3c2, type: 3}
       propertyPath: player_inventory
       value: 
       objectReference: {fileID: 960090854}
+    - target: {fileID: -8960585983615711109, guid: 064443dcc504e9346b57d940af62f3c2, type: 3}
+      propertyPath: coins.Array.data[0]
+      value: 
+      objectReference: {fileID: 1181573667}
+    - target: {fileID: -8960585983615711109, guid: 064443dcc504e9346b57d940af62f3c2, type: 3}
+      propertyPath: coins.Array.data[1]
+      value: 
+      objectReference: {fileID: 982884074}
+    - target: {fileID: -8960585983615711109, guid: 064443dcc504e9346b57d940af62f3c2, type: 3}
+      propertyPath: coins.Array.data[2]
+      value: 
+      objectReference: {fileID: 2040183914}
     - target: {fileID: 5914180105065575185, guid: 064443dcc504e9346b57d940af62f3c2, type: 3}
       propertyPath: m_Sprite
       value: 
