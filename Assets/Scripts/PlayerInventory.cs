@@ -32,4 +32,9 @@ public class PlayerInventory : MonoBehaviour
     {
         return sequence_of_coin;
     }
+
+    public int Coins()
+    {
+        return number_of_coin;
+    }
 }

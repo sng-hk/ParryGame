@@ -6,11 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    //public static int coins = 0;
 
     [SerializeField]
     private GameObject setting_object;
-
     public Text setting_sound_value_text;
+    //public Text coin_text;
 
     public void SettingEnable()
     {
@@ -28,6 +29,7 @@ public class MainMenu : MonoBehaviour
     void Start()
     {
         SettingDisable();
+        //coin_text.text = coins.ToString();
     }
 
     

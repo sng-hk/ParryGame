@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private bool canDoubleJump;
 
     bool isFacingRight = true;
+    [SerializeField]
     Vector2 start_pos;
 
     [Header("Physics")]
