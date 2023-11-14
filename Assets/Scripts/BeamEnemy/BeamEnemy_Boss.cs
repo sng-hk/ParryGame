@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Boss : Enemy
+public class BeamEnemy_Boss : BeamEnemy
 {
     [SerializeField]
     private GameObject exit_door;
@@ -14,8 +14,8 @@ public class Boss : Enemy
 
     private void Awake()
     {
-        boss_names = "skelton";
-        enemy_hp = 100;
+        boss_names = "darkmage";
+        enemy_hp = 50;
     }
     // Start is called before the first frame update
     void Start()
@@ -25,17 +25,19 @@ public class Boss : Enemy
 
     void Update()
     {
-        
+
     }
 
     public override void Recognize()
     {
-        StartCoroutine(SpawnBullet());
+        recognize = true;
+        StartCoroutine(FireBeam());
         Boss_object.SetActive(true);
     }
     public override void UnRecognize()
     {
-        StopCoroutine(SpawnBullet());
+        recognize = false;
+        StopCoroutine(FireBeam());
         Boss_object.SetActive(false);
     }
 
@@ -50,5 +52,4 @@ public class Boss : Enemy
             Destroy(gameObject);
         }
     }
-
 }

@@ -30,23 +30,22 @@ public class BeamEnemy : MonoBehaviour
         sound_manager = FindObjectOfType<SoundManager>();
     }
 
-    public void Recognize()
+    public virtual void Recognize()
     {
         Debug.Log("fire");
         recognize = true;
         StartCoroutine(FireBeam());
     }
 
-    public void UnRecognize()
+    public virtual void UnRecognize()
     {
         recognize = false;
         StopCoroutine(FireBeam());
         Debug.Log("stop");
-        //지금 이거땜에 시야 나가면 다 사라짐.
-        RemoveAll();
+        
     }
 
-    private void RemoveAll()
+    public void RemoveAll()
     {
         //자신이 쏜 모든 총알을 삭제
         foreach (GameObject missile_object in missile_list)
@@ -59,7 +58,7 @@ public class BeamEnemy : MonoBehaviour
         missile_list.Clear();
     }
 
-    IEnumerator FireBeam()
+    public IEnumerator FireBeam()
     {
         while (true)
         {
@@ -115,7 +114,7 @@ public class BeamEnemy : MonoBehaviour
             RemoveAll();
         }
     }
-    public void TakeDamage(int damage)
+    public virtual void TakeDamage(int damage)
     {
         enemy_hp -= damage;
 
