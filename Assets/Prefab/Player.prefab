@@ -285,6 +285,7 @@ MonoBehaviour:
   jumpCounter: 0
   doubleJump: 0
   canDoubleJump: 0
+  start_pos: {x: 0, y: 0}
   linearDrag: 10
   gravity: 1
   Velocity: 0
@@ -448,8 +449,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7047448677426862812}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.2165, y: 0.23, z: 0}
-  m_LocalScale: {x: 0.20980217, y: 0.29371476, z: 0.2423}
+  m_LocalPosition: {x: 0.2191, y: 0.236, z: 0}
+  m_LocalScale: {x: 0.22105664, y: 0.29371476, z: 0.2423}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1680858167}
