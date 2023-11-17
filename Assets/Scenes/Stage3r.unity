@@ -596,6 +596,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boss_name: {fileID: 1210020666}
   boss_hp_bar: {fileID: 745280601}
+--- !u!95 &415086876
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 415086853}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 64c2f2e7436627a49a307eff2c75190e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &444730939 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2326567145606549913, guid: a3ce0e01c4984d94a83c47a14d92c527, type: 3}
@@ -1176,11 +1197,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2bed62a7ddeeeb94aa8ccf85412e0a29, type: 3}
---- !u!4 &737499469 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 399937036919391234, guid: 583dd66bfbe86d140a8f662bcb66deb1, type: 3}
-  m_PrefabInstance: {fileID: 894955124}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &745280601 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3994141240569637713, guid: 064443dcc504e9346b57d940af62f3c2, type: 3}
@@ -1256,10 +1272,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2310786212345851212, guid: e43b2ae4ea110824a8803c413dcc80c4, type: 3}
-      propertyPath: exit_portal
-      value: 
-      objectReference: {fileID: 737499469}
     - target: {fileID: 4331023819549732099, guid: e43b2ae4ea110824a8803c413dcc80c4, type: 3}
       propertyPath: m_RootOrder
       value: 26
