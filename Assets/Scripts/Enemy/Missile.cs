@@ -54,14 +54,14 @@ public class Missile : Bullet
                 direction = (Vector2)target.position + _target_offset - rb.position;
             }
             direction.Normalize();
-            float rotateAmount = Vector3.Cross(direction, transform.up).z;
+            float rotateAmount = Vector3.Cross(direction, transform.right).z;
             rb.angularVelocity = (-1) * rotateAmount * rotateSpeed;
         }
         else if (inHomingZone && this.target.name == "Body")
         {
             rb.angularVelocity = 0f;
         }
-            rb.velocity = transform.up * speed;
+            rb.velocity = transform.right * speed;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

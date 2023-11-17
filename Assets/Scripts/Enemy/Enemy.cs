@@ -14,10 +14,14 @@ public class Enemy : MonoBehaviour
     private Color halfalphaColor;
     private Color fullalphaColor;
 
+    [Header("Animator")]
+    private Animator animator;
+
     private List<GameObject> missile_list = new List<GameObject>();
 
     private bool isHurt = false;
     public int isFacingRight = 1;
+    public bool canAttack;
 
     public SoundManager sound_manager;
 
@@ -48,19 +52,23 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    public void Recognize()
+    {
+        /*StartCoroutine(SpawnBullet());*/
+        canAttack = false;
+        animator.SetTrigger("attack");
+    }
+
+    /*public void UnRecognize()
+    {
+        StopCoroutine(SpawnBullet());
+    }*/
+
     private void Awake()
     {
         sound_manager = FindObjectOfType<SoundManager>();
     }
 
-    public virtual void Recognize()
-    {
-        StartCoroutine(SpawnBullet());
-    }
-    public virtual void UnRecognize()
-    {
-        StopCoroutine(SpawnBullet());
-    }
 
     // Start is called before the first frame update
     void Start()
@@ -68,13 +76,51 @@ public class Enemy : MonoBehaviour
         enemy_hp = 10;
         enemySr = GetComponent<SpriteRenderer>();
 
+        canAttack = true;
+
         halfalphaColor = new Color(enemySr.color.r, enemySr.color.g, enemySr.color.b, 0.6f);
         fullalphaColor = new Color(enemySr.color.r, enemySr.color.g, enemySr.color.b, 1f);
+
+        animator = GetComponent<Animator>();
     }
 
-    public IEnumerator SpawnBullet()
+    public void AnimationEventSpawnBullet()
     {
-        yield return new WaitForSeconds(1.0f);
+        SpawnBullet();
+    }
+
+    // animator 에서 attack모션이 끝나는 시점에 애니메이션 이벤트로 추가
+    public void SpawnBullet()
+    {
+        sound_manager.SfxPlayer(SoundManager.sfx.shot);
+        // 플레이어, 적 사이를 잇는 직선상에서 적과 일정범위 떨어진 곳에 투사체 생성 bulletspawnDistance 값을 조정하여
+        // 적과 어느정도 떨어진 거리에서 투사체를 생성할 건지 결정
+        // 플레이어 방향을 구합니다.
+        Vector3 playerDirection = PlayerController.instance.transform.position - transform.position;
+        Vector3 instantiatePosition = Vector3.Normalize(playerDirection);
+
+        // 플레이어 방향으로 회전한 각도를 구합니다.
+        float angle = Mathf.Atan2(playerDirection.y, playerDirection.x) * Mathf.Rad2Deg;
+        GameObject missile_object = Instantiate(bullet, transform.position + instantiatePosition * bulletspawnDistance, Quaternion.Euler(0,0,angle));
+        Missile missile_script = missile_object.GetComponent<Missile>();
+        missile_script.MemoryShooter(this);
+        missile_list.Add(missile_object);
+
+        // 2초 뒤에 적이 공격할 수 있는 준비가 됨
+        StartCoroutine(EnableAttackAfterSeconds(2));
+    }
+
+    IEnumerator EnableAttackAfterSeconds(float time)
+    {
+        yield return new WaitForSeconds(time);
+        canAttack = true;
+    }
+
+    /*(애니메이션 넣기 전 spawnbullet)*/
+    /*public IEnumerator SpawnBullet()
+    {
+        animator.SetTrigger("attack");
+        
         while (true)
         {
             if (EnemySight.recognize == true)
@@ -91,11 +137,12 @@ public class Enemy : MonoBehaviour
             }
             else if(EnemySight.recognize == false)
             {
-                yield break;
+                break;
+                // (수정 전 코드 : yield break; )
             }
 
         }
-    }
+    }*/
 
     public void RemoveAll()
     {
@@ -113,6 +160,19 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Vector3 playerDirection = PlayerController.instance.transform.position - transform.position;
+
+        if (playerDirection.x > 0)
+        {
+            transform.localScale = new Vector3(1, 1, 1); // 오른쪽 방향으로 봄
+            isFacingRight = 1;
+        }
+        else
+        {
+            transform.localScale = new Vector3(-1, 1, 1); // 왼쪽 방향으로 봄
+            isFacingRight = -1;
+        }
+
         for (int i = missile_list.Count - 1; i >= 0; i--)
         {
             GameObject missile_object = missile_list[i];
@@ -134,7 +194,7 @@ public class Enemy : MonoBehaviour
     public virtual void TakeDamage(int damage)
     {
         enemy_hp -= damage;
-        if(enemy_hp <= 0)
+        if (enemy_hp <= 0)
         {
             RemoveAll();
             Destroy(gameObject);

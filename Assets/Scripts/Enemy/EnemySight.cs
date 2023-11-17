@@ -5,12 +5,12 @@ using UnityEngine;
 public class EnemySight : MonoBehaviour
 {
     public static bool recognize = false;
-    Enemy parent_script;
+    Enemy enemy;
 
     // Start is called before the first frame update
     void Start()
     {
-        parent_script = GetComponentInParent<Enemy>();
+        enemy = GetComponentInParent<Enemy>();
     }
 
     // Update is called once per frame
@@ -19,12 +19,12 @@ public class EnemySight : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") && enemy.canAttack)
         {
-            parent_script.Recognize();
-            recognize = true;
+            enemy.Recognize();
+            /*recognize = true;*/
         }
     }
 
@@ -43,12 +43,12 @@ public class EnemySight : MonoBehaviour
         }
     }*/
 
-    private void OnTriggerExit2D(Collider2D collision)
+    /*private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            parent_script.UnRecognize();
+            enemy.UnRecognize();
             recognize = false;
         }
-    }
+    }*/
 }

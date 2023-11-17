@@ -11,6 +11,7 @@ public class Boss : Enemy
     private GameObject Boss_object;
 
     public string boss_names;
+    public bool canAttack = false;
 
     private void Awake()
     {
@@ -28,7 +29,7 @@ public class Boss : Enemy
         
     }
 
-    public override void Recognize()
+    /*public override void Recognize()
     {
         StartCoroutine(SpawnBullet());
         Boss_object.SetActive(true);
@@ -37,7 +38,7 @@ public class Boss : Enemy
     {
         StopCoroutine(SpawnBullet());
         Boss_object.SetActive(false);
-    }
+    }*/
 
     public override void TakeDamage(int damage)
     {

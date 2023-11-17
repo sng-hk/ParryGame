@@ -5,13 +5,13 @@ using UnityEngine;
 public class BeamEnemySight : MonoBehaviour
 {
     public bool recognize;
-    BeamEnemy parent_script;
+    BeamEnemy enemy;
 
 
     void Start()
     {
         recognize = false;
-        parent_script = GetComponentInParent<BeamEnemy>();
+        enemy = GetComponentInParent<BeamEnemy>();
     }
 
     void Update()
@@ -26,7 +26,16 @@ public class BeamEnemySight : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    /*private void OnTriggerStay2D(Collider2D collision)
+    {
+        *//*if (collision.gameObject.CompareTag("Player") && enemy.canAttack)*//*
+        {
+            enemy.Recognize();
+            *//*recognize = true;*//*
+        }
+    }*/
+
+    /*private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
@@ -42,5 +51,5 @@ public class BeamEnemySight : MonoBehaviour
             parent_script.UnRecognize();
             recognize = false;
         }
-    }
+    }*/
 }

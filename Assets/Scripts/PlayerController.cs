@@ -63,10 +63,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Events")]
     [Space]
-    public UnityEngine.Events.UnityEvent OnLandEvent;
-
-    [Header("TrailRenderer")]
-    [SerializeField] private TrailRenderer tr;
+    public UnityEngine.Events.UnityEvent OnLandEvent;   
 
     [Header("Dash")]
     private bool canDash = true;
@@ -89,8 +86,7 @@ public class PlayerController : MonoBehaviour
     }
 
     void Start()
-    {
-        tr.emitting = false;
+    {        
         start_pos = transform.position;
         respawn_delay = 0.7f;
         /*shield = GetComponent<ShieldController>();*/

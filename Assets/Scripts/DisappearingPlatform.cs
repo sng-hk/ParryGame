@@ -24,7 +24,7 @@ public class DisappearingPlatform : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("collision");        
+        Debug.Log("collision");
         if (!_is_disappear)
         {            
             StartCoroutine(nameof(DisappearAfterSeconds));            

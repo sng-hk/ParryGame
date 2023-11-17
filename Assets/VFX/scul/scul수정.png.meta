@@ -115,7 +115,1435 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: "scul\uC218\uC815_0"
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 429
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eca425e87eb31d46b96829ba61f6040
+      internalID: 1924213501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "scul\uC218\uC815_1"
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 429
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d6a5beb75ada5e4786593448c2340c7
+      internalID: -1557021069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "scul\uC218\uC815_2"
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 429
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cac44d1bbcff47f4db433fc5d61a441d
+      internalID: -1430050349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "scul\uC218\uC815_3"
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 429
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12e3e4e5fccd6694ca2f1fec712fe677
+      internalID: -330389815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "scul\uC218\uC815_4"
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 429
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ce8417500595ba44b968b1bfb0aa015
+      internalID: -2056667130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "scul\uC218\uC815_5"
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 429
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a266341dfb281cd4aa568a92df2d5604
+      internalID: 895606474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "scul\uC218\uC815_6"
+      rect:
+        serializedVersion: 2
+        x: 1314
+        y: 429
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ade67d209aa8364cbb5c6ac9d69657f
+      internalID: -1669635218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "scul\uC218\uC815_7"
+      rect:
+        serializedVersion: 2
+        x: 1527
+        y: 429
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 274b9fb70440b624db0c75a1d590aa93
+      internalID: 520986478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "scul\uC218\uC815_8"
+      rect:
+        serializedVersion: 2
+        x: 1740
+        y: 429
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ebfa7d1abeb482418b298403846707a
+      internalID: 1199685580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "scul\uC218\uC815_9"
+      rect:
+        serializedVersion: 2
+        x: 1953
+        y: 429
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be16b7e4872ec1d42a63b3b307d29349
+      internalID: 1072348293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "scul\uC218\uC815_10"
+      rect:
+        serializedVersion: 2
+        x: 2166
+        y: 429
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b1cf977758b06442bcd92f9f59b0eb6
+      internalID: -287699484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "scul\uC218\uC815_11"
+      rect:
+        serializedVersion: 2
+        x: 2379
+        y: 429
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 398c9580790916345be83a4a26e2565c
+      internalID: -224300365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "scul\uC218\uC815_12"
+      rect:
+        serializedVersion: 2
+        x: 2592
+        y: 429
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e44e808c9f223ea43b842372bae0e9c2
+      internalID: 785308571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "scul\uC218\uC815_13"
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 333
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e9c410c5464e374e9e6b3bfb139fce6
+      internalID: 27405884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "scul\uC218\uC815_14"
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 333
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfacaaf8e0aa2964eb724ed1cb109926
+      internalID: 1024545133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "scul\uC218\uC815_15"
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 333
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21122dfd432bac54e94268f6cf2d35e7
+      internalID: 1775597060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "scul\uC218\uC815_16"
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 333
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41a50d1d5b04ee940888317498fa757c
+      internalID: 1107561680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "scul\uC218\uC815_17"
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 333
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bdd1a7d0906f464bbb02bb31f208df2
+      internalID: -1338150235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "scul\uC218\uC815_18"
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 333
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7294818ec407db24a8af92e94745556c
+      internalID: 1983330105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "scul\uC218\uC815_19"
+      rect:
+        serializedVersion: 2
+        x: 1314
+        y: 333
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e6810bd9db751142b96f99281cae90e
+      internalID: 91657678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "scul\uC218\uC815_20"
+      rect:
+        serializedVersion: 2
+        x: 1527
+        y: 333
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7eb37508bad20d4a9fbee377f5e5add
+      internalID: 436775676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "scul\uC218\uC815_21"
+      rect:
+        serializedVersion: 2
+        x: 1740
+        y: 333
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76d81b226c2f40a4b9e556d49bedd274
+      internalID: 1193062883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "scul\uC218\uC815_22"
+      rect:
+        serializedVersion: 2
+        x: 1953
+        y: 333
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63e254b8d38249943b7ffcc2ccde263d
+      internalID: -928373432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "scul\uC218\uC815_23"
+      rect:
+        serializedVersion: 2
+        x: 2166
+        y: 333
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5310e7649f890b847bda07fd87258e7a
+      internalID: 1438748907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "scul\uC218\uC815_24"
+      rect:
+        serializedVersion: 2
+        x: 2379
+        y: 333
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddc2959836763c94f9b99dc91dc45b1b
+      internalID: -1219781000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "scul\uC218\uC815_25"
+      rect:
+        serializedVersion: 2
+        x: 2592
+        y: 333
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7054eca277a5e4b4c90e13b44724e7e6
+      internalID: 444600020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "scul\uC218\uC815_26"
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 237
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ef698c7803c1764d83c0021373bb0d7
+      internalID: -343719142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "scul\uC218\uC815_27"
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 237
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e84c6586a41e97449c1a6e770473641
+      internalID: 165548127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "scul\uC218\uC815_28"
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 237
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82a6f6223a4da8847bac54f1d35d0406
+      internalID: -973753467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "scul\uC218\uC815_29"
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 237
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c2f4d4069300bf42a114f153a3e4c0e
+      internalID: 2038788784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "scul\uC218\uC815_30"
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 237
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1b1d74c91e085b4ab1cfb0e88514af5
+      internalID: 1713839770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "scul\uC218\uC815_31"
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 237
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e608cd7bdf617f74ebda00c237d24baa
+      internalID: -1061370642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "scul\uC218\uC815_32"
+      rect:
+        serializedVersion: 2
+        x: 1314
+        y: 237
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c63b1570d8c4cd40a23ea8b5bb72e8c
+      internalID: 1141386833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "scul\uC218\uC815_33"
+      rect:
+        serializedVersion: 2
+        x: 1527
+        y: 237
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83bc57ff63a5b3541878692913714247
+      internalID: 1900013082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "scul\uC218\uC815_34"
+      rect:
+        serializedVersion: 2
+        x: 1740
+        y: 237
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c743a99aed28ef4099df2ff8b260993
+      internalID: -1582846248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "scul\uC218\uC815_35"
+      rect:
+        serializedVersion: 2
+        x: 1953
+        y: 237
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 287ed67491cfe4d4f92839f09cfb74ca
+      internalID: 1279636881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "scul\uC218\uC815_36"
+      rect:
+        serializedVersion: 2
+        x: 2166
+        y: 237
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1e927506fe31bc4c89829a42a32b0ae
+      internalID: 1232180327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "scul\uC218\uC815_37"
+      rect:
+        serializedVersion: 2
+        x: 2379
+        y: 237
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a83339d169e2ea648a7d6ef85ebb9300
+      internalID: -1015801639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "scul\uC218\uC815_38"
+      rect:
+        serializedVersion: 2
+        x: 2592
+        y: 237
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab7ca545019b3c94283c5692e9706dd6
+      internalID: 336429958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "scul\uC218\uC815_39"
+      rect:
+        serializedVersion: 2
+        x: 2805
+        y: 237
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 010064637ad7ebe4a9b3bf9576e91653
+      internalID: -109606342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "scul\uC218\uC815_40"
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 141
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ebd75747e6d83142bfb3a43e502f0aa
+      internalID: -483175669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "scul\uC218\uC815_41"
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 141
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edfb343f8b8336645afd2260a6bc3f50
+      internalID: 1469321613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "scul\uC218\uC815_42"
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 141
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab95cb0a313a8b942b6ad8e1fb9d6839
+      internalID: 827517548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "scul\uC218\uC815_43"
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 141
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ab7aaed3ef21904fa97a7f8f493b76d
+      internalID: 1928332289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "scul\uC218\uC815_44"
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 141
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e84f2a925e0e35047a22989f1a227892
+      internalID: 793166577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "scul\uC218\uC815_45"
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 141
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b3aaf239f804a346a1b11d1f6c9d7f5
+      internalID: -1969743520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "scul\uC218\uC815_46"
+      rect:
+        serializedVersion: 2
+        x: 1314
+        y: 141
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e5ee23ac19b1d7419f2579609d44644
+      internalID: -1861312910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "scul\uC218\uC815_47"
+      rect:
+        serializedVersion: 2
+        x: 1527
+        y: 141
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 297d2f0840295754db6acb12b6147ff6
+      internalID: 1934729412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "scul\uC218\uC815_48"
+      rect:
+        serializedVersion: 2
+        x: 1740
+        y: 141
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 582a76ad8f34fba409ca737439bf6872
+      internalID: 1418263010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "scul\uC218\uC815_49"
+      rect:
+        serializedVersion: 2
+        x: 1953
+        y: 141
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91d0d048021f0e74bbb22cb43123228e
+      internalID: 996055745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "scul\uC218\uC815_50"
+      rect:
+        serializedVersion: 2
+        x: 2166
+        y: 141
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04319415a4f2d674ca472dafeae1f273
+      internalID: -1272826376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "scul\uC218\uC815_51"
+      rect:
+        serializedVersion: 2
+        x: 2379
+        y: 141
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa2f44e1ac0255f4fbab2aeea7ee4c2f
+      internalID: 1644595928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "scul\uC218\uC815_52"
+      rect:
+        serializedVersion: 2
+        x: 2592
+        y: 141
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ae4402704de4d248b21cb5d74d4f70e
+      internalID: 175566027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "scul\uC218\uC815_53"
+      rect:
+        serializedVersion: 2
+        x: 2805
+        y: 141
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56a9a082411cd0f4e94c64733738ae90
+      internalID: -2121205616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "scul\uC218\uC815_54"
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 45
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08db9cf9e9825d447b00adf198255760
+      internalID: 535159412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "scul\uC218\uC815_55"
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 45
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cb21f2093b9b3748a7c670356799e77
+      internalID: 737804692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "scul\uC218\uC815_56"
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 45
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cfde1542b70a4946b7c4dd7c23ddd35
+      internalID: -188716521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "scul\uC218\uC815_57"
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 45
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fcb29d877c3ecf4f9231b8e72b80ee4
+      internalID: -232879121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "scul\uC218\uC815_58"
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 45
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89947f9182145f5428973eeeacc77028
+      internalID: -1439167904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "scul\uC218\uC815_59"
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 45
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a741f62a9b47b748a6f552fb003ef0f
+      internalID: 808151780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "scul\uC218\uC815_60"
+      rect:
+        serializedVersion: 2
+        x: 1314
+        y: 45
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdbbe00876b619a46844e3c6ff3d9da6
+      internalID: 1416269509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "scul\uC218\uC815_61"
+      rect:
+        serializedVersion: 2
+        x: 1527
+        y: 45
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d4e557d83199744da683a916104a13d
+      internalID: -900907401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "scul\uC218\uC815_62"
+      rect:
+        serializedVersion: 2
+        x: 1740
+        y: 45
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4031d0c4640abd341a0f489c6093b521
+      internalID: -815082519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "scul\uC218\uC815_63"
+      rect:
+        serializedVersion: 2
+        x: 1953
+        y: 45
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9caaa98631eeeda41af91fef61e3ccfe
+      internalID: 46876181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "scul\uC218\uC815_64"
+      rect:
+        serializedVersion: 2
+        x: 2166
+        y: 45
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2290941cd2b01c4418aff206b22ae5e1
+      internalID: 615280521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "scul\uC218\uC815_65"
+      rect:
+        serializedVersion: 2
+        x: 2379
+        y: 45
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a645b728198424459ec5515e606837a
+      internalID: -708187422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "scul\uC218\uC815_66"
+      rect:
+        serializedVersion: 2
+        x: 2592
+        y: 45
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d55567b77d6f1284b97fcda9cd58886c
+      internalID: 1454656629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "scul\uC218\uC815_67"
+      rect:
+        serializedVersion: 2
+        x: 2805
+        y: 45
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ec6c63bd9986454ab8188475a6e4735
+      internalID: -1241123231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -126,7 +1554,75 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      "scul\uC218\uC815_0": 1924213501
+      "scul\uC218\uC815_1": -1557021069
+      "scul\uC218\uC815_10": -287699484
+      "scul\uC218\uC815_11": -224300365
+      "scul\uC218\uC815_12": 785308571
+      "scul\uC218\uC815_13": 27405884
+      "scul\uC218\uC815_14": 1024545133
+      "scul\uC218\uC815_15": 1775597060
+      "scul\uC218\uC815_16": 1107561680
+      "scul\uC218\uC815_17": -1338150235
+      "scul\uC218\uC815_18": 1983330105
+      "scul\uC218\uC815_19": 91657678
+      "scul\uC218\uC815_2": -1430050349
+      "scul\uC218\uC815_20": 436775676
+      "scul\uC218\uC815_21": 1193062883
+      "scul\uC218\uC815_22": -928373432
+      "scul\uC218\uC815_23": 1438748907
+      "scul\uC218\uC815_24": -1219781000
+      "scul\uC218\uC815_25": 444600020
+      "scul\uC218\uC815_26": -343719142
+      "scul\uC218\uC815_27": 165548127
+      "scul\uC218\uC815_28": -973753467
+      "scul\uC218\uC815_29": 2038788784
+      "scul\uC218\uC815_3": -330389815
+      "scul\uC218\uC815_30": 1713839770
+      "scul\uC218\uC815_31": -1061370642
+      "scul\uC218\uC815_32": 1141386833
+      "scul\uC218\uC815_33": 1900013082
+      "scul\uC218\uC815_34": -1582846248
+      "scul\uC218\uC815_35": 1279636881
+      "scul\uC218\uC815_36": 1232180327
+      "scul\uC218\uC815_37": -1015801639
+      "scul\uC218\uC815_38": 336429958
+      "scul\uC218\uC815_39": -109606342
+      "scul\uC218\uC815_4": -2056667130
+      "scul\uC218\uC815_40": -483175669
+      "scul\uC218\uC815_41": 1469321613
+      "scul\uC218\uC815_42": 827517548
+      "scul\uC218\uC815_43": 1928332289
+      "scul\uC218\uC815_44": 793166577
+      "scul\uC218\uC815_45": -1969743520
+      "scul\uC218\uC815_46": -1861312910
+      "scul\uC218\uC815_47": 1934729412
+      "scul\uC218\uC815_48": 1418263010
+      "scul\uC218\uC815_49": 996055745
+      "scul\uC218\uC815_5": 895606474
+      "scul\uC218\uC815_50": -1272826376
+      "scul\uC218\uC815_51": 1644595928
+      "scul\uC218\uC815_52": 175566027
+      "scul\uC218\uC815_53": -2121205616
+      "scul\uC218\uC815_54": 535159412
+      "scul\uC218\uC815_55": 737804692
+      "scul\uC218\uC815_56": -188716521
+      "scul\uC218\uC815_57": -232879121
+      "scul\uC218\uC815_58": -1439167904
+      "scul\uC218\uC815_59": 808151780
+      "scul\uC218\uC815_6": -1669635218
+      "scul\uC218\uC815_60": 1416269509
+      "scul\uC218\uC815_61": -900907401
+      "scul\uC218\uC815_62": -815082519
+      "scul\uC218\uC815_63": 46876181
+      "scul\uC218\uC815_64": 615280521
+      "scul\uC218\uC815_65": -708187422
+      "scul\uC218\uC815_66": 1454656629
+      "scul\uC218\uC815_67": -1241123231
+      "scul\uC218\uC815_7": 520986478
+      "scul\uC218\uC815_8": 1199685580
+      "scul\uC218\uC815_9": 1072348293
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
