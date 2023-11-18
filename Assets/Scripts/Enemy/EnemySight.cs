@@ -9,8 +9,12 @@ public class EnemySight : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
+    {        
         enemy = GetComponentInParent<Enemy>();
+        if(enemy != null)
+        {
+            enemy = GetComponentInParent<Boss>();
+        }
     }
 
     // Update is called once per frame
@@ -23,7 +27,14 @@ public class EnemySight : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player") && enemy.canAttack)
         {
-            enemy.Recognize();
+            if (enemy is Boss)
+            {
+                ((Boss)enemy).Recognize();
+            }
+            else
+            {
+                enemy.Recognize();
+            }
             /*recognize = true;*/
         }
     }

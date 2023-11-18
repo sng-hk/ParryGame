@@ -15,7 +15,7 @@ public class Enemy : MonoBehaviour
     private Color fullalphaColor;
 
     [Header("Animator")]
-    private Animator animator;
+    public Animator animator;
 
     private List<GameObject> missile_list = new List<GameObject>();
 
@@ -27,6 +27,8 @@ public class Enemy : MonoBehaviour
 
     public GameObject bullet;
     float bulletspawnDistance = 1;
+
+    public Vector3 defaultLocalScale;
 
     public void EnemyHurt()
     {
@@ -82,7 +84,9 @@ public class Enemy : MonoBehaviour
         fullalphaColor = new Color(enemySr.color.r, enemySr.color.g, enemySr.color.b, 1f);
 
         animator = GetComponent<Animator>();
-    }
+
+        defaultLocalScale = transform.localScale;
+    }    
 
     public void AnimationEventSpawnBullet()
     {
@@ -160,17 +164,11 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 playerDirection = PlayerController.instance.transform.position - transform.position;
+        Facing();
 
-        if (playerDirection.x > 0)
+        if (enemy_hp <= 0)
         {
-            transform.localScale = new Vector3(1, 1, 1); // 오른쪽 방향으로 봄
-            isFacingRight = 1;
-        }
-        else
-        {
-            transform.localScale = new Vector3(-1, 1, 1); // 왼쪽 방향으로 봄
-            isFacingRight = -1;
+            RemoveAll();
         }
 
         for (int i = missile_list.Count - 1; i >= 0; i--)
@@ -182,13 +180,23 @@ public class Enemy : MonoBehaviour
                 missile_list.RemoveAt(i);
             }
         }
+    }
+    public void Facing()
+    {
+        Vector3 playerDirection = PlayerController.instance.transform.position - transform.position;
 
-        if (enemy_hp <= 0)
+        // 플레이어가 적보다 오른쪽에 있을 경우
+        if (playerDirection.x > 0)
         {
-            RemoveAll();
+            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+            isFacingRight = 1;
         }
-
-
+        // 플레이어가 적보다 왼쪽에 있을 경우
+        else
+        {
+            transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+            isFacingRight = -1;
+        }
     }
 
     public virtual void TakeDamage(int damage)
@@ -197,6 +205,7 @@ public class Enemy : MonoBehaviour
         if (enemy_hp <= 0)
         {
             RemoveAll();
+            Instantiate()
             Destroy(gameObject);
         }
     }

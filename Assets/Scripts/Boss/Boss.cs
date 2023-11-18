@@ -20,28 +20,20 @@ public class Boss : Enemy
     // Start is called before the first frame update
     void Start()
     {
-
+        canAttack = true;
     }
 
     void Update()
     {
-        
+        Facing();
     }
 
-    /*
-    public override void Recognize()
-    {
-        //StartCoroutine(SpawnBullet());
-        SpawnBullet();
-        Boss_object.SetActive(true);
-    }
     
-    /*
-    public override void UnRecognize()
+    public void Recognize()
     {
-        //StopCoroutine(SpawnBullet());
-        Boss_object.SetActive(false);
-    }*/
+        base.Recognize();
+        Boss_object.SetActive(true);
+    }            
 
     public override void TakeDamage(int damage)
     {
