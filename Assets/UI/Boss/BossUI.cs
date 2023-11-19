@@ -20,8 +20,11 @@ public class BossUI : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        boss_name.text = boss.boss_names;
-        boss_hp_bar.value = 1 - boss.enemy_hp / 100.0f;
+    {        
+        if(boss != null)
+        {
+            boss_name.text = boss.boss_names;
+            boss_hp_bar.value = 1 - boss.enemy_hp / 100.0f;
+        }
     }
 }

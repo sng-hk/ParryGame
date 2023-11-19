@@ -10,17 +10,21 @@ public class Boss : Enemy
     [SerializeField]
     private GameObject Boss_object;
 
+
+    SpriteRenderer sr;
+
     public string boss_names;
 
     private void Awake()
     {
         boss_names = "skelton";
-        enemy_hp = 100;
+        enemy_hp = 5;
     }
     // Start is called before the first frame update
     void Start()
     {
         canAttack = true;
+        sr = GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -28,12 +32,35 @@ public class Boss : Enemy
         Facing();
     }
 
-    
+
     public void Recognize()
     {
         base.Recognize();
         Boss_object.SetActive(true);
-    }            
+    }
+
+    new IEnumerator DeadParticle()
+    {        
+        base.DeadParticle();
+        yield return new WaitForSeconds(0.2f);
+        base.DeadParticle(-1, 0.5f, 0);
+        yield return new WaitForSeconds(0.1f);
+        base.DeadParticle(0, 1, 0);
+        base.DeadParticle(-1f, 1, 0);
+        base.DeadParticle(0, 3, 0);
+        yield return new WaitForSeconds(0.1f);
+        base.DeadParticle(0, 2, 0);
+        base.DeadParticle(-0.2f, 1, 0);
+        yield return new WaitForSeconds(0.2f);
+        base.DeadParticle(0.6f, 2, 0);
+        base.DeadParticle();
+        yield return new WaitForSeconds(0.4f);
+        base.DeadParticle(0, 3, 0);
+        base.DeadParticle(-0.2f, 1, 0);
+        yield return new WaitForSeconds(0.1f);
+        base.DeadParticle(2, 1, 0);
+        Destroy(gameObject);
+    }
 
     public override void TakeDamage(int damage)
     {
@@ -41,9 +68,9 @@ public class Boss : Enemy
         if (enemy_hp <= 0)
         {
             RemoveAll();
+            sr.color = new Color(0, 0, 0, 0);
+            StartCoroutine(DeadParticle());
             exit_door.SetActive(true);
-            Boss_object.SetActive(false);
-            Destroy(gameObject);
         }
     }
 

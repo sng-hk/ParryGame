@@ -28,8 +28,7 @@ public class Enemy : MonoBehaviour
     [Header("Instantiate Object")]
     public GameObject bullet;
     float bulletspawnDistance = 1;
-    public GameObject deadSmokeParticle;
-    public Vector3 smokePositionOffset;
+    [SerializeField] private GameObject deadSmokeParticle;
 
     public Vector3 defaultLocalScale;
 
@@ -204,12 +203,23 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    public void DeadParticle()
+    {
+        Instantiate(deadSmokeParticle, transform.position, Quaternion.identity);
+    }
+
+    public void DeadParticle(float x, float y, float z)
+    {
+        Instantiate(deadSmokeParticle, transform.position + new Vector3(x, y, z), Quaternion.identity);
+    }
+
     public virtual void TakeDamage(int damage)
     {
         enemy_hp -= damage;
         if (enemy_hp <= 0)
         {
-            RemoveAll();            
+            RemoveAll();
+            DeadParticle();
             Destroy(gameObject);
         }
     }
