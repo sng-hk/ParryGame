@@ -12,19 +12,21 @@ public class ShieldController : MonoBehaviour
     SpriteRenderer sr;
 
     public SoundManager sound_manager;
+    private KeyCode parryKey;
 
     // Start is called before the first frame update
     void Start()
     {
         transform.GetChild(0).gameObject.SetActive(false);
         sr = GetComponent<SpriteRenderer>();
+        parryKey = PlayerController.instance.parryKey;
     }
 
     // Update is called once per frame
     void Update()
     {
         /*if (Input.GetKeyDown(KeyCode.ÆÐ¸µ Å°) && canActiveShield)*/
-        if (Input.GetKeyDown(KeyCode.LeftControl) && canActiveShield)
+        if (Input.GetKeyDown(parryKey) && canActiveShield)
         {
             StartCoroutine(nameof(ActivateShield));
         }

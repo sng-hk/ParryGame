@@ -60,6 +60,12 @@ public class PlayerController : MonoBehaviour
 
     [Header("Player Input")]
     Vector2 moveInput;
+    
+    public KeyCode jumpKey = KeyCode.LeftAlt;
+    public KeyCode parryKey = KeyCode.LeftControl;
+    public KeyCode dashKey = KeyCode.LeftShift;
+    public KeyCode interactionKey = KeyCode.Z;
+
 
     [Header("Events")]
     [Space]
@@ -82,7 +88,12 @@ public class PlayerController : MonoBehaviour
         Pause.ResumeGame();
         RB = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
-        instance = this;
+        instance = this;        
+
+        jumpKey = (jumpKey == KeyCode.None) ? KeyCode.LeftAlt : jumpKey;
+        parryKey = (parryKey == KeyCode.None) ? KeyCode.LeftControl : parryKey;
+        dashKey = (dashKey == KeyCode.None) ? KeyCode.LeftShift : dashKey;
+        interactionKey = (interactionKey == KeyCode.None) ? KeyCode.Z : interactionKey;
     }
 
     void Start()
@@ -114,7 +125,7 @@ public class PlayerController : MonoBehaviour
 
         #region Dash
             /*if (Input.GetKeyDown(KeyCode.대시키) && canDash)*/
-            if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
+            if (Input.GetKeyDown(dashKey) && canDash)
             {
             sound_manager.SfxPlayer(SoundManager.sfx.dash);
             StartCoroutine(nameof(Dash));
@@ -136,7 +147,7 @@ public class PlayerController : MonoBehaviour
             }
 
             /*if (Input.GetKeyDown(KeyCode.점프키))*/
-            if (Input.GetKeyDown(KeyCode.LeftAlt))
+            if (Input.GetKeyDown(jumpKey))
             {
                 //JumpBuffer
                 jumpTimer = Time.time + jumpDelay;

@@ -10,6 +10,7 @@ public class KeyChecker : MonoBehaviour
     
     [SerializeField] private Transform KeyCheckerWall;
     public SoundManager sound_manager;
+    KeyCode interactionKey;
 
     [Header("시작점 끝점 지정: 빨간점(startPoint) -> 초록점(endPoint)")]
     [SerializeField] private Transform startPoint;
@@ -23,6 +24,7 @@ public class KeyChecker : MonoBehaviour
     {
         coll = GetComponent<BoxCollider2D>();
         KeyCheckerWall = transform.parent.GetChild(0);
+        interactionKey = PlayerController.instance.interactionKey;
     }
 
     private void Update()
@@ -79,7 +81,7 @@ public class KeyChecker : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player") && _player != null && _player_inventory != null)
         {
-            if (Input.GetKeyDown(KeyCode.F))
+            if (Input.GetKeyDown(interactionKey))
             {
                 if (_player_inventory.NumberOfKeyItems >= 1)
                 {

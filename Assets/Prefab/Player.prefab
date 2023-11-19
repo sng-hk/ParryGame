@@ -201,7 +201,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1877976534739777646}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -40.63, y: -28.68, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -303,10 +303,13 @@ MonoBehaviour:
   jumpParticle: {fileID: 4681902642837797537, guid: a86d90aab1e80ce49a3d187a344f09ff, type: 3}
   runParticle: {fileID: 2579735474919245329, guid: 637820ab12b57674092e1afc133c01a8, type: 3}
   dashAnimationOffset: {x: -0.5, y: 0, z: 0}
+  jumpKey: 0
+  parryKey: 0
+  dashKey: 0
+  lockerCheckerKey: 0
   OnLandEvent:
     m_PersistentCalls:
       m_Calls: []
-  tr: {fileID: 0}
   sound_manager: {fileID: 0}
 --- !u!114 &1877976534739777639
 MonoBehaviour:
