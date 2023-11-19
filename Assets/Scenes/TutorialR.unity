@@ -150,7 +150,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 227486361}
-  m_Text: press 'X' to jump,
+  m_Text: "'Alt'\uD0A4\uB85C \uC810\uD504\uD558\uAE30"
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -308,11 +308,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 577042565827917970, guid: 46c810f11f6d4244ab4a7e8d477c1868, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.169998
+      value: 52.87
       objectReference: {fileID: 0}
     - target: {fileID: 577042565827917970, guid: 46c810f11f6d4244ab4a7e8d477c1868, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.0599995
+      value: 27.790005
       objectReference: {fileID: 0}
     - target: {fileID: 577042565827917970, guid: 46c810f11f6d4244ab4a7e8d477c1868, type: 3}
       propertyPath: m_LocalPosition.z
@@ -361,17 +361,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2326567145606549913, guid: a3ce0e01c4984d94a83c47a14d92c527, type: 3}
   m_PrefabInstance: {fileID: 2066766950}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &346220846 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5914180106943422203, guid: 064443dcc504e9346b57d940af62f3c2, type: 3}
-  m_PrefabInstance: {fileID: 2135404984}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &486576949
 GameObject:
   m_ObjectHideFlags: 0
@@ -936,7 +925,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1015318153}
-  m_Text: "press '\u2191' to clear!"
+  m_Text: "'\u2191'\uD0A4\uB97C \uB20C\uB7EC \uB098\uAC00\uAE30."
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -1017,7 +1006,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 27, y: 47.5}
+  m_AnchoredPosition: {x: 26.7, y: 47.5}
   m_SizeDelta: {x: 7.4571, y: 4.4313}
   m_Pivot: {x: 0, y: 0}
 --- !u!1 &1046778923
@@ -1424,9 +1413,8 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1304737383}
-  m_Text: 'press ''Space bar'' to dash
-
-    dash can go 8 directions'
+  m_Text: "'Shift'\uD0A4\uB85C \uB300\uC26C\uD558\uAE30.\n\uB300\uC26C\uB294 8 \uBC29\uD5A5\uC73C\uB85C
+    \uD560 \uC218 \uC788\uB2E4."
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -19030,7 +19018,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1507121928}
-  m_Text: press 'F' to interaction
+  m_Text: "'F'\uD0A4\uB97C \uB20C\uB7EC \uC0C1\uD638\uC791\uC6A9\uD558\uAE30"
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -19476,7 +19464,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1802153442}
-  m_Text: press 'C' to parrying
+  m_Text: "'Ctrl'\uD0A4\uB97C \uB20C\uB7EC \uD328\uB9C1\uD558\uAE30"
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -19560,6 +19548,17 @@ RectTransform:
   m_AnchoredPosition: {x: 51.211548, y: 52.080017}
   m_SizeDelta: {x: 7.4571, y: 4.4313}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1814133244 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5914180104959684001, guid: 064443dcc504e9346b57d940af62f3c2, type: 3}
+  m_PrefabInstance: {fileID: 2135404984}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1822661052
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20355,11 +20354,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 775585151475636896, guid: c03f3f6f69c94eb4295ebefe1f79077f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.169998
+      value: 52.87
       objectReference: {fileID: 0}
     - target: {fileID: 775585151475636896, guid: c03f3f6f69c94eb4295ebefe1f79077f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.0599995
+      value: 27.790005
       objectReference: {fileID: 0}
     - target: {fileID: 775585151475636896, guid: c03f3f6f69c94eb4295ebefe1f79077f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -20432,11 +20431,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1877976534525730940, guid: 64c3c382225778e488846bd9bd0bf4ae, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 53.8
+      value: 93.5
       objectReference: {fileID: 0}
     - target: {fileID: 1877976534525730940, guid: 64c3c382225778e488846bd9bd0bf4ae, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 26.12
+      value: 68.8
       objectReference: {fileID: 0}
     - target: {fileID: 1877976534525730940, guid: 64c3c382225778e488846bd9bd0bf4ae, type: 3}
       propertyPath: m_LocalPosition.z
@@ -20473,6 +20472,14 @@ PrefabInstance:
     - target: {fileID: 1877976534525730941, guid: 64c3c382225778e488846bd9bd0bf4ae, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 1877976534739777635, guid: 64c3c382225778e488846bd9bd0bf4ae, type: 3}
+      propertyPath: start_pos.x
+      value: 93
+      objectReference: {fileID: 0}
+    - target: {fileID: 1877976534739777635, guid: 64c3c382225778e488846bd9bd0bf4ae, type: 3}
+      propertyPath: start_pos.y
+      value: 69
       objectReference: {fileID: 0}
     - target: {fileID: 1877976534739777635, guid: 64c3c382225778e488846bd9bd0bf4ae, type: 3}
       propertyPath: sound_manager
@@ -20551,7 +20558,7 @@ PrefabInstance:
     - target: {fileID: 2470379303268738533, guid: ea1f77a1abc2190489c04243429266c5, type: 3}
       propertyPath: sound_value_text
       value: 
-      objectReference: {fileID: 346220846}
+      objectReference: {fileID: 1814133244}
     - target: {fileID: 2470379303268738533, guid: ea1f77a1abc2190489c04243429266c5, type: 3}
       propertyPath: sfx_clip.Array.data[0]
       value: 
