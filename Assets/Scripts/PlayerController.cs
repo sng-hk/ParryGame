@@ -113,7 +113,8 @@ public class PlayerController : MonoBehaviour
         }
 
         #region Dash
-            if (Input.GetKeyDown(KeyCode.Space) && canDash)
+            /*if (Input.GetKeyDown(KeyCode.대시키) && canDash)*/
+            if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
             {
             sound_manager.SfxPlayer(SoundManager.sfx.dash);
             StartCoroutine(nameof(Dash));
@@ -134,7 +135,8 @@ public class PlayerController : MonoBehaviour
                 coyoteTimeCounter -= Time.deltaTime;
             }
 
-            if (Input.GetKeyDown(KeyCode.X))
+            /*if (Input.GetKeyDown(KeyCode.점프키))*/
+            if (Input.GetKeyDown(KeyCode.LeftAlt))
             {
                 //JumpBuffer
                 jumpTimer = Time.time + jumpDelay;

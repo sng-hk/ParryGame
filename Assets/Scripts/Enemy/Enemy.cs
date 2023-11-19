@@ -204,8 +204,7 @@ public class Enemy : MonoBehaviour
         enemy_hp -= damage;
         if (enemy_hp <= 0)
         {
-            RemoveAll();
-            Instantiate()
+            RemoveAll();            
             Destroy(gameObject);
         }
     }

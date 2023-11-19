@@ -23,7 +23,8 @@ public class ShieldController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.C) && canActiveShield)
+        /*if (Input.GetKeyDown(KeyCode.ÆÐ¸µ Å°) && canActiveShield)*/
+        if (Input.GetKeyDown(KeyCode.LeftControl) && canActiveShield)
         {
             StartCoroutine(nameof(ActivateShield));
         }
