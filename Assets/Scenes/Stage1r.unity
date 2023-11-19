@@ -1003,7 +1003,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 577042565827917970, guid: 46c810f11f6d4244ab4a7e8d477c1868, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 26.52
+      value: 12.690002
       objectReference: {fileID: 0}
     - target: {fileID: 577042565827917970, guid: 46c810f11f6d4244ab4a7e8d477c1868, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2159,6 +2159,8 @@ MonoBehaviour:
   canAttack: 0
   sound_manager: {fileID: 1631728607}
   bullet: {fileID: 3343141980394933602, guid: bb6a968f344b3de458ca5bae5d9de971, type: 3}
+  deadSmokeParticle: {fileID: 0}
+  smokePositionOffset: {x: 0, y: 0, z: 0}
   defaultLocalScale: {x: 0, y: 0, z: 0}
   exit_door: {fileID: 85723933}
   Boss_object: {fileID: 1502708577}
@@ -23769,21 +23771,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 903489490, guid: 64c3c382225778e488846bd9bd0bf4ae, type: 3}
-      propertyPath: OnKeyItemCollected.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 903489490, guid: 64c3c382225778e488846bd9bd0bf4ae, type: 3}
       propertyPath: OnKeyItemCollected.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1421290757}
-    - target: {fileID: 903489490, guid: 64c3c382225778e488846bd9bd0bf4ae, type: 3}
-      propertyPath: OnKeyItemCollected.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: UpdateKeyItemText
-      objectReference: {fileID: 0}
-    - target: {fileID: 903489490, guid: 64c3c382225778e488846bd9bd0bf4ae, type: 3}
-      propertyPath: OnKeyItemCollected.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 1877976534525730940, guid: 64c3c382225778e488846bd9bd0bf4ae, type: 3}
       propertyPath: m_RootOrder
       value: 26
@@ -24456,7 +24446,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 775585151475636896, guid: c03f3f6f69c94eb4295ebefe1f79077f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 26.52
+      value: 12.690002
       objectReference: {fileID: 0}
     - target: {fileID: 775585151475636896, guid: c03f3f6f69c94eb4295ebefe1f79077f, type: 3}
       propertyPath: m_LocalPosition.z

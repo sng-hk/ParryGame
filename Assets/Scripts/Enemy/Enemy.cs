@@ -25,10 +25,15 @@ public class Enemy : MonoBehaviour
 
     public SoundManager sound_manager;
 
+    [Header("Instantiate Object")]
     public GameObject bullet;
     float bulletspawnDistance = 1;
+    public GameObject deadSmokeParticle;
+    public Vector3 smokePositionOffset;
 
     public Vector3 defaultLocalScale;
+
+    
 
     public void EnemyHurt()
     {

@@ -11,7 +11,7 @@ public class EnemySight : MonoBehaviour
     void Start()
     {        
         enemy = GetComponentInParent<Enemy>();
-        if(enemy != null)
+        if(enemy == null)
         {
             enemy = GetComponentInParent<Boss>();
         }
