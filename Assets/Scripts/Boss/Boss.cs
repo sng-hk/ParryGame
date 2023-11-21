@@ -18,7 +18,7 @@ public class Boss : Enemy
     private void Awake()
     {
         boss_names = "skelton";
-        enemy_hp = 5;
+        enemy_hp = 50;
     }
     // Start is called before the first frame update
     void Start()
@@ -33,7 +33,7 @@ public class Boss : Enemy
     }
 
 
-    public void Recognize()
+    public override void Recognize()
     {
         base.Recognize();
         Boss_object.SetActive(true);

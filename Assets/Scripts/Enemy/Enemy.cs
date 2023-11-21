@@ -58,7 +58,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    public void Recognize()
+    public virtual void Recognize()
     {
         /*StartCoroutine(SpawnBullet());*/
         canAttack = false;

@@ -26,20 +26,12 @@ public class BeamEnemySight : MonoBehaviour
         }
     }
 
-    /*private void OnTriggerStay2D(Collider2D collision)
-    {
-        *//*if (collision.gameObject.CompareTag("Player") && enemy.canAttack)*//*
-        {
-            enemy.Recognize();
-            *//*recognize = true;*//*
-        }
-    }*/
 
-    /*private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            parent_script.Recognize();
+            enemy.Recognize();
             recognize = true;
         }
     }
@@ -48,8 +40,8 @@ public class BeamEnemySight : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            parent_script.UnRecognize();
+            enemy.UnRecognize();
             recognize = false;
         }
-    }*/
+    }
 }
