@@ -113,7 +113,7 @@ public class CutSceneUI2 : MonoBehaviour
                 break;
             //무기 빛나는거?
             case 8:
-                sound_manager.SfxPlayer(SoundManager.sfx.paper_turn);
+                sound_manager.SfxPlayer(SoundManager.sfx.final);
                 cut_scene.sprite = image[3];
                 text_object.SetActive(false);
                 break;

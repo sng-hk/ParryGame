@@ -14,7 +14,7 @@ public class SoundManager : MonoBehaviour
     public AudioSource bgm;
     public AudioSource[] sfx_player;
     public AudioClip[] sfx_clip;
-    public enum sfx { paper_turn, shot_beam, shot_danger_line, dash, game_over, attacked, parrying, shot, get, jump, door_open, time_stop, page_up, shild_on};
+    public enum sfx { portal, stream_portal, jump_pad, final, paper_turn, shot_beam, shot_danger_line, dash, game_over, attacked, parrying, shot, get, jump, door_open, time_stop, page_up, shild_on};
     int sfx_cousor = 0;
     
 
@@ -89,6 +89,18 @@ public class SoundManager : MonoBehaviour
                 break;
             case sfx.paper_turn:
                 sfx_player[sfx_cousor].clip = sfx_clip[13];
+                break;
+            case sfx.portal:
+                sfx_player[sfx_cousor].clip = sfx_clip[14];
+                break;
+            case sfx.stream_portal:
+                sfx_player[sfx_cousor].clip = sfx_clip[15];
+                break;
+            case sfx.jump_pad:
+                sfx_player[sfx_cousor].clip = sfx_clip[16];
+                break;
+            case sfx.final:
+                sfx_player[sfx_cousor].clip = sfx_clip[17];
                 break;
         }
 

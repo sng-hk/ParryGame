@@ -101,6 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player_in: 0
   exit_portal: {fileID: 0}
+  sound_manager: {fileID: 2470379303268738533, guid: ea1f77a1abc2190489c04243429266c5, type: 3}
 --- !u!70 &6257588261050154004
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

@@ -117,6 +117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player_in: 0
   exit_portal: {fileID: 0}
+  sound_manager: {fileID: 2470379303268738533, guid: ea1f77a1abc2190489c04243429266c5, type: 3}
 --- !u!95 &1729960333949912384
 Animator:
   serializedVersion: 5

@@ -5,11 +5,13 @@ using UnityEngine;
 public class JumpPad : MonoBehaviour
 {
     private float bounce = 20f;
+    public SoundManager sound_manager;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.CompareTag("Player"))
         {
+            sound_manager.SfxPlayer(SoundManager.sfx.jump_pad);
             Rigidbody2D player_rb = collision.gameObject.GetComponent<Rigidbody2D>();
             if (Input.GetKey(KeyCode.X))
             {

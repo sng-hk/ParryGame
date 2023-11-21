@@ -7,6 +7,8 @@ public class Portal : MonoBehaviour
     public bool player_in;
     public GameObject exit_portal;
 
+    public SoundManager sound_manager;
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
@@ -25,6 +27,7 @@ public class Portal : MonoBehaviour
 
     public void IntoThePortal()
     {
+        sound_manager.SfxPlayer(SoundManager.sfx.portal);
         PlayerController.instance.transform.position = exit_portal.transform.position;
     }
 

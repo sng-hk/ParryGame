@@ -24308,6 +24308,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3509779479000617796, guid: c879211bb23708143bf018be6c051995, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3509779479000617797, guid: c879211bb23708143bf018be6c051995, type: 3}
       propertyPath: m_Name
       value: Boss

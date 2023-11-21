@@ -15,6 +15,8 @@ public class StreamPortal : MonoBehaviour
     private Vector3 target_position;
     private float elapsed_time = 0.0f;
 
+    public SoundManager sound_manager;
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
@@ -33,6 +35,7 @@ public class StreamPortal : MonoBehaviour
 
     public void IntoThePortal()
     {
+        sound_manager.SfxPlayer(SoundManager.sfx.stream_portal);
         initial_position = player.transform.position;
         target_position = exit_portal.position;
         elapsed_time = 0.0f;
