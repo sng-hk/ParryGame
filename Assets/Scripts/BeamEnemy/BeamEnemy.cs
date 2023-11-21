@@ -91,7 +91,6 @@ public class BeamEnemy : MonoBehaviour
         beam_script.end_point = line_destroy_point;
     }
 
-
     void Start()
     {
         enemy_hp = 10;
