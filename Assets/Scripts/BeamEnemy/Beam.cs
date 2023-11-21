@@ -15,6 +15,8 @@ public class Beam : MonoBehaviour
 
     DangerLine danger_line;
 
+    public SoundManager sound_manager;
+
     private void Start()
     {
         speed = 3.0f;
@@ -45,6 +47,7 @@ public class Beam : MonoBehaviour
         {
             if (is_reflect == false)
             {
+                sound_manager.SfxPlayer(SoundManager.sfx.parrying);
                 speed *= 2;
                 is_reflect = true;
             }

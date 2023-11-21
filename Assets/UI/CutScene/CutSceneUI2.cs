@@ -26,6 +26,8 @@ public class CutSceneUI2 : MonoBehaviour
     int index = 0;
     int max_index = 10;
 
+    public SoundManager sound_manager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -92,6 +94,7 @@ public class CutSceneUI2 : MonoBehaviour
                 break;
             //페허
             case 1:
+                sound_manager.SfxPlayer(SoundManager.sfx.paper_turn);
                 cut_scene.sprite = image[1];
                 script.text = text[index];
                 break;
@@ -104,16 +107,19 @@ public class CutSceneUI2 : MonoBehaviour
                 break;
             //탑을 바라보는 주인공
             case 7:
+                sound_manager.SfxPlayer(SoundManager.sfx.paper_turn);
                 cut_scene.sprite = image[2];
                 script.text = text[index];
                 break;
             //무기 빛나는거?
             case 8:
+                sound_manager.SfxPlayer(SoundManager.sfx.paper_turn);
                 cut_scene.sprite = image[3];
                 text_object.SetActive(false);
                 break;
             //검은 화면
             case 9:
+                sound_manager.SfxPlayer(SoundManager.sfx.paper_turn);
                 cut_scene.sprite = image[4];
                 break;
 

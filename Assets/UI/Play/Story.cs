@@ -20,6 +20,8 @@ public class Story : MonoBehaviour
     int index = 0;
     int max_index = 10;
 
+    public SoundManager sound_manager;
+
     void Start()
     {
         cut_scene.SetActive(true);
@@ -73,6 +75,7 @@ public class Story : MonoBehaviour
                 break;
             //ÄÆ¾À ÄÑ±â
             case 5:
+                sound_manager.SfxPlayer(SoundManager.sfx.paper_turn);
                 cut_scene_image.SetActive(true);
                 script.text = text[index];
                 break;

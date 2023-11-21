@@ -1237,7 +1237,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2470379303268738532, guid: ea1f77a1abc2190489c04243429266c5, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2470379303268738533, guid: ea1f77a1abc2190489c04243429266c5, type: 3}
       propertyPath: sound_bar
@@ -1669,6 +1669,7 @@ MonoBehaviour:
   - "\"\uADF8\uB9AC\uACE0 \uC9C0\uAE08\uC740 \uB098 \uD63C\uC790 \uC0B4\uC544\uB0A8\uC740\uAC74\uAC00.\""
   - "\"\uADF8\uB807\uB2E4\uBA74 \uC774\uC81C...\""
   index: 0
+  sound_manager: {fileID: 1116385978}
 --- !u!1 &1893988264
 GameObject:
   m_ObjectHideFlags: 0

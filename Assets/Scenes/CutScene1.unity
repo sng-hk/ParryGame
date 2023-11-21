@@ -1674,6 +1674,7 @@ MonoBehaviour:
   - "\"... \u2026\""
   - "(\uB208\uC744 \uB72C\uB2E4.)"
   index: 0
+  sound_manager: {fileID: 1116385978}
 --- !u!1 &1893988264
 GameObject:
   m_ObjectHideFlags: 0

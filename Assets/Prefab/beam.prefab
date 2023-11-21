@@ -220,3 +220,4 @@ MonoBehaviour:
   speed: 10
   lifetime: 5
   is_reflect: 0
+  sound_manager: {fileID: 2470379303268738533, guid: ea1f77a1abc2190489c04243429266c5, type: 3}

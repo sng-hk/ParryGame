@@ -20051,6 +20051,7 @@ MonoBehaviour:
   - "'\uB3D9\uAD74 \uBC16\uC5D0 \uC5B4\uB834\uD48B\uC774 \uD0D1\uC774 \uBCF4\uC778\uB2E4.'"
   - "\"\uC77C\uB2E8 \uC5EC\uAE30\uC11C \uBC97\uC5B4\uB098\uC790.\""
   index: 0
+  sound_manager: {fileID: 1631728607}
 --- !u!1 &1958844783
 GameObject:
   m_ObjectHideFlags: 0

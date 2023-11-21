@@ -444,17 +444,20 @@ MonoBehaviour:
   - {fileID: 2470379304338510841}
   - {fileID: 2470379304319380206}
   sfx_clip:
-  - {fileID: 8300000, guid: b16c664fbc4982d40859446c9e29b04c, type: 3}
+  - {fileID: 8300000, guid: 1baa41f90fd5c3d449b240995c38e625, type: 3}
   - {fileID: 8300000, guid: 648d48647b4ba424497d05ac69a777be, type: 3}
-  - {fileID: 8300000, guid: 213242bd4afe4ba418018533d5c943dd, type: 3}
+  - {fileID: 8300000, guid: 6f5a8f36b8c7ff6428fb98df28fa48dc, type: 3}
   - {fileID: 8300000, guid: a3dc97b1f95fa874596bd557c8ce80a1, type: 3}
-  - {fileID: 8300000, guid: ac9b0508f119d77459d56747130ed793, type: 3}
-  - {fileID: 8300000, guid: 95107bab26ba5914ca14bbfa28f8af28, type: 3}
-  - {fileID: 8300000, guid: 52b71de0dad1de74e869afaae32f5b61, type: 3}
-  - {fileID: 8300000, guid: a3fbb1020a481c44d819d15f619d61ef, type: 3}
-  - {fileID: 8300000, guid: d4b4e53638e0b244d8f67f3ffce6b694, type: 3}
-  - {fileID: 8300000, guid: 69860eeefffcc3e4b939ec69793acdca, type: 3}
-  - {fileID: 8300000, guid: c54f2bb0abe54014684df4c68920a488, type: 3}
+  - {fileID: 8300000, guid: 03be1454b4c04d84dafe4f381b20a89d, type: 3}
+  - {fileID: 8300000, guid: 81bf21d85148bba48850b70cf6c52261, type: 3}
+  - {fileID: 8300000, guid: c7b6c8f0b7492054dbe222cb2ccef21e, type: 3}
+  - {fileID: 8300000, guid: 3b892ca9009e20242baa4070ba232292, type: 3}
+  - {fileID: 8300000, guid: 9d3171d7b3203ea46941e101926d9fb7, type: 3}
+  - {fileID: 8300000, guid: 9c2d2046a4cf16d49b17657ea9766182, type: 3}
+  - {fileID: 8300000, guid: e84fc9e6dc2537d47ada8790dc19fc3c, type: 3}
+  - {fileID: 8300000, guid: 614997238a2ab5a4b81a2f211d929763, type: 3}
+  - {fileID: 8300000, guid: 61dd400b68599b4448311c66335f8d0e, type: 3}
+  - {fileID: 8300000, guid: 020d16aa143252342abb7c59206f8cc8, type: 3}
 --- !u!1 &2470379303556086594
 GameObject:
   m_ObjectHideFlags: 0

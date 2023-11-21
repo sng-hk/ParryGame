@@ -23,6 +23,8 @@ public class CutSceneUI : MonoBehaviour
     int index = 0;
     int max_index = 13;
 
+    public SoundManager sound_manager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -92,6 +94,7 @@ public class CutSceneUI : MonoBehaviour
                 break;
             //불사자들
             case 2:
+                sound_manager.SfxPlayer(SoundManager.sfx.paper_turn);
                 cut_scene.sprite = image[1];
                 script.text = text[index];
                 break;
@@ -102,6 +105,7 @@ public class CutSceneUI : MonoBehaviour
                 break;
             //일곱 무구
             case 6:
+                sound_manager.SfxPlayer(SoundManager.sfx.paper_turn);
                 cut_scene.sprite = image[2];
                 script.text = text[index];
                 break;
@@ -111,6 +115,7 @@ public class CutSceneUI : MonoBehaviour
                 break;
             //갇히는 불사자들의 영혼
             case 9:
+                sound_manager.SfxPlayer(SoundManager.sfx.paper_turn);
                 cut_scene.sprite = image[3];
                 script.text = text[index];
                 break;
@@ -119,6 +124,7 @@ public class CutSceneUI : MonoBehaviour
                 break;
             //검은 화면
             case 11:
+                sound_manager.SfxPlayer(SoundManager.sfx.paper_turn);
                 cut_scene.sprite = image[4];
                 script.text = text[index];
                 break;

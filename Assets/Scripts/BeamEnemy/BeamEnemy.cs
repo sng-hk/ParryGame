@@ -68,8 +68,10 @@ public class BeamEnemy : MonoBehaviour
             }
 
             yield return new WaitForSeconds(fireInterval);
+            sound_manager.SfxPlayer(SoundManager.sfx.shot_danger_line);
             DangerLine();
             yield return new WaitForSeconds(2f);
+            sound_manager.SfxPlayer(SoundManager.sfx.shot_beam);
             ShootBeam();
         }
     }
