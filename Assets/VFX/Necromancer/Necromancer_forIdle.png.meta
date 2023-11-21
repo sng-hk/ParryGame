@@ -1,0 +1,1455 @@
+fileFormatVersion: 2
+guid: a0e5de427dd33484eaf5d279b51e8399
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Necromancer_forIdle_0
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 284
+        width: 30
+        height: 49
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15217c34073f01349957cc6ba6971424
+      internalID: 1842978746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_forIdle_1
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 284
+        width: 30
+        height: 49
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f061aa39c4b6c684fba8b2e55b1242fc
+      internalID: -2009706375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_forIdle_2
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 284
+        width: 30
+        height: 49
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e749c2fe238ef349bead37cff1455aa
+      internalID: 2073646204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_forIdle_3
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 284
+        width: 30
+        height: 49
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77b39d3acf48dc74d909ed71a71552d4
+      internalID: 2035328100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_forIdle_4
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 284
+        width: 30
+        height: 49
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03f7fa0c5e479f347a9f1a05cd9e9e7d
+      internalID: -531377438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_forIdle_5
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 284
+        width: 30
+        height: 49
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e3abe9b37aa6d249be3e1be63b5443c
+      internalID: 806342890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_forIdle_6
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 284
+        width: 30
+        height: 49
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e79a4ad19c8f6eb48bf6250e23015e25
+      internalID: 1405223853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_forIdle_7
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 284
+        width: 30
+        height: 49
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfb4a2552442be24cb4a00e4856c1d50
+      internalID: -1198150663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_forIdle_8
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 223
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eef723690cfe1d34c9eb609e1eb8c981
+      internalID: 574550459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_forIdle_9
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 223
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5fcbf3bde925fa499c5c63e7a5800b7
+      internalID: -1026201629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_forIdle_10
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 223
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e4a41778691f054f9c64605663726ee
+      internalID: 75767405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_forIdle_11
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 223
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1dc5ab60f4c3fe4c81ae1ded6129b95
+      internalID: 2060223059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_forIdle_12
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 223
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72d87dec6383cd240abcbf9eed6f1cbb
+      internalID: -914325397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_forIdle_13
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 223
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9221a2c4f2dfc44bb43c3f188b2f1e8
+      internalID: 1030118668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_forIdle_14
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 223
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 644e05428da3f6447be2be9fc437c413
+      internalID: 162471193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_forIdle_15
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 223
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66db806369bc15c438b71bd114ec7021
+      internalID: -976292898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_forIdle_16
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 223
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e92f6459bbcbf744caa5adf6ffb21c2d
+      internalID: -1617748658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_forIdle_17
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 223
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de0eb2f90249ebc4eadfd5d8b7197eae
+      internalID: 1621985412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_forIdle_18
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 162
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef5532f99d350cc4f81ba0430016a268
+      internalID: 850196748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_forIdle_19
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 162
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a97614697edff0d4d854fa5a782abe8e
+      internalID: 529856523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_forIdle_20
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 162
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86a2757ebe9291f4990e2c3f9a3d9acd
+      internalID: 160392303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_forIdle_21
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 162
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fdcfc744ad4f2c48bc454882f2a97f5
+      internalID: 1670337238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_forIdle_22
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 162
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5da44cd8c8db74f45bf17bcb89abd265
+      internalID: -752561148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_forIdle_23
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 162
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5da5ba58e315e7d4aa82ee5076c9e8af
+      internalID: -2042482414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_forIdle_24
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 162
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d278ff395704a00439277ebd968c897e
+      internalID: -339860102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_forIdle_25
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 162
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f01932c0c8338648884c142fd41f2d6
+      internalID: 1577400559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_forIdle_26
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 162
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38ca471ccc63e4243a34fb025192fd09
+      internalID: -2111506615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_forIdle_27
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 162
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 145458ac8fa0db14a9f93621420cf13f
+      internalID: -1261294837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_forIdle_28
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 162
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 007f8cfe8ba29b646bda8225679a6751
+      internalID: -1633221280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_forIdle_29
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 162
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30ae2fb8a4c6b884b8e81589a0a92321
+      internalID: 1008266256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_forIdle_30
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 101
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b82b57b17765f546a6ccf596d94eb0e
+      internalID: -661345287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_forIdle_31
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 101
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eef2bcf22b30726428838051d67c8801
+      internalID: -89215053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_forIdle_32
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 101
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fe2ffb9884043946a9c75384b46cd0e
+      internalID: 405187832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_forIdle_33
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 101
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c7bef72c5715e844a547a3073e2ce00
+      internalID: -843093884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_forIdle_34
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 101
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52130e383cb5564499b028800f032cb0
+      internalID: 1192431415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_forIdle_35
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 101
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e47ffc75d0e56a744a4ea4397a9bf5f4
+      internalID: 1222556664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_forIdle_36
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 101
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e989c00260a4fe478eb86abd66bbb1f
+      internalID: 2036881293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_forIdle_37
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 101
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f654f1c72b11ca9448befdae94020d81
+      internalID: -1929460404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_forIdle_38
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 101
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 340ae48a6635da945bb390d18f666f68
+      internalID: 1937215136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_forIdle_39
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 101
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0209d79bc71075741ba87256c1c92387
+      internalID: -842016155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_forIdle_40
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 101
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56487c6338e86d943915ea39295c76ce
+      internalID: 305474311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_forIdle_41
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 101
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b6de9580d33efe41bc8fce5aa7a1a00
+      internalID: 1978740655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_forIdle_42
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 101
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e871a01d1b3fe543869f917ba0c9230
+      internalID: -1493480017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_forIdle_43
+      rect:
+        serializedVersion: 2
+        x: 933
+        y: 101
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: defea6c6be967ae41810c37f521f1980
+      internalID: -2083104614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_forIdle_44
+      rect:
+        serializedVersion: 2
+        x: 1003
+        y: 101
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92a1d94e0d0e7994aae5325894fd1127
+      internalID: -1889183642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_forIdle_45
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 40
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86fe492fcd6fcb0479716e5e127f20f1
+      internalID: -1866251690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_forIdle_46
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 40
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13ca5ce54685d5545a7eb338f13e1c9a
+      internalID: -1261980289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_forIdle_47
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 40
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 342a053268829164897a47cd780345d5
+      internalID: -1064368266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_forIdle_48
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 40
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9078a9ddaa91a3446ad30f21643acb3f
+      internalID: -1256609865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_forIdle_49
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 40
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc32f6c75bdb8334380eb485fafddecc
+      internalID: -451977140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_forIdle_50
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 40
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e8e73aea0bf7474992301e58d12caa5
+      internalID: 1120621978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_forIdle_51
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 40
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8832095cc052b3b4cba5fa090b49715b
+      internalID: 1883315640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_forIdle_52
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 40
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de3573b804f7e9a48987ad3268b31382
+      internalID: -133135793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_forIdle_53
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 40
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 477229437466a3143b993a7ae346e247
+      internalID: 2081368282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_forIdle_54
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 40
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e4951f0f1320584b8a231e9f5777312
+      internalID: 2126545096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_forIdle_55
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 40
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d33e2896118a28d498f21adc48f0d43d
+      internalID: -725871127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_forIdle_56
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 40
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de81446d2dd37e74e8f1b6ecaf1cc22d
+      internalID: 1258807591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_forIdle_57
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 40
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e5d639d5ee40374880038c4821fd6c3
+      internalID: 1321280328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_forIdle_58
+      rect:
+        serializedVersion: 2
+        x: 933
+        y: 40
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41b32b24dde3b5b44a58fbd6c5fcb976
+      internalID: 990374769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_forIdle_59
+      rect:
+        serializedVersion: 2
+        x: 1003
+        y: 40
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1abdb98f4dd0f9b419f2dd8f5d68c9cc
+      internalID: 182112625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Necromancer_forIdle_0: 1842978746
+      Necromancer_forIdle_1: -2009706375
+      Necromancer_forIdle_10: 75767405
+      Necromancer_forIdle_11: 2060223059
+      Necromancer_forIdle_12: -914325397
+      Necromancer_forIdle_13: 1030118668
+      Necromancer_forIdle_14: 162471193
+      Necromancer_forIdle_15: -976292898
+      Necromancer_forIdle_16: -1617748658
+      Necromancer_forIdle_17: 1621985412
+      Necromancer_forIdle_18: 850196748
+      Necromancer_forIdle_19: 529856523
+      Necromancer_forIdle_2: 2073646204
+      Necromancer_forIdle_20: 160392303
+      Necromancer_forIdle_21: 1670337238
+      Necromancer_forIdle_22: -752561148
+      Necromancer_forIdle_23: -2042482414
+      Necromancer_forIdle_24: -339860102
+      Necromancer_forIdle_25: 1577400559
+      Necromancer_forIdle_26: -2111506615
+      Necromancer_forIdle_27: -1261294837
+      Necromancer_forIdle_28: -1633221280
+      Necromancer_forIdle_29: 1008266256
+      Necromancer_forIdle_3: 2035328100
+      Necromancer_forIdle_30: -661345287
+      Necromancer_forIdle_31: -89215053
+      Necromancer_forIdle_32: 405187832
+      Necromancer_forIdle_33: -843093884
+      Necromancer_forIdle_34: 1192431415
+      Necromancer_forIdle_35: 1222556664
+      Necromancer_forIdle_36: 2036881293
+      Necromancer_forIdle_37: -1929460404
+      Necromancer_forIdle_38: 1937215136
+      Necromancer_forIdle_39: -842016155
+      Necromancer_forIdle_4: -531377438
+      Necromancer_forIdle_40: 305474311
+      Necromancer_forIdle_41: 1978740655
+      Necromancer_forIdle_42: -1493480017
+      Necromancer_forIdle_43: -2083104614
+      Necromancer_forIdle_44: -1889183642
+      Necromancer_forIdle_45: -1866251690
+      Necromancer_forIdle_46: -1261980289
+      Necromancer_forIdle_47: -1064368266
+      Necromancer_forIdle_48: -1256609865
+      Necromancer_forIdle_49: -451977140
+      Necromancer_forIdle_5: 806342890
+      Necromancer_forIdle_50: 1120621978
+      Necromancer_forIdle_51: 1883315640
+      Necromancer_forIdle_52: -133135793
+      Necromancer_forIdle_53: 2081368282
+      Necromancer_forIdle_54: 2126545096
+      Necromancer_forIdle_55: -725871127
+      Necromancer_forIdle_56: 1258807591
+      Necromancer_forIdle_57: 1321280328
+      Necromancer_forIdle_58: 990374769
+      Necromancer_forIdle_59: 182112625
+      Necromancer_forIdle_6: 1405223853
+      Necromancer_forIdle_7: -1198150663
+      Necromancer_forIdle_8: 574550459
+      Necromancer_forIdle_9: -1026201629
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
