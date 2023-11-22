@@ -568,6 +568,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'KeyCheckerSystem '
       objectReference: {fileID: 0}
+    - target: {fileID: 7926700077673619415, guid: 893b074a00523ad4d9392e2e3dd80526, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 893b074a00523ad4d9392e2e3dd80526, type: 3}
 --- !u!1 &567746227

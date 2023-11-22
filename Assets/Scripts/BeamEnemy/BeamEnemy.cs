@@ -21,14 +21,16 @@ public class BeamEnemy : Enemy
     public override void Recognize()
     {
         canAttack = false;
-        sound_manager.SfxPlayer(SoundManager.sfx.shot_danger_line);        
+        if(sound_manager != null)
+            sound_manager.SfxPlayer(SoundManager.sfx.shot_danger_line);        
         DangerLine();
     }    
 
     // 공격준비 모션이 끝나는 순간 애니메이션 이벤트로 처리
     public override void SpawnBullet()
     {
-        sound_manager.SfxPlayer(SoundManager.sfx.shot_beam);
+        if (sound_manager != null)
+            sound_manager.SfxPlayer(SoundManager.sfx.shot_beam);
         ShootBeam();
     }
 
