@@ -158,7 +158,7 @@ BoxCollider2D:
   m_Offset: {x: -0.1432905, y: 0.0033168271}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 1, y: 0.5}
+    pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.3, y: 0.49}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
@@ -181,10 +181,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy_hp: 10
-  player: {fileID: 0}
+  animator: {fileID: 630497845}
+  missile_list: []
+  isFacingRight: 1
+  canAttack: 0
+  sound_manager: {fileID: 2470379303268738533, guid: ea1f77a1abc2190489c04243429266c5, type: 3}
+  bullet: {fileID: 0}
+  deadSmokeParticle: {fileID: 2972979500464413585, guid: b9cf673ec45b86a429733e0f856a75b6, type: 3}
+  defaultLocalScale: {x: 0, y: 0, z: 0}
   player_position: {x: 0, y: 0, z: 0}
   line_destroy_point: {x: 0, y: 0, z: 0}
-  sound_manager: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 1
@@ -313,6 +319,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   recognize: 0
+  enemy: {fileID: 0}
 --- !u!60 &5105554658639029852
 PolygonCollider2D:
   m_ObjectHideFlags: 0
