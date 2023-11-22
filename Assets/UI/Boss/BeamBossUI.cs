@@ -14,7 +14,7 @@ public class BeamBossUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        boss_name.text = "boss";
+        boss_name.text = "Black Mage";
         boss = GameObject.Find("beam_boss").GetComponent<BeamEnemy>();
     }
 

@@ -20,7 +20,7 @@ public class Boss : Enemy
 
     private void Awake()
     {
-        boss_names = "skelton";
+        boss_names = "Elite Skelton";
         enemy_hp = 50;
     }
     // Start is called before the first frame update
