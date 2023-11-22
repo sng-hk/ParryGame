@@ -10,7 +10,7 @@ public class DangerLine : MonoBehaviour
     public LineRenderer lr;
     public Vector3 start_position;
     public Vector3 end_position;
-    public Color lineColor = new Color(1f, 0f, 0f, 0.2f);
+    public Color lineColor = new Color(1f, 1f, 1f, 0.2f);
 
     public float speed;
     public float lifetime;
