@@ -21,8 +21,7 @@ public class BeamEnemy : Enemy
     public override void Recognize()
     {
         canAttack = false;
-        animator.SetTrigger("attack");
-        sound_manager.SfxPlayer(SoundManager.sfx.shot_danger_line);
+        sound_manager.SfxPlayer(SoundManager.sfx.shot_danger_line);        
         DangerLine();
     }    
 
@@ -52,8 +51,8 @@ public class BeamEnemy : Enemy
         GameObject line_clone = Instantiate(danger_line, transform.position, Quaternion.identity);
         DangerLine missile_script = line_clone.GetComponent<DangerLine>();
         missile_script.MemoryShooter(this);
+        animator.SetTrigger("attack");
     }
-
 
     void ShootBeam()
     {
@@ -61,6 +60,8 @@ public class BeamEnemy : Enemy
         Beam beam_script = beam_clone.GetComponent<Beam>();
         beam_script.start_point = transform.position;
         beam_script.end_point = line_destroy_point;
+
+        StartCoroutine(EnableAttackAfterSeconds(2));
     }
 
     void Start()
@@ -88,6 +89,7 @@ public class BeamEnemy : Enemy
             RemoveAll();
         }
     }
+
     public virtual void TakeDamage(int damage)
     {
         enemy_hp -= damage;

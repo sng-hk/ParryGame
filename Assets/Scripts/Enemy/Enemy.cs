@@ -111,7 +111,7 @@ public class Enemy : MonoBehaviour
         StartCoroutine(EnableAttackAfterSeconds(2));
     }
 
-    IEnumerator EnableAttackAfterSeconds(float time)
+    public IEnumerator EnableAttackAfterSeconds(float time)
     {
         yield return new WaitForSeconds(time);
         canAttack = true;
