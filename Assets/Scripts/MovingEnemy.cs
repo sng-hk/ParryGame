@@ -21,31 +21,26 @@ public class MovingEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        transform.Translate(Vector2.left * speed * Time.deltaTime);
+
         player_x = player.position.x;
         enemy_x = transform.position.x;
 
-        if (EnemySight.recognize == true)
+        if(enemy_x > player_x)
         {
-            if(enemy_x > player_x)
+            if (!is_left)
             {
-                if (!is_left)
-                {
-                    transform.eulerAngles = new Vector3(0, 180, 0);
-                    is_left = true;
-                }
-            }
-            else if(enemy_x < player_x)
-            {
-                if (is_left)
-                {
-                    transform.eulerAngles = new Vector3(0, 0, 0);
-                    is_left = false;
-                }
+                transform.eulerAngles = new Vector3(0, 180, 0);
+                is_left = true;
             }
         }
-        else
+        else if(enemy_x < player_x)
         {
-            transform.Translate(Vector2.left * speed * Time.deltaTime);
+            if (is_left)
+            {
+                transform.eulerAngles = new Vector3(0, 0, 0);
+                is_left = false;
+            }
         }
     }
 

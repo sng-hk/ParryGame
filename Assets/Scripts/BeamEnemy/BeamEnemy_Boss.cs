@@ -26,20 +26,7 @@ public class BeamEnemy_Boss : BeamEnemy
     void Update()
     {
 
-    }
-
-    public override void Recognize()
-    {
-        recognize = true;
-        StartCoroutine(FireBeam());
-        Boss_object.SetActive(true);
-    }
-    public override void UnRecognize()
-    {
-        recognize = false;
-        StopCoroutine(FireBeam());
-        Boss_object.SetActive(false);
-    }
+    }    
 
     public override void TakeDamage(int damage)
     {

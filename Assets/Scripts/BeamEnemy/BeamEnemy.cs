@@ -2,19 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BeamEnemy : MonoBehaviour
-{
-    [Header("EnemyUI")]
-    public int enemy_hp;
-
-    public GameObject player;
+public class BeamEnemy : Enemy
+{            
     public Vector3 player_position;
     public Vector3 line_destroy_point;
 
-    private List<GameObject> missile_list = new List<GameObject>();
-
-    public SoundManager sound_manager;
-
+    private List<GameObject> missile_list = new List<GameObject>();    
 
     public LayerMask layerMask;
     public GameObject danger_line;
@@ -25,24 +18,19 @@ public class BeamEnemy : MonoBehaviour
 
     [SerializeField] Vector3 spawnBulletOffset;
 
-    private void Awake()
+    public override void Recognize()
     {
-        sound_manager = FindObjectOfType<SoundManager>();
-    }
+        canAttack = false;
+        animator.SetTrigger("attack");
+        sound_manager.SfxPlayer(SoundManager.sfx.shot_danger_line);
+        DangerLine();
+    }    
 
-    public virtual void Recognize()
+    // 공격준비 모션이 끝나는 순간 애니메이션 이벤트로 처리
+    public override void SpawnBullet()
     {
-        Debug.Log("fire");
-        recognize = true;
-        StartCoroutine(FireBeam());
-    }
-
-    public virtual void UnRecognize()
-    {
-        recognize = false;
-        StopCoroutine(FireBeam());
-        Debug.Log("stop");
-        
+        sound_manager.SfxPlayer(SoundManager.sfx.shot_beam);
+        ShootBeam();
     }
 
     public void RemoveAll()
@@ -58,30 +46,14 @@ public class BeamEnemy : MonoBehaviour
         missile_list.Clear();
     }
 
-    public IEnumerator FireBeam()
-    {
-        while (true)
-        {
-            if(recognize == false)
-            {
-                yield break;
-            }
-
-            yield return new WaitForSeconds(fireInterval);
-            sound_manager.SfxPlayer(SoundManager.sfx.shot_danger_line);
-            DangerLine();
-            yield return new WaitForSeconds(2f);
-            sound_manager.SfxPlayer(SoundManager.sfx.shot_beam);
-            ShootBeam();
-        }
-    }
-
+    // 공격 준비 중에 투사체를 어디로 날릴지 미리 보여준다.
     void DangerLine()
     {
         GameObject line_clone = Instantiate(danger_line, transform.position, Quaternion.identity);
         DangerLine missile_script = line_clone.GetComponent<DangerLine>();
         missile_script.MemoryShooter(this);
     }
+
 
     void ShootBeam()
     {
@@ -95,8 +67,9 @@ public class BeamEnemy : MonoBehaviour
     {
         enemy_hp = 10;
         fireInterval = 2f;
-    }
 
+        canAttack = true;
+    }
 
     void Update()
     {

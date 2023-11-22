@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class BeamBossUI : MonoBehaviour
 {
-    private BeamEnemy_Boss boss;
+    private BeamEnemy boss;
 
     public Text boss_name;
     public Slider boss_hp_bar;
@@ -15,13 +15,13 @@ public class BeamBossUI : MonoBehaviour
     void Start()
     {
         boss_name.text = "boss";
-        boss = GameObject.Find("beam_boss").GetComponent<BeamEnemy_Boss>();
+        boss = GameObject.Find("beam_boss").GetComponent<BeamEnemy>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        boss_name.text = boss.boss_names;
+        /*boss_name.text = boss.boss_names;*/
         boss_hp_bar.value = 1 - boss.enemy_hp / 50.0f;
     }
 }
