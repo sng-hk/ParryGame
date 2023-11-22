@@ -24264,6 +24264,14 @@ PrefabInstance:
       propertyPath: sound_manager
       value: 
       objectReference: {fileID: 1631728607}
+    - target: {fileID: 1224026549595532380, guid: c879211bb23708143bf018be6c051995, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 11.340553
+      objectReference: {fileID: 0}
+    - target: {fileID: 1224026549595532380, guid: c879211bb23708143bf018be6c051995, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.8579
+      objectReference: {fileID: 0}
     - target: {fileID: 3509779479000617787, guid: c879211bb23708143bf018be6c051995, type: 3}
       propertyPath: m_RootOrder
       value: 25

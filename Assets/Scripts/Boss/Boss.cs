@@ -10,6 +10,9 @@ public class Boss : Enemy
     [SerializeField]
     private GameObject Boss_object;
 
+    [SerializeField]
+    private GameObject Drop_object;
+
 
     SpriteRenderer sr;
 
@@ -37,6 +40,7 @@ public class Boss : Enemy
     {
         base.Recognize();
         Boss_object.SetActive(true);
+        Drop_object.SetActive(true);
     }
 
     new IEnumerator DeadParticle()
@@ -69,6 +73,8 @@ public class Boss : Enemy
         {
             RemoveAll();
             sr.color = new Color(0, 0, 0, 0);
+            Boss_object.SetActive(false);
+            Drop_object.SetActive(false);
             StartCoroutine(DeadParticle());
             exit_door.SetActive(true);
         }
