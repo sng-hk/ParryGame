@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 854270902773357688}
   - component: {fileID: 854270902773357639}
   - component: {fileID: 854270902773357638}
-  - component: {fileID: 854270902773357689}
+  - component: {fileID: 2452634888474351260}
   m_Layer: 0
   m_Name: coin3
   m_TagString: Untagged
@@ -98,9 +98,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d21390f0d74f14647a091470966743fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sound_manager: {fileID: 0}
+  sound_manager: {fileID: 2470379303268738533, guid: ea1f77a1abc2190489c04243429266c5, type: 3}
   coin_number: 3
---- !u!58 &854270902773357689
+--- !u!58 &2452634888474351260
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -115,4 +115,4 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 2.56
