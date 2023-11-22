@@ -8,14 +8,14 @@ public class Enemy : MonoBehaviour
     public int enemy_hp;
 
     [Header("Sprite Renderer")]
-    private SpriteRenderer enemySr;
+    protected SpriteRenderer enemySr;
 
     [Header("Color")]
     private Color halfalphaColor;
     private Color fullalphaColor;
 
     [Header("Animator")]
-    public Animator animator;
+    [SerializeField] protected Animator animator;
 
     private List<GameObject> missile_list = new List<GameObject>();
 
@@ -27,12 +27,10 @@ public class Enemy : MonoBehaviour
 
     [Header("Instantiate Object")]
     public GameObject bullet;
-    float bulletspawnDistance = 1;
-    [SerializeField] private GameObject deadSmokeParticle;
+    private float bulletspawnDistance = 1;
+    [SerializeField] protected GameObject deadSmokeParticle;
 
     public Vector3 defaultLocalScale;
-
-    
 
     public void EnemyHurt()
     {
@@ -92,13 +90,8 @@ public class Enemy : MonoBehaviour
         defaultLocalScale = transform.localScale;
     }    
 
-    public void AnimationEventSpawnBullet()
-    {
-        SpawnBullet();
-    }
-
     // animator 에서 attack모션이 끝나는 시점에 애니메이션 이벤트로 추가
-    public void SpawnBullet()
+    public virtual void SpawnBullet()
     {
         sound_manager.SfxPlayer(SoundManager.sfx.shot);
         // 플레이어, 적 사이를 잇는 직선상에서 적과 일정범위 떨어진 곳에 투사체 생성 bulletspawnDistance 값을 조정하여
