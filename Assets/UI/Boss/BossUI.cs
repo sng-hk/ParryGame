@@ -24,7 +24,7 @@ public class BossUI : MonoBehaviour
         if(boss != null)
         {
             boss_name.text = boss.boss_names;
-            boss_hp_bar.value = 1 - boss.enemy_hp / 100.0f;
+            boss_hp_bar.value = 1 - boss.enemy_hp / 50.0f;
         }
     }
 }

@@ -130,7 +130,7 @@ public class CutSceneUI2 : MonoBehaviour
 
     public void GoStageSelectButton()
     {
-        SceneManager.LoadScene("StageSelect");
+        SceneManager.LoadScene("title");
         Resources.UnloadUnusedAssets();
     }
 
