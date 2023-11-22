@@ -17,7 +17,7 @@ public class Enemy : MonoBehaviour
     [Header("Animator")]
     [SerializeField] protected Animator animator;
 
-    private List<GameObject> missile_list = new List<GameObject>();
+    public List<GameObject> missile_list = new List<GameObject>();
 
     private bool isHurt = false;
     public int isFacingRight = 1;

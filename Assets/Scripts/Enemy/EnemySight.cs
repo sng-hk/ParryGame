@@ -34,6 +34,10 @@ public class EnemySight : MonoBehaviour
             {
                 ((BeamEnemy)enemy).Recognize();
             }
+            else if (enemy is FlyingEmeny)
+            {
+                ((FlyingEmeny)enemy).Recognize();
+            }
             else
             {
                 enemy.Recognize();

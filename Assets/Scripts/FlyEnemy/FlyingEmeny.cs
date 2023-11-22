@@ -2,15 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FlyingEmeny : MonoBehaviour
+public class FlyingEmeny : Enemy
 {
-    [Header("EnemyUI")]
-    public int enemy_hp;
-
-    private List<GameObject> missile_list = new List<GameObject>();
-
-    public SoundManager sound_manager;
-
     public GameObject drops;
     [SerializeField] Vector3 spawnBulletOffset;
 
@@ -20,30 +13,62 @@ public class FlyingEmeny : MonoBehaviour
 
     [SerializeField] private int i; // index of the array
     [SerializeField] private int id;
+    SpriteRenderer sr;
 
-
-    private void Awake()
+    public override void Recognize()
     {
-        sound_manager = FindObjectOfType<SoundManager>();
-    }
-
-    public void Recognize()
-    {
-        StartCoroutine(SpawnBullet());
-    }
-
-    public void UnRecognize()
-    {
-        StopCoroutine(SpawnBullet());
+        canAttack = false;
+        animator.SetTrigger("attack");
     }
 
     void Start()
     {
-        enemy_hp = 10;
         speed = 2;
         transform.position = points[startingPoint].position;
+        canAttack = true;
+        sr = GetComponent<SpriteRenderer>();
     }
 
+    void Update()
+    {
+        if (Vector2.Distance(transform.position, points[i].position) < 0.02f) // check if the platform was on the olast point after the increase
+        {
+            i++;
+            sr.flipX = true;
+            if (i == points.Length)
+            {
+                i = 0; // reset the index
+                sr.flipX = false;
+            }
+        }
+        transform.position = Vector2.MoveTowards(transform.position, points[i].position, speed * Time.deltaTime);
+
+        for (int i = missile_list.Count - 1; i >= 0; i--)
+        {
+            GameObject missile_object = missile_list[i];
+            if (missile_object == null)
+            {
+                // 투사체가 삭제되었을 경우 리스트에서 제거
+                missile_list.RemoveAt(i);
+            }
+        }
+
+
+    }
+
+    public override void SpawnBullet()
+    {
+        sound_manager.SfxPlayer(SoundManager.sfx.shot);
+        GameObject missile_object = Instantiate(drops, transform.position + spawnBulletOffset, drops.transform.rotation);
+        Drops missile_script = missile_object.GetComponent<Drops>();
+        missile_script.MemoryShooter(this);
+        missile_list.Add(missile_object);
+
+        // 2초 뒤에 적이 공격할 수 있는 준비가 됨
+        StartCoroutine(EnableAttackAfterSeconds(2));
+    }
+
+    /*
     IEnumerator SpawnBullet()
     {
         yield return new WaitForSeconds(1.0f);
@@ -65,54 +90,6 @@ public class FlyingEmeny : MonoBehaviour
 
         }
     }
+    */
 
-    private void RemoveAll()
-    {
-        // 적이 비활성화될 때 자신이 쏜 모든 총알을 삭제
-        foreach (GameObject missile_object in missile_list)
-        {
-            if (missile_object != null)
-            {
-                Destroy(missile_object);
-            }
-        }
-        missile_list.Clear();
-
-        Destroy(gameObject);
-    }
-
-    void Update()
-    {
-        if (Vector2.Distance(transform.position, points[i].position) < 0.02f) // check if the platform was on the olast point after the increase
-        {
-            i++;
-            if (i == points.Length)
-            {
-                i = 0; // reset the index
-            }
-        }
-        
-        transform.position = Vector2.MoveTowards(transform.position, points[i].position, speed * Time.deltaTime);
-
-
-        for (int i = missile_list.Count - 1; i >= 0; i--)
-        {
-            GameObject missile_object = missile_list[i];
-            if (missile_object == null)
-            {
-                // 투사체가 삭제되었을 경우 리스트에서 제거
-                missile_list.RemoveAt(i);
-            }
-        }
-
-        if (enemy_hp <= 0)
-        {
-            RemoveAll();
-        }
-    }
-
-    public void TakeDamage(int damage)
-    {
-        enemy_hp -= damage;
-    }
 }

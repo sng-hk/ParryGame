@@ -85,7 +85,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1311280498890469123}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 40.58, y: 2.64, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -122,9 +122,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1311280499020901327}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.6924, z: 0}
-  m_LocalScale: {x: 2.2869177, y: 5.0446453, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.0129539315, y: -1.0377176, z: 0}
+  m_LocalScale: {x: 1.7380257, y: 3.2703404, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1311280499033062201}
@@ -220,6 +220,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27c74cef9c9f3ec4d862b30318ae757f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  recognize: 0
+  enemy: {fileID: 1311280499033062202}
 --- !u!1 &1311280499033062205
 GameObject:
   m_ObjectHideFlags: 0
@@ -232,6 +234,7 @@ GameObject:
   - component: {fileID: 1311280499033062200}
   - component: {fileID: 1311280499033062207}
   - component: {fileID: 1311280499033062202}
+  - component: {fileID: 87609979}
   m_Layer: 0
   m_Name: flying_enemy
   m_TagString: Enemy
@@ -247,8 +250,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1311280499033062205}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.2299995, y: 1.8599999, z: 0}
-  m_LocalScale: {x: 3.520127, y: 1.7453035, z: 1}
+  m_LocalPosition: {x: 6.29, y: 1.7, z: 0}
+  m_LocalScale: {x: 4.6318307, y: 2.6922083, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1311280499020901320}
@@ -296,7 +299,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b1b19f47ebc5b1345b8c73ac7fd9af7e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -324,7 +327,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.6, y: 0.6}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -345,9 +348,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fa21fb577d19884ea927ff8e60a160e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemy_object: {fileID: 1311280499033062205}
   enemy_hp: 0
-  sound_manager: {fileID: 0}
+  animator: {fileID: 87609979}
+  missile_list: []
+  isFacingRight: 1
+  canAttack: 0
+  sound_manager: {fileID: 2470379303268738533, guid: ea1f77a1abc2190489c04243429266c5, type: 3}
+  bullet: {fileID: 1587043870209816721, guid: 9fba434757dd6e643a7c74e348238640, type: 3}
+  deadSmokeParticle: {fileID: 2972979500464413585, guid: b9cf673ec45b86a429733e0f856a75b6, type: 3}
+  defaultLocalScale: {x: 0, y: 0, z: 0}
   drops: {fileID: 1587043870209816721, guid: 9fba434757dd6e643a7c74e348238640, type: 3}
   spawnBulletOffset: {x: 0, y: -1.3, z: 0}
   speed: 0
@@ -357,3 +366,24 @@ MonoBehaviour:
   - {fileID: 1311280498709704740}
   i: 0
   id: 0
+--- !u!95 &87609979
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1311280499033062205}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a9d243096e943bf419db4da3c901b25d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
