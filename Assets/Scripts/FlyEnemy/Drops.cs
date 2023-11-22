@@ -49,6 +49,9 @@ public class Drops : MonoBehaviour
         if (collision.gameObject.CompareTag("Shield"))
         {
             sound_manager.SfxPlayer(SoundManager.sfx.parrying);
+            Vector3 newScale = transform.localScale;
+            newScale.y *= -1f; // y축을 반전시킵니다.
+            transform.localScale = newScale;
             //적에게 발사 구문 추가 필요
             is_reflect = true;
             StartCoroutine(nameof(TimeFreeze), 0.4f);

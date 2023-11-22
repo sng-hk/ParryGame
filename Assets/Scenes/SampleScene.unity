@@ -10542,6 +10542,7 @@ MonoBehaviour:
   defaultLocalScale: {x: 0, y: 0, z: 0}
   exit_door: {fileID: 356101545}
   Boss_object: {fileID: 5914180105221295688}
+  Drop_object: {fileID: 0}
   boss_names: skelton
 --- !u!1 &1925814011
 GameObject:
