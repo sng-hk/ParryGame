@@ -4,20 +4,55 @@ using UnityEngine;
 
 public class BossDrops : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject Drop_object1;
-    private GameObject Drop_object2;
+    Rigidbody2D rb;
+    Renderer rend;
+    public SoundManager sound_manager;
+    public bool is_reflect;
 
     // Start is called before the first frame update
     void Start()
     {
-        Drop_object1.SetActive(true);
-        Drop_object2.SetActive(true);
+        rb = GetComponent<Rigidbody2D>();
+        rb.isKinematic = true;
+        rend = GetComponent<Renderer>();
+        float delayInSeconds = Random.Range(3, 21);
+        Invoke("ChangeColor", delayInSeconds);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        if (collision.gameObject.CompareTag("Shield"))
+        {
+            sound_manager.SfxPlayer(SoundManager.sfx.parrying);
+            Destroy(gameObject);
+        }
+        else if (collision.gameObject.CompareTag("Ground"))
+        {
+            //터지는 소리 추가 필요
+            sound_manager.SfxPlayer(SoundManager.sfx.attacked);
+            Destroy(gameObject);
+        }
+        else if (collision.gameObject.CompareTag("Player"))
+        {
+            // 플레이어 피격시 로직
+            if (!is_reflect)
+            {
+                sound_manager.SfxPlayer(SoundManager.sfx.attacked);
+                PlayerController.instance.player_helth_point -= 1;
+                Destroy(gameObject);
+            }
+        }
+    }
+
+    public void ChangeColor()
+    {
+        rend.material.color = Color.red;
+        Invoke("Drop", 1f);
+    }
+
+    public void Drop()
+    {
+        //떨어지는 소리 추가
+        rb.isKinematic = false;
     }
 }
