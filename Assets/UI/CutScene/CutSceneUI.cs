@@ -32,6 +32,7 @@ public class CutSceneUI : MonoBehaviour
         cut_scene.sprite = image[0];
         script.text = text[0];
         index = 0;
+        Screen.SetResolution(1920, 1080, true);
     }
 
     // Update is called once per frame
